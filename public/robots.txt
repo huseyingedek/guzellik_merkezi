@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.goksumguzellik.com
+
+# Sitemaps
+Sitemap: https://www.goksumguzellik.com/sitemap.xml
