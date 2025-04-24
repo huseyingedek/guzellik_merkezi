@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, FormEvent } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
@@ -20,7 +20,7 @@ export default function AppointmentPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [timeRange, setTimeRange] = useState({ min: '09:00', max: '19:00' });
-  const [submitResult, setSubmitResult] = useState<{ success: boolean; message: string } | null>(null);
+  const [submissionStatus, setSubmissionStatus] = useState<{ success: boolean; message: string } | null>(null);
   
   // Tarih değiştiğinde saat aralığını güncelle
   useEffect(() => {
@@ -65,52 +65,52 @@ export default function AppointmentPage() {
     }
   };
   
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
-    // Form gönderilmeden önce son bir kontrol
-    if (formData.time < timeRange.min || formData.time > timeRange.max) {
-      alert(`Lütfen çalışma saatleri içinde bir saat seçin: ${timeRange.min} - ${timeRange.max}`);
-      return;
-    }
-    
     setIsSubmitting(true);
-    setSubmitResult(null);
-    
+    setSubmissionStatus(null);
+
     try {
-      // API endpoint'e form verileri gönderiliyor
-      const response = await fetch('/api/send-appointment', {
+      // Form verilerini topla
+      const formElement = e.currentTarget;
+      const formData = new FormData(formElement);
+      
+      // FormSubmit.co API'ye doğrudan AJAX çağrısı yap
+      const response = await fetch('https://formsubmit.co/ajax/bilgi@goksumguzellik.com', {
         method: 'POST',
+        body: formData,
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+          'Accept': 'application/json'
+        }
       });
       
       const result = await response.json();
       
-      if (result.success) {
-        setFormSubmitted(true);
-        // Form başarıyla gönderildiğinde formData'yı sıfırla
-        setFormData({
-          name: '',
-          phone: '',
-          email: '',
-          service: '',
-          date: '',
-          time: '',
-          message: ''
-        });
-      } else {
-        setSubmitResult({
-          success: false,
-          message: result.message || 'Randevu talebi gönderilemedi. Lütfen daha sonra tekrar deneyin.'
-        });
+      if (!result.success) {
+        throw new Error('Randevu formu gönderimi sırasında bir hata oluştu');
       }
+      
+      // Form verilerini sıfırla
+      setFormData({
+        name: '',
+        phone: '',
+        email: '',
+        service: '',
+        date: '',
+        time: '',
+        message: '',
+      });
+      
+      setSubmissionStatus({
+        success: true,
+        message: 'Randevu talebiniz başarıyla alındı. Ekibimiz kısa süre içinde sizinle iletişime geçecektir.',
+      });
+      
     } catch (error) {
-      setSubmitResult({
+      console.error('Error submitting form:', error);
+      setSubmissionStatus({
         success: false,
-        message: 'Bir hata oluştu. Lütfen daha sonra tekrar deneyin.'
+        message: error instanceof Error ? error.message : 'Randevu formu gönderimi sırasında bir hata oluştu',
       });
     } finally {
       setIsSubmitting(false);
@@ -241,6 +241,17 @@ export default function AppointmentPage() {
               ) : (
                 <form onSubmit={handleSubmit} className="bg-white border border-beauty-100 p-8 rounded-lg shadow-sm">
                   <h3 className="text-xl font-display font-semibold text-beauty-900 mb-6">Randevu Formu</h3>
+                  
+                  {submissionStatus && (
+                    <div className={`p-4 mb-6 rounded-md ${submissionStatus.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+                      {submissionStatus.message}
+                    </div>
+                  )}
+                  
+                  {/* FormSubmit.co için gizli alanlar */}
+                  <input type="hidden" name="_subject" value="Göksum Güzellik Merkezi - Randevu Talebi" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="text" name="_honey" style={{ display: 'none' }} />
                   
                   <div className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

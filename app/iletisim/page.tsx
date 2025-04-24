@@ -36,21 +36,26 @@ export default function ContactPage() {
     setSubmissionStatus(null);
     
     try {
-      const response = await fetch('/api/send-contact', {
+      // Form verilerini topla
+      const formElement = e.currentTarget;
+      const formData = new FormData(formElement);
+      
+      // FormSubmit.co API'ye doğrudan AJAX çağrısı yap
+      const response = await fetch('https://formsubmit.co/ajax/bilgi@goksumguzellik.com', {
         method: 'POST',
+        body: formData,
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+          'Accept': 'application/json'
+        }
       });
       
       const result = await response.json();
       
-      if (!response.ok) {
-        throw new Error(result.error || 'Form gönderimi sırasında bir hata oluştu');
+      if (!result.success) {
+        throw new Error('Form gönderimi sırasında bir hata oluştu');
       }
       
-      // Reset form on success
+      // Form verilerini sıfırla
       setFormData({
         name: '',
         phone: '',
@@ -61,8 +66,9 @@ export default function ContactPage() {
       
       setSubmissionStatus({
         success: true,
-        message: result.message || 'Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.',
+        message: 'Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.',
       });
+      
     } catch (error) {
       console.error('Error submitting form:', error);
       setSubmissionStatus({
@@ -119,6 +125,11 @@ export default function ContactPage() {
                     onSubmit={handleSubmit}
                     className="grid grid-cols-1 gap-4 mt-4"
                   >
+                    {/* FormSubmit.co için gizli alanlar */}
+                    <input type="hidden" name="_subject" value="Göksum Güzellik Merkezi - İletişim Formu" />
+                    <input type="hidden" name="_template" value="table" />
+                    <input type="text" name="_honey" style={{ display: 'none' }} />
+                    
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="name" className="block text-beauty-700 font-medium mb-2">

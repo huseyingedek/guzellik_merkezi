@@ -1,25 +1,16 @@
 import React from 'react';
 
 const features = [
+
   {
-    id: 1,
+    id: 4,
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
       </svg>
     ),
-    title: 'Güvenli Ödeme',
-    description: 'Tüm ödeme işlemleriniz %100 güvenli bir şekilde gerçekleştirilir.',
-  },
-  {
-    id: 2,
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current">
-        <path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10zm1-17.93c3.94.49 7 3.85 7 7.93s-3.05 7.44-7 7.93V4.07z"></path>
-      </svg>
-    ),
-    title: 'Müşteri Hizmetleri',
-    description: 'Sorularınıza hızlı yanıt almak için 7/24 müşteri hizmetlerimize ulaşabilirsiniz.',
+    title: 'Yüksek Memnuniyet',
+    description: 'Müşteri memnuniyeti en önemli değerimizdir. Kaliteli hizmetlerimizle fark yaratıyoruz.',
   },
   {
     id: 3,
@@ -32,14 +23,14 @@ const features = [
     description: 'Tüm işlemlerimizde hijyen ve sterilizasyon kurallarına %100 uyum sağlarız.',
   },
   {
-    id: 4,
+    id: 2,
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+        <path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10zm1-17.93c3.94.49 7 3.85 7 7.93s-3.05 7.44-7 7.93V4.07z"></path>
       </svg>
     ),
-    title: 'Yüksek Memnuniyet',
-    description: 'Müşteri memnuniyeti en önemli değerimizdir. Kaliteli hizmetlerimizle fark yaratıyoruz.',
+    title: 'Müşteri Hizmetleri',
+    description: 'Sorularınıza hızlı yanıt almak için 7/24 müşteri hizmetlerimize ulaşabilirsiniz.',
   },
 ];
 
@@ -47,7 +38,7 @@ export default function Features() {
   return (
     <section className="bg-beauty-50 py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {features.map((feature) => (
             <div key={feature.id} className="flex flex-col items-center text-center p-6">
               <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gold-500 text-white mb-4">

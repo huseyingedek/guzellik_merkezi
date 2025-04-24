@@ -25,20 +25,19 @@ export default function Header() {
   return (
     <header className="w-full">
       {/* Top Bar */}
-      <div className="bg-beauty-900 text-white text-sm py-1">
+      <div className="bg-beauty-900 text-white text-sm py-3">
         <div className="container mx-auto px-4 flex flex-wrap justify-between items-center">
           <div className="flex items-center">
             <span className="mr-4 text-xs sm:text-sm">📞 +90 544 859 72 80</span>
             <span className="text-xs sm:text-sm">📍 Serinevler Mah, Yüreğir, Adana</span>
           </div>
-          <div className="flex items-center space-x-4">
+          <div className="md:flex items-center space-x-4 hidden">
             <Link href="https://www.instagram.com/goksum_guzellik01" target="_blank" className="hover:text-gold-300 transition-colors">
               <FaInstagram size={16} />
             </Link>
             <Link href="https://wa.me/905448597280" target="_blank" className="hover:text-gold-300 transition-colors">
               <FaWhatsapp size={16} />
             </Link>
-            <span className="hidden md:inline text-xs sm:text-sm">Göksum Güzellik</span>
           </div>
         </div>
       </div>
