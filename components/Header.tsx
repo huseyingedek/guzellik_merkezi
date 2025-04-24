@@ -25,7 +25,7 @@ export default function Header() {
   return (
     <header className="w-full">
       {/* Top Bar */}
-      <div className="bg-beauty-900 text-white text-sm py-3">
+      <div className="bg-beauty-900 text-white text-sm py-5">
         <div className="container mx-auto px-4 flex flex-wrap justify-between items-center">
           <div className="flex items-center">
             <span className="mr-4 text-xs sm:text-sm">📞 +90 544 859 72 80</span>
