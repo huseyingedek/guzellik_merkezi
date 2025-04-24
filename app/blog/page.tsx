@@ -45,7 +45,7 @@ export default function BlogPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Blog Post 1 */}
             <BlogCard
-              image="/images/blog-1.jpg"
+              image="/images/kis.png"
               category="Cilt Bakımı"
               title="Kış Aylarında Cilt Bakımı Nasıl Yapılmalı?"
               date="15 Aralık 2023"
@@ -55,7 +55,7 @@ export default function BlogPage() {
 
             {/* Blog Post 2 */}
             <BlogCard
-              image="/images/blog-2.jpg"
+              image="/images/sac-maske.png"
               category="Saç Bakımı"
               title="Doğal Saç Bakım Maskeleri"
               date="8 Ocak 2024"
@@ -65,7 +65,7 @@ export default function BlogPage() {
 
             {/* Blog Post 3 */}
             <BlogCard
-              image="/images/blog-3.jpg"
+              image="/images/bahar-trend.png"
               category="Makyaj"
               title="2024 Bahar Makyaj Trendleri"
               date="22 Şubat 2024"
@@ -75,7 +75,7 @@ export default function BlogPage() {
 
             {/* Blog Post 4 */}
             <BlogCard
-              image="/images/blog-4.jpg"
+              image="/images/sac-besleme.png"
               category="Beslenme"
               title="Cilt Sağlığı İçin Beslenme Önerileri"
               date="10 Mart 2024"
@@ -85,7 +85,7 @@ export default function BlogPage() {
 
             {/* Blog Post 5 */}
             <BlogCard
-              image="/images/blog-5.jpg"
+              image="/images/lazer-merak-edilenler.png"
               category="Lazer Epilasyon"
               title="Lazer Epilasyon Hakkında Merak Edilenler"
               date="5 Nisan 2024"
@@ -95,10 +95,10 @@ export default function BlogPage() {
 
             {/* Blog Post 6 */}
             <BlogCard
-              image="/images/blog-6.jpg"
+              image="/images/kalici-makyaj.png"
               category="Güzellik Trendleri"
               title="Kalıcı Makyaj Uygulamaları"
-              date="17 Nisan 2024"
+              date="17 Nisan 2025"
               excerpt="Kalıcı makyaj teknikleri ve doğru uzman seçimi hakkında kapsamlı rehber."
               slug="kalici-makyaj-uygulamalari"
             />

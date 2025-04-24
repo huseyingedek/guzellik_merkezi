@@ -21,7 +21,7 @@ const testimonials = [
   },
   {
     id: 3,
-    name: 'Zeynep Demir',
+    name: 'Ezgi Demir',
     position: 'Müşteri',
     image: '/images/testimonial-3.jpg',
     quote: 'Cilt bakımı konusunda uzman bir ekip. Cildim çok daha iyi görünüyor.',
@@ -29,7 +29,7 @@ const testimonials = [
   },
   {
     id: 4,
-    name: 'Emre Şahin',
+    name: 'Can Şahin',
     position: 'Müşteri',
     image: '/images/testimonial-4.jpg',
     quote: 'Bölgesel incelme seanslarında etkili sonuçlar aldım. Tavsiye ediyorum.',
