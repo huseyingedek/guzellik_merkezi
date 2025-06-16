@@ -3,12 +3,12 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Hizmetlerimiz | Adana Güzellik Merkezi - Cilt Bakımı, Lazer, Makyaj',
-  description: 'Adana\'da en iyi güzellik hizmetleri Göksum\'da. Cilt bakımı, lazer epilasyon, kalıcı makyaj, masaj ve daha birçok profesyonel bakım hizmeti için merkez.',
-  keywords: 'Adana güzellik hizmetleri, cilt bakımı Adana, lazer epilasyon Adana, kalıcı makyaj, manikür pedikür, en yakın güzellik merkezi',
+  title: 'Güzellik Merkezi Hizmetleri | Adana\'da Profesyonel Güzellik Bakımı',
+  description: 'Adana\'nın en iyi güzellik merkezinde lazer epilasyon, cilt bakımı, kalıcı makyaj, bölgesel zayıflama ve daha fazla profesyonel güzellik hizmeti. Yüreğir\'de uygun fiyatlı güzellik hizmetleri.',
+  keywords: 'adana güzellik merkezi hizmetleri, adana lazer epilasyon fiyatları, adana cilt bakımı fiyatları, yüreğir güzellik merkezi hizmetleri, adana kalıcı makyaj, adana profesyonel güzellik bakımı',
   openGraph: {
-    title: 'Hizmetlerimiz | Adana\'nın En İyi Güzellik Hizmetleri - Göksum',
-    description: 'Adana\'da profesyonel güzellik ve bakım hizmetleri. Cilt bakımı, lazer epilasyon, kalıcı makyaj ve daha fazlası.',
+    title: 'Adana Güzellik Merkezi Hizmetleri | Profesyonel Güzellik Bakımı',
+    description: 'Adana Yüreğir\'de profesyonel güzellik hizmetleri. Lazer epilasyon, cilt bakımı, kalıcı makyaj ve daha fazlası için en iyi güzellik merkezi.',
     url: 'https://www.goksumguzellik.com/hizmetlerimiz',
     type: 'website',
   }

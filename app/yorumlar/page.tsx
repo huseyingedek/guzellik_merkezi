@@ -93,16 +93,6 @@ const testimonials = [
     date: '10 Ağustos 2023',
   },
   {
-    id: 9,
-    name: 'Elif Kara',
-    position: 'Müşteri',
-    image: '/images/testimonial-9.jpg',
-    quote: 'Göz altı ışık dolgusu yaptırdım ve sonuç harika oldu. Gözaltı morlukları ve çizgiler gözle görülür şekilde azaldı. Uygulama sırasında hiç acı hissetmedim, çok profesyonel bir ekip.',
-    rating: 5,
-    service: 'Göz Altı Dolgusu',
-    date: '3 Eylül 2023',
-  },
-  {
     id: 10,
     name: 'Mustafa Öztürk',
     position: 'Müşteri',
@@ -111,16 +101,6 @@ const testimonials = [
     rating: 4,
     service: 'Selülit Tedavisi',
     date: '17 Eylül 2023',
-  },
-  {
-    id: 11,
-    name: 'Gizem Aydın',
-    position: 'Müşteri',
-    image: '/images/testimonial-11.jpg',
-    quote: 'Botoks yaptırdım ve çok doğal durdu. Mimiklerimi kaybetmeden istediğim sonucu aldım. Doktor çok titiz çalıştı ve tüm sorularımı sabırla yanıtladı. Memnuniyetle tavsiye ediyorum.',
-    rating: 5,
-    service: 'Botoks',
-    date: '5 Ekim 2023',
   },
   {
     id: 12,

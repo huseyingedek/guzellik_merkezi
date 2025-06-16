@@ -1,6 +1,6 @@
 {
-  "name": "Göksum Güzellik Merkezi - Adana",
-  "short_name": "Göksum Güzellik",
+  "name": "Adana Güzellik Merkezi",
+  "short_name": "Adana Güzellik",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -17,5 +17,5 @@
   "background_color": "#ffffff",
   "display": "standalone",
   "start_url": "/",
-  "description": "Adana'nın merkezinde profesyonel güzellik ve bakım hizmetleri"
+  "description": "Adana Yüreğir'de profesyonel güzellik ve bakım hizmetleri. Lazer epilasyon, cilt bakımı ve daha fazlası."
 } 

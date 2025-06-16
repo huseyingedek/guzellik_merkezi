@@ -129,18 +129,12 @@ const JsonLd = () => {
   // Hakkımızda sayfası için Organization şeması
   const aboutPageSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Göksum Güzellik Merkezi',
+    '@type': 'BeautySalon',
+    name: 'Adana Güzellik Merkezi',
     url: 'https://www.goksumguzellik.com',
     logo: 'https://www.goksumguzellik.com/images/logo.png',
-    foundingDate: '2015',
-    founders: [
-      {
-        '@type': 'Person',
-        name: 'Ayşe Göksu'
-      }
-    ],
-    description: 'Adana\'nın merkezinde 2015 yılından beri profesyonel güzellik ve bakım hizmetleri sunan Göksum Güzellik Merkezi. Güzellik merkezimizde uzman ekibimizle hizmetinizdeyiz.',
+    image: 'https://www.goksumguzellik.com/images/salon.jpg',
+    description: 'Adana Yüreğir\'de profesyonel güzellik ve bakım hizmetleri sunan güzellik merkezi. Lazer epilasyon, cilt bakımı, kalıcı makyaj ve bölgesel incelme tedavileri için Adana\'nın tercih edilen güzellik merkezi.',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Serinevler Mah, Gül Apartmanı, Mustafa Kemal Paşa Bulvarı No:103, Kat 1, Daire 7',
@@ -149,11 +143,65 @@ const JsonLd = () => {
       postalCode: '01240',
       addressCountry: 'TR'
     },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '37.0159',
+      longitude: '35.3465'
+    },
+    areaServed: [
+      {
+        '@type': 'City',
+        name: 'Adana'
+      },
+      {
+        '@type': 'AdministrativeArea',
+        name: 'Yüreğir'
+      }
+    ],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+90 544 859 72 80',
       contactType: 'customer service'
-    }
+    },
+    sameAs: [
+      'https://www.instagram.com/goksumguzellik/',
+      'https://www.facebook.com/goksumguzellik/'
+    ],
+    priceRange: '₺₺',
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        opens: '09:00',
+        closes: '19:00'
+      }
+    ],
+    makesOffer: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Lazer Epilasyon',
+          description: 'Adana\'da profesyonel lazer epilasyon hizmeti'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Cilt Bakımı',
+          description: 'Adana\'da profesyonel cilt bakımı hizmetleri'
+        }
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Kalıcı Makyaj',
+          description: 'Adana\'da profesyonel kalıcı makyaj hizmetleri'
+        }
+      }
+    ]
   };
 
   // Randevu sayfası için şema

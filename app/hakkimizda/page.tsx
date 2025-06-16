@@ -5,12 +5,12 @@ import { FaInstagram } from 'react-icons/fa';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Hakkımızda | Adana\'nın Güvenilir Güzellik Merkezi - Göksum',
-  description: 'Adana\'da 2015\'ten beri hizmet veren Göksum Güzellik Merkezi\'nin hikayesi, vizyonu ve uzman ekibi hakkında bilgi edinin. Profesyonel güzellik hizmetleri için bizi tercih edin.',
-  keywords: 'Adana güzellik merkezi hakkında, Göksum Güzellik Merkezi ekibi, Adana güzellik merkezi hikayesi, profesyonel estetisyenler Adana',
+  title: 'Hakkımızda | Adana\'nın Güvenilir Güzellik Merkezi',
+  description: 'Adana Yüreğir\'de yıllardır profesyonel güzellik hizmetleri sunuyoruz. Deneyimli ekibimiz, modern cihazlarımız ve müşteri memnuniyeti odaklı yaklaşımımızla Adana\'nın tercih edilen güzellik merkeziyiz.',
+  keywords: 'adana güzellik merkezi, yüreğir güzellik merkezi, adana güzellik salonu, adana profesyonel güzellik merkezi, adana güvenilir güzellik merkezi, adana yüreğir güzellik merkezi hakkında',
   openGraph: {
-    title: 'Hakkımızda | Adana\'nın Güvenilir Güzellik Merkezi - Göksum',
-    description: 'Adana\'da 2015\'ten beri hizmet veren Göksum Güzellik Merkezi\'nin hikayesi, vizyonu ve uzman ekibi hakkında bilgi edinin.',
+    title: 'Hakkımızda | Adana\'nın Güvenilir Güzellik Merkezi',
+    description: 'Adana Yüreğir\'de yıllardır profesyonel güzellik hizmetleri sunuyoruz. Deneyimli ekibimiz ve modern cihazlarımızla hizmetinizdeyiz.',
     url: 'https://www.goksumguzellik.com/hakkimizda',
     type: 'website',
   }
