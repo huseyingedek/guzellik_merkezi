@@ -255,7 +255,7 @@ export default function ContactPage() {
                           01240 Yüreğir/Adana
                           <br />
                           <span className="font-medium text-gold-600 mt-2 inline-block">
-                            Kuaför Burak Karakaya'nın üst katında bulunmaktayız.
+                            Göksum Güzellik Merkezi
                           </span>
                         </p>
                       </div>
@@ -347,18 +347,18 @@ export default function ContactPage() {
       {/* Map Section */}
       <section className="h-96 relative">
         <div className="absolute top-4 left-4 z-10 bg-beauty-900/90 text-white px-4 py-3 rounded-lg shadow-lg max-w-xs">
-          <p className="font-bold text-red-400">Kuaför Burak Karakaya'nın Üst Katında</p>
+          <p className="font-bold text-red-400">Göksum Güzellik Merkezi</p>
           <p className="font-semibold">Serinevler Mah, Gül Apartmanı</p>
           <p className="text-white/80 text-xs mt-1">Mustafa Kemal Paşa Bulvarı No:103, Kat 1, Daire 7, 01240 Yüreğir/Adana</p>
         </div>
         
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199.13101616630863!2d35.3610213064108!3d37.00749989934657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15288f5c02a76bef%3A0x506daa1650c7f78b!2sKuaf%C3%B6r%20Burak%20Karakaya!5e0!3m2!1str!2str!4v1745331338566!5m2!1str!2str"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2679.152343662692!2d35.36052014790516!3d37.00819724398693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15288fb46443d347%3A0xccab37c71d3076d8!2sG%C3%B6ksum%20G%C3%BCzellik%20Merkezi!5e0!3m2!1str!2str!4v1750144023700!5m2!1str!2str"
           className="absolute inset-0 w-full h-full"
           loading="lazy"
           allowFullScreen
           referrerPolicy="no-referrer-when-downgrade"
-          title="Göksum Güzellik Merkezi Konum - Kuaför Burak Karakaya üst katı"
+          title="Göksum Güzellik Merkezi Konum"
         ></iframe>
       </section>
     </main>

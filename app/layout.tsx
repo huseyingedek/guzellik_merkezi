@@ -90,11 +90,27 @@ export default function RootLayout({
   return (
     <html lang="tr" className={`${inter.variable} ${playfair.variable}`}>
       <body className="bg-white" suppressHydrationWarning>
+        {/* Google Analytics */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-17213011309" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17213011309');
+          `}
+        </Script>
+        {/* Event snippet for Yol tarifi alma conversion page */}
+        <Script id="google-ads-conversion" strategy="afterInteractive">
+          {`
+            gtag('event', 'conversion', {'send_to': 'AW-17213011309/aaXiCPjZoNwaEO3q5o9A'});
+          `}
+        </Script>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-DZZVJ7PR05"
           strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics-old" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
