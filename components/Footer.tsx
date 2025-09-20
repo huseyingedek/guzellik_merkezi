@@ -56,9 +56,9 @@ export default function Footer() {
                   <FaMapMarkerAlt />
                 </span>
                 <span className="text-beauty-300">
-                  Serinevler Mah, Gül Apartmanı, Mustafa Kemal Paşa Bulvarı No:103, Kat 1, Daire 7
+                  Cemalpaşa, Gazipaşa Blv. Apartmanı No:30 Kat:1
                   <br />
-                  01240 Yüreğir/Adana
+                  01120 Seyhan/Adana
                 </span>
               </li>
               <li className="flex items-center">

@@ -17,8 +17,8 @@ const JsonLd = () => {
     telephone: '+90 544 859 72 80',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Serinevler Mah, Gül Apartmanı, Mustafa Kemal Paşa Bulvarı No:103, Kat 1, Daire 7',
-      addressLocality: 'Yüreğir',
+      streetAddress: 'Cemalpaşa, Gazipaşa Blv. Apartmanı No:30 Kat:1',
+      addressLocality: 'Seyhan',
       addressRegion: 'Adana',
       postalCode: '01240',
       addressCountry: 'TR'
@@ -134,11 +134,11 @@ const JsonLd = () => {
     url: 'https://www.goksumguzellik.com',
     logo: 'https://www.goksumguzellik.com/images/logo.png',
     image: 'https://www.goksumguzellik.com/images/salon.jpg',
-    description: 'Adana Yüreğir\'de profesyonel güzellik ve bakım hizmetleri sunan güzellik merkezi. Lazer epilasyon, cilt bakımı, kalıcı makyaj ve bölgesel incelme tedavileri için Adana\'nın tercih edilen güzellik merkezi.',
+    description: 'Adana Seyhan\'de profesyonel güzellik ve bakım hizmetleri sunan güzellik merkezi. Lazer epilasyon, cilt bakımı, kalıcı makyaj ve bölgesel incelme tedavileri için Adana\'nın tercih edilen güzellik merkezi.',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Serinevler Mah, Gül Apartmanı, Mustafa Kemal Paşa Bulvarı No:103, Kat 1, Daire 7',
-      addressLocality: 'Yüreğir',
+      streetAddress: 'Cemalpaşa, Gazipaşa Blv. Apartmanı No:30 Kat:1',
+      addressLocality: 'Seyhan',
       addressRegion: 'Adana',
       postalCode: '01240',
       addressCountry: 'TR'
@@ -155,7 +155,7 @@ const JsonLd = () => {
       },
       {
         '@type': 'AdministrativeArea',
-        name: 'Yüreğir'
+        name: 'Seyhan'
       }
     ],
     contactPoint: {
@@ -216,8 +216,8 @@ const JsonLd = () => {
       name: 'Göksum Güzellik Merkezi',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Serinevler Mah, Gül Apartmanı, Mustafa Kemal Paşa Bulvarı No:103, Kat 1, Daire 7',
-        addressLocality: 'Yüreğir',
+        streetAddress: 'Cemalpaşa, Gazipaşa Blv. Apartmanı No:30 Kat:1',
+        addressLocality: 'Seyhan',
         addressRegion: 'Adana',
         postalCode: '01240',
         addressCountry: 'TR'

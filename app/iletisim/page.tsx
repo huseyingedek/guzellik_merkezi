@@ -250,9 +250,9 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold text-beauty-800 mb-1">Adres</h3>
                         <p className="text-beauty-600">
-                          Serinevler Mah, Gül Apartmanı, Mustafa Kemal Paşa Bulvarı No:103, Kat 1, Daire 7
+                          Cemalpaşa, Gazipaşa Blv. Apartmanı No:30 Kat:1
                           <br />
-                          01240 Yüreğir/Adana
+                          01120 Seyhan/Adana
                           <br />
                           <span className="font-medium text-gold-600 mt-2 inline-block">
                             Göksum Güzellik Merkezi
@@ -260,7 +260,7 @@ export default function ContactPage() {
                         </p>
                       </div>
                     </div>
-                    
+                     
                     <div className="flex items-start">
                       <div className="w-12 h-12 rounded-full bg-beauty-100 flex items-center justify-center text-gold-500 mr-4 flex-shrink-0">
                         <FaPhone size={20} />
@@ -348,8 +348,8 @@ export default function ContactPage() {
       <section className="h-96 relative">
         <div className="absolute top-4 left-4 z-10 bg-beauty-900/90 text-white px-4 py-3 rounded-lg shadow-lg max-w-xs">
           <p className="font-bold text-red-400">Göksum Güzellik Merkezi</p>
-          <p className="font-semibold">Serinevler Mah, Gül Apartmanı</p>
-          <p className="text-white/80 text-xs mt-1">Mustafa Kemal Paşa Bulvarı No:103, Kat 1, Daire 7, 01240 Yüreğir/Adana</p>
+          <p className="font-semibold">Cemalpaşa Mah, Seyhan</p>
+          <p className="text-white/80 text-xs mt-1">Cemalpaşa, Gazipaşa Blv. Apartmanı No:30 Kat:1, 01120 Seyhan/Adana</p>
         </div>
         
         <iframe 
