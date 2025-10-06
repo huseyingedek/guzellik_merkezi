@@ -21,24 +21,30 @@ export const metadata: Metadata = {
     'adana güzellik merkezi',
     'adana güzellik salonu',
     'adana lazer epilasyon',
-    'adana cilt bakımı',
-    'adana yüreğir lazer epilasyon',
-    'adana yüreğir güzellik merkezi',
-    'yüreğir güzellik merkezi',
-    'yüreğir güzellik salonu',
-    'yüreğir lazer epilasyon',
-    'yüreğir cilt bakımı',
-    'adana yüreğir güzellik merkezi',
-    'adana yüreğir lazer epilasyon',
-    'adana yüreğir güzellik salonu',
-    'yüreğir kalıcı makyaj',
-    'yüreğir bölgesel zayıflama',
-    'yüreğir profesyonel güzellik merkezi',
-    'adana yüreğir cilt bakımı',
-    'yüreğir lazer epilasyon fiyatları',
-    'yüreğir güzellik merkezi fiyatları',
-    'adana yüreğir güzellik merkezleri',
-    'yüreğir en iyi güzellik merkezi',
+    'adanagazipaşa lazer epilasyon',
+    'adanagazipaşa güzellik merkezi',
+    'gazipaşa güzellik merkezi',
+    'gazipaşa güzellik salonu',
+    'gazipaşa lazer epilasyon',
+    'gazipaşa cilt bakımı',
+    'adanagazipaşa güzellik merkezi',
+    'adana seyhan lazer epilasyon',
+    'adana seyhan güzellik merkezi',
+    'seyhan güzellik merkezi',
+    'seyhan güzellik salonu',
+    'seyhan lazer epilasyon',
+    'seyhan cilt bakımı',
+    'adana seyhan güzellik merkezi',
+    'adana seyhan lazer epilasyon',
+    'adana seyhan güzellik salonu',
+    'seyhan kalıcı makyaj',
+    'seyhan bölgesel zayıflama',
+    'seyhan profesyonel güzellik merkezi',
+    'adana seyhan cilt bakımı',
+    'seyhan lazer epilasyon fiyatları',
+    'seyhan güzellik merkezi fiyatları',
+    'adana seyhan güzellik merkezleri',
+    'seyhan en iyi güzellik merkezi',
     'adana güzellik merkezi',
     'adana güzellik salonu',
     'adana lazer epilasyon',
@@ -63,7 +69,7 @@ export const metadata: Metadata = {
     locale: 'tr_TR',
     url: 'https://www.goksumguzellik.com',
     title: 'Adana Güzellik Merkezi | Profesyonel Güzellik ve Bakım Hizmetleri',
-    description: 'Adana Yüreğir\'de profesyonel güzellik ve bakım hizmetleri. Lazer epilasyon, cilt bakımı, kalıcı makyaj ve daha fazlası için güvenilir güzellik merkezi.',
+    description: 'Adana seyhan\'de profesyonel güzellik ve bakım hizmetleri. Lazer epilasyon, cilt bakımı, kalıcı makyaj ve daha fazlası için güvenilir güzellik merkezi.',
     siteName: 'Adana Güzellik Merkezi',
   },
   twitter: {
@@ -91,6 +97,15 @@ export default function RootLayout({
     <html lang="tr" className={`${inter.variable} ${playfair.variable}`}>
       <body className="bg-white" suppressHydrationWarning>
         {/* Google Analytics */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-16974602246" />
+        <Script id="google-analytics-new" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16974602246');
+          `}
+        </Script>
         <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-17213011309" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
