@@ -29,7 +29,7 @@ export default function Header() {
         <div className="container mx-auto px-4 flex flex-wrap justify-between items-center">
           <div className="flex items-center">
             <span className="mr-4 text-xs sm:text-sm">📞 +90 544 859 72 80</span>
-            <span className="text-xs sm:text-sm">📍 Cemalpaşa Mah, Seyhan, Adana</span>
+            <a href="/iletisim"><span className="text-xs sm:text-sm">📍 Cemalpaşa Mah, Seyhan, Adana</span></a>
           </div>
           <div className="md:flex items-center space-x-4 hidden">
             <Link href="https://www.instagram.com/goksum_guzellik01" target="_blank" className="hover:text-gold-300 transition-colors">
@@ -133,7 +133,7 @@ export default function Header() {
                 </Link>
               </div>
               <p className="text-sm text-white text-center">Göksum Güzellik Merkezi</p>
-              <p className="text-sm text-white text-center">Cemalpaşa Mah, Seyhan, Adana</p>
+              <a href="/iletisim"><p className="text-sm text-white text-center">Cemalpaşa Mah, Seyhan, Adana</p></a>
             </div>
           </div>
         </div>
