@@ -189,7 +189,7 @@ export default function AppointmentPage() {
                         Mesaj göndermek isterseniz WhatsApp üzerinden bize ulaşabilirsiniz.
                       </p>
                       <a 
-                        href="https://wa.me/905448597280" 
+                        href="https://wa.me/905411901390" 
                         target="_blank"
                         className="text-gold-500 font-medium hover:text-gold-600 transition-colors"
                       >
