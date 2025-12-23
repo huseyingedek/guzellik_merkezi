@@ -171,7 +171,7 @@ export default function AppointmentPage() {
                         Doğrudan konuşmak ve randevu almak isterseniz bizi arayabilirsiniz.
                       </p>
                       <a 
-                        href="tel:+905448597280" 
+                        href="tel:+905411901390" 
                         className="text-gold-500 font-medium hover:text-gold-600 transition-colors"
                       >
                         +90 544 859 72 80
@@ -383,7 +383,7 @@ export default function AppointmentPage() {
                       </button>
                       <p className="text-xs text-beauty-500 mt-2 text-center">
                         <span className="text-red-500">*</span> işaretli alanlar zorunludur<br />
-                        Alternatif olarak telefonla da randevu alabilirsiniz: <a href="tel:+905448597280" className="text-gold-600 hover:underline">0544 859 72 80</a>
+                        Alternatif olarak telefonla da randevu alabilirsiniz: <a href="tel:+905411901390" className="text-gold-600 hover:underline">0544 859 72 80</a>
                       </p>
                     </div>
                   </div>
@@ -459,7 +459,7 @@ export default function AppointmentPage() {
               Hizmetlerimizi İnceleyin
             </Link>
             <a
-              href="tel:+905448597280"
+              href="tel:+905411901390"
               className="bg-white text-beauty-900 hover:bg-beauty-50 py-3 px-8 rounded-full transition-colors duration-300 font-semibold"
             >
               Hemen Arayın

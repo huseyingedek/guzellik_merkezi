@@ -268,7 +268,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold text-beauty-800 mb-1">Telefon</h3>
                         <a 
-                          href="tel:+905448597280" 
+                          href="tel:+905411901390" 
                           className="text-beauty-600 hover:text-gold-500 transition-colors"
                         >
                           +90 544 859 72 80
