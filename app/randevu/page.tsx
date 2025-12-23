@@ -174,7 +174,7 @@ export default function AppointmentPage() {
                         href="tel:+905411901390" 
                         className="text-gold-500 font-medium hover:text-gold-600 transition-colors"
                       >
-                        +90 544 859 72 80
+                        +90 541 190 13 90
                       </a>
                     </div>
                   </div>

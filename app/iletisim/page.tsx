@@ -271,7 +271,7 @@ export default function ContactPage() {
                           href="tel:+905411901390" 
                           className="text-beauty-600 hover:text-gold-500 transition-colors"
                         >
-                          +90 544 859 72 80
+                          +90 541 190 13 90
                         </a>
                       </div>
                     </div>

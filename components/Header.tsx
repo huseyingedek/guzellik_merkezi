@@ -28,7 +28,7 @@ export default function Header() {
       <div className="bg-beauty-900 text-white text-sm py-5">
         <div className="container mx-auto px-4 flex flex-wrap justify-between items-center">
           <div className="flex items-center">
-            <span className="mr-4 text-xs sm:text-sm">📞 +90 544 859 72 80</span>
+            <span className="mr-4 text-xs sm:text-sm">📞 +90 541 190 13 90</span>
             <a href="/iletisim"><span className="text-xs sm:text-sm">📍 Cemalpaşa Mah, Seyhan, Adana</span></a>
           </div>
           <div className="md:flex items-center space-x-4 hidden">

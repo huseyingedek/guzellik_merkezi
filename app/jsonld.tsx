@@ -14,7 +14,7 @@ const JsonLd = () => {
     image: 'https://www.goksumguzellik.com/images/logo.png',
     '@id': 'https://www.goksumguzellik.com',
     url: 'https://www.goksumguzellik.com',
-    telephone: '+90 544 859 72 80',
+    telephone: '+90 541 190 13 90',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Cemalpaşa, Gazipaşa Blv. Apartmanı No:30 Kat:1',
@@ -160,7 +160,7 @@ const JsonLd = () => {
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+90 544 859 72 80',
+      telephone: '+90 541 190 13 90',
       contactType: 'customer service'
     },
     sameAs: [
@@ -222,7 +222,7 @@ const JsonLd = () => {
         postalCode: '01240',
         addressCountry: 'TR'
       },
-      telephone: '+90 544 859 72 80'
+      telephone: '+90 541 190 13 90'
     },
     areaServed: {
       '@type': 'City',

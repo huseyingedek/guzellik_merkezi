@@ -54,7 +54,7 @@ export default function Navbar() {
             <div className="flex items-center">
               <FaPhone className="mr-2 text-gold-400" />
               <a href="tel:+905411901390" className="hover:text-gold-300 transition-colors">
-                +90 544 859 72 80
+                +90 541 190 13 90
               </a>
             </div>
             <div>

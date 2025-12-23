@@ -66,7 +66,7 @@ export default function Footer() {
                   <FaPhone />
                 </span>
                 <a href="tel:+905411901390" className="text-beauty-300 hover:text-gold-300 transition-colors">
-                  +90 544 859 72 80
+                  +90 541 190 13 90
                 </a>
               </li>
               <li className="flex items-center">
