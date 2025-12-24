@@ -68,7 +68,7 @@ export default function Navbar() {
             <a href="https://www.instagram.com/goksum_guzellik01" target="_blank" rel="noopener noreferrer" className="hover:text-gold-300 transition-colors">
               <FaInstagram />
             </a>
-            <a href="https://wa.me/905448597280" target="_blank" rel="noopener noreferrer" className="hover:text-gold-300 transition-colors">
+            <a href="https://wa.me/905411901390" target="_blank" rel="noopener noreferrer" className="hover:text-gold-300 transition-colors">
               <FaWhatsapp />
             </a>
           </div>
@@ -220,7 +220,7 @@ export default function Navbar() {
           <a href="https://www.instagram.com/goksum_guzellik01" target="_blank" rel="noopener noreferrer" className="hover:text-gold-400 text-xl">
             <FaInstagram />
           </a>
-          <a href="https://wa.me/905448597280" target="_blank" rel="noopener noreferrer" className="hover:text-gold-400 text-xl">
+          <a href="https://wa.me/905411901390" target="_blank" rel="noopener noreferrer" className="hover:text-gold-400 text-xl">
             <FaWhatsapp />
           </a>
         </div>

@@ -305,7 +305,7 @@ export default function ContactPage() {
                         <FaInstagram size={18} />
                       </a>
                       <a 
-                        href="https://wa.me/905448597280" 
+                        href="https://wa.me/905411901390" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="w-10 h-10 rounded-full bg-beauty-100 flex items-center justify-center text-beauty-700 hover:bg-gold-500 hover:text-white transition-all"

@@ -17,7 +17,7 @@ export default function Footer() {
             <div className="flex space-x-4">
               <SocialLink href="https://www.facebook.com/profile.php?id=61574776514786" icon={<FaFacebook size={18} />} />
               <SocialLink href="https://www.instagram.com/goksum_guzellik01" icon={<FaInstagram size={18} />} />
-              <SocialLink href="https://wa.me/905448597280" icon={<FaWhatsapp size={18} />} />
+              <SocialLink href="https://wa.me/905411901390" icon={<FaWhatsapp size={18} />} />
             </div>
           </div>
 

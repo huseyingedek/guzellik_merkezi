@@ -35,7 +35,7 @@ export default function Header() {
             <Link href="https://www.instagram.com/goksum_guzellik01" target="_blank" className="hover:text-gold-300 transition-colors">
               <FaInstagram size={16} />
             </Link>
-            <Link href="https://wa.me/905448597280" target="_blank" className="hover:text-gold-300 transition-colors">
+            <Link href="https://wa.me/905411901390" target="_blank" className="hover:text-gold-300 transition-colors">
               <FaWhatsapp size={16} />
             </Link>
           </div>
@@ -128,7 +128,7 @@ export default function Header() {
                 <Link href="https://www.instagram.com/goksum_guzellik01" className="text-white hover:text-gold-300 transition-colors">
                   <FaInstagram size={24} />
                 </Link>
-                <Link href="https://wa.me/905448597280" className="text-white hover:text-gold-300 transition-colors">
+                <Link href="https://wa.me/905411901390" className="text-white hover:text-gold-300 transition-colors">
                   <FaWhatsapp size={24} />
                 </Link>
               </div>
