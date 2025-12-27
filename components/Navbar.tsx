@@ -92,10 +92,10 @@ export default function Navbar() {
           <Link href="/hakkimizda" className={`nav-link ${isActive('/hakkimizda')}`}>
             Hakkımızda
           </Link>
-          
+
           {/* Hizmetler Dropdown */}
           <div className="relative group">
-            <button 
+            <button
               className={`nav-link flex items-center ${router.pathname.startsWith('/hizmetlerimiz') ? 'text-gold-500' : ''}`}
               onClick={(e) => {
                 e.preventDefault();
@@ -104,8 +104,8 @@ export default function Navbar() {
               Hizmetlerimiz <RiArrowDownSLine className="ml-1" />
             </button>
             <div className="absolute left-0 mt-2 w-60 bg-white rounded-md shadow-lg overflow-hidden z-10 transform scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all duration-200 origin-top">
-              <Link href="/hizmetlerimiz/cilt-analizi" className="block px-4 py-2 text-sm text-beauty-900 hover:bg-beauty-100">
-                Cilt Analizi
+              <Link href="/hizmetlerimiz/protez-tirnak" className="block px-4 py-2 text-sm text-beauty-900 hover:bg-beauty-100">
+                Protez Tırnak
               </Link>
               <Link href="/hizmetlerimiz/cilt-bakimi" className="block px-4 py-2 text-sm text-beauty-900 hover:bg-beauty-100">
                 Cilt Bakımı
@@ -124,6 +124,9 @@ export default function Navbar() {
               </Link>
               <Link href="/hizmetlerimiz/sac-mezoterapi" className="block px-4 py-2 text-sm text-beauty-900 hover:bg-beauty-100">
                 Saç Mezoterapi
+              </Link>
+              <Link href="/hizmetlerimiz/cilt-analizi" className="block px-4 py-2 text-sm text-beauty-900 hover:bg-beauty-100">
+                Cilt Analizi
               </Link>
               <Link href="/hizmetlerimiz" className="block px-4 py-2 text-sm text-beauty-900 hover:bg-beauty-100 font-medium">
                 Tüm Hizmetlerimiz
@@ -149,7 +152,7 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Menu */}
-      <div 
+      <div
         className={`fixed inset-0 bg-beauty-900 z-40 flex flex-col lg:hidden transition-transform duration-300 ease-in-out ${isOpen ? 'transform translate-x-0' : 'transform translate-x-full'}`}
       >
         <div className="flex justify-end p-4">
@@ -164,10 +167,10 @@ export default function Navbar() {
           <Link href="/hakkimizda" className="text-xl font-medium hover:text-gold-400">
             Hakkımızda
           </Link>
-          
+
           {/* Mobile Dropdown */}
           <div className="relative">
-            <button 
+            <button
               className="text-xl font-medium hover:text-gold-400 flex items-center"
               onClick={toggleDropdown}
             >
@@ -175,8 +178,8 @@ export default function Navbar() {
             </button>
             {dropdownOpen && (
               <div className="mt-4 space-y-2 flex flex-col items-center">
-                <Link href="/hizmetlerimiz/cilt-analizi" className="text-lg text-beauty-300 hover:text-gold-400">
-                  Cilt Analizi
+                <Link href="/hizmetlerimiz/protez-tirnak" className="text-lg text-beauty-300 hover:text-gold-400">
+                  Protez Tırnak
                 </Link>
                 <Link href="/hizmetlerimiz/cilt-bakimi" className="text-lg text-beauty-300 hover:text-gold-400">
                   Cilt Bakımı
@@ -196,13 +199,16 @@ export default function Navbar() {
                 <Link href="/hizmetlerimiz/sac-mezoterapi" className="text-lg text-beauty-300 hover:text-gold-400">
                   Saç Mezoterapi
                 </Link>
+                <Link href="/hizmetlerimiz/cilt-analizi" className="text-lg text-beauty-300 hover:text-gold-400">
+                  Cilt Analizi
+                </Link>
                 <Link href="/hizmetlerimiz" className="text-lg text-beauty-300 hover:text-gold-400 font-medium">
                   Tüm Hizmetlerimiz
                 </Link>
               </div>
             )}
           </div>
-          
+
           <Link href="/blog" className="text-xl font-medium hover:text-gold-400">
             Blog
           </Link>

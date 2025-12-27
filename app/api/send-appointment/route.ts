@@ -36,7 +36,7 @@ export async function POST(request: Request) {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_TO || 'bilgi@goksumguzellik.com',
+      to: process.env.EMAIL_TO || 'huseyinxgedek@gmail.com',
       subject: 'Göksum Güzellik Merkezi - Yeni Randevu Talebi',
       html: emailContent,
     };

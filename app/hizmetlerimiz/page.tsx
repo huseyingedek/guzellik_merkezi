@@ -4,11 +4,11 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Güzellik Merkezi Hizmetleri | Adana\'da Profesyonel Güzellik Bakımı',
-  description: 'Adana\'nın en iyi güzellik merkezinde lazer epilasyon, cilt bakımı, kalıcı makyaj, bölgesel zayıflama ve daha fazla profesyonel güzellik hizmeti. Yüreğir\'de uygun fiyatlı güzellik hizmetleri.',
-  keywords: 'adana güzellik merkezi hizmetleri, adana lazer epilasyon fiyatları, adana cilt bakımı fiyatları, yüreğir güzellik merkezi hizmetleri, adana kalıcı makyaj, adana profesyonel güzellik bakımı',
+  description: 'Adana\'nın en iyi güzellik merkezinde lazer epilasyon, cilt bakımı, kalıcı makyaj, bölgesel zayıflama, protez tırnak ve daha fazla profesyonel güzellik hizmeti. Yüreğir\'de uygun fiyatlı güzellik hizmetleri.',
+  keywords: 'adana güzellik merkezi hizmetleri, adana lazer epilasyon fiyatları, adana cilt bakımı fiyatları, yüreğir güzellik merkezi hizmetleri, adana kalıcı makyaj, adana profesyonel güzellik bakımı, adana protez tırnak',
   openGraph: {
     title: 'Adana Güzellik Merkezi Hizmetleri | Profesyonel Güzellik Bakımı',
-    description: 'Adana Yüreğir\'de profesyonel güzellik hizmetleri. Lazer epilasyon, cilt bakımı, kalıcı makyaj ve daha fazlası için en iyi güzellik merkezi.',
+    description: 'Adana Yüreğir\'de profesyonel güzellik hizmetleri. Lazer epilasyon, cilt bakımı, kalıcı makyaj, protez tırnak ve daha fazlası için en iyi güzellik merkezi.',
     url: 'https://www.goksumguzellik.com/hizmetlerimiz',
     type: 'website',
   }
@@ -16,18 +16,20 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    id: 1,
-    title: 'Cilt Analizi',
-    description: 'Uzman estetisyenlerimiz tarafından detaylı cilt analizi yapılarak, cildinizin ihtiyaçları belirlenir. Cilt tipinize özel bakım programları oluşturulur.',
-    image: '/images/analiz_cilt.png',
+    id: 8,
+    title: 'Protez Tırnak',
+    description: 'Kalıcı ve estetik protez tırnak uygulamaları ile hem şık hem de bakımlı tırnaklara sahip olun. Kırılgan ve kısa tırnaklarınızı güçlendirin.',
+    image: '/images/protez-tirnak.jpg',
     features: [
-      'Detaylı cilt tipi analizi',
-      'Cilt problemlerinin tespiti',
-      'Kişiye özel bakım önerileri',
-      'Ürün kullanım tavsiyeleri'
+      'Kalıcı oje uygulaması',
+      'Jel tırnak uygulaması',
+      'Tırnak uzatma',
+      'Nail art ve tasarım',
+      'Protez tırnak bakımı'
     ],
-    slug: 'cilt-analizi'
+    slug: 'protez-tirnak'
   },
+
   {
     id: 2,
     title: 'Cilt Bakımı',
@@ -107,7 +109,20 @@ const services = [
       'Dökülme önleyici bakım'
     ],
     slug: 'sac-mezoterapi'
-  }
+  },
+  {
+    id: 1,
+    title: 'Cilt Analizi',
+    description: 'Uzman estetisyenlerimiz tarafından detaylı cilt analizi yapılarak, cildinizin ihtiyaçları belirlenir. Cilt tipinize özel bakım programları oluşturulur.',
+    image: '/images/analiz_cilt.png',
+    features: [
+      'Detaylı cilt tipi analizi',
+      'Cilt problemlerinin tespiti',
+      'Kişiye özel bakım önerileri',
+      'Ürün kullanım tavsiyeleri'
+    ],
+    slug: 'cilt-analizi'
+  },
 ];
 
 export default function ServicesPage() {
@@ -226,4 +241,4 @@ export default function ServicesPage() {
       </section>
     </>
   );
-} 
+}

@@ -2,9 +2,11 @@ import { FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link';
 
 export default function FloatingWhatsApp() {
-  const message = "Merhaba, web sitenizden ulaşıyorum. Güzellik hizmetleriniz hakkında bilgi almak istiyorum.";
+  const message = `Merhaba, web sitenizden ulaşıyorum.
+Cilt bakımı, Protez tırnak, Bölgesel incelme, Lazer epilasyon, Kalıcı makyaj, Saç mezoterapisi ve Leke tedavisi hizmetleriniz hakkında detaylı bilgi ve fiyat alabilir miyim? ✨`;
+
   const encodedMessage = encodeURIComponent(message);
-  
+
   return (
     <Link
       href={`https://wa.me/905411901390?text=${encodedMessage}`}
@@ -16,4 +18,4 @@ export default function FloatingWhatsApp() {
       <FaWhatsapp className="text-white" size={28} />
     </Link>
   );
-} 
+}

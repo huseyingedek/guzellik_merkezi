@@ -13,6 +13,54 @@ import { Button } from '@/components/ui/button';
 // Hizmetler veritabanı
 const services = [
   {
+    id: 8,
+    title: 'Protez Tırnak',
+    description: 'Kalıcı ve estetik protez tırnak uygulamaları ile hem şık hem de bakımlı tırnaklara sahip olun. Kırılgan ve kısa tırnaklarınızı güçlendirin.',
+    image: '/images/protez-tirnak.png',
+    longDescription: `
+      Göksum Güzellik Merkezi'nde sunduğumuz profesyonel protez tırnak uygulamaları, tırnaklarınızı güçlendirirken şık ve bakımlı bir görünüm sağlar.
+      
+      Kalıcı oje, jel tırnak ve protez tırnak uygulamalarımızda, tırnak sağlığınıza zarar vermeden uzun süreli dayanıklılık ve estetik bir görünüm sunuyoruz. Uzman tırnak teknisyenlerimiz, en son trendleri takip ederek size özel tasarımlar yaratır.
+      
+      Kırılgan, kısa veya hasarlı tırnaklarınızı güçlendirmek, uzatmak veya sadece şık bir görünüm elde etmek için protez tırnak uygulamalarımızı tercih edebilirsiniz.
+    `,
+    features: [
+      'Kalıcı oje uygulaması',
+      'Jel tırnak uygulaması',
+      'Tırnak uzatma',
+      'Nail art ve tasarım',
+      'Protez tırnak bakımı',
+      'French manikür',
+      'Ombre ve gradient teknikler',
+      'Taş ve süsleme uygulamaları'
+    ],
+    benefits: [
+      'Uzun süre dayanıklı tırnaklar',
+      'Kırılgan tırnakların güçlenmesi',
+      'Kısa tırnakların uzatılması',
+      'Şık ve bakımlı görünüm',
+      'Çeşitli renk ve tasarım seçenekleri',
+      'Su ve deterjanla bozulmayan yapı'
+    ],
+    faq: [
+      {
+        question: 'Protez tırnak ne kadar süre dayanır?',
+        answer: 'Bakım ve kullanıma bağlı olarak, jel tırnak uygulamaları 3-4 hafta, kalıcı oje ise 2-3 hafta dayanabilir. Düzenli dolgu ile bu süre uzatılabilir.'
+      },
+      {
+        question: 'Protez tırnak doğal tırnağa zarar verir mi?',
+        answer: 'Profesyonel uygulama ve doğru bakım ile protez tırnak, doğal tırnağınıza zarar vermez. Aksine kırılgan tırnakları korur ve güçlendirir.'
+      },
+      {
+        question: 'Protez tırnak bakımı nasıl yapılmalıdır?',
+        answer: 'Tırnaklarınızı aşırı kimyasal maddelerden koruyun, eldiven kullanın ve düzenli olarak tırnak bakım kremlerinizi uygulayın. Çatlak veya kırık varsa hemen tamir ettirin.'
+      }
+    ],
+    duration: '60-120 dakika',
+    price: '₺400 - ₺1200 (Uygulamaya Göre Değişir)',
+    slug: 'protez-tirnak'
+  },
+  {
     id: 1,
     title: 'Cilt Analizi',
     description: 'Uzman estetisyenlerimiz tarafından detaylı cilt analizi yapılarak, cildinizin ihtiyaçları belirlenir. Cilt tipinize özel bakım programları oluşturulur.',
@@ -198,6 +246,7 @@ const services = [
     duration: '40-60 dakika',
     price: '₺500 - ₺1000 (Bölgeye Göre Değişir)',
     slug: 'bolgesel-zayiflama'
+  
   },
   {
     id: 5,
@@ -341,7 +390,8 @@ const services = [
     duration: '30-45 dakika',
     price: '₺800 - ₺1500 (Uygulama Alanına Göre Değişir)',
     slug: 'sac-mezoterapi'
-  }
+  },
+  
 ];
 
 // Dynamic metadata

@@ -41,7 +41,7 @@ export default function ContactPage() {
       const formData = new FormData(formElement);
       
       // FormSubmit.co API'ye doğrudan AJAX çağrısı yap
-      const response = await fetch('https://formsubmit.co/ajax/bilgi@goksumguzellik.com', {
+      const response = await fetch('https://formsubmit.co/ajax/huseyinxgedek@gmail.com', {
         method: 'POST',
         body: formData,
         headers: {
@@ -283,7 +283,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold text-beauty-800 mb-1">E-posta</h3>
                         <a 
-                          href="mailto:bilgi@goksumguzellik.com" 
+                          href="mailto:huseyinxgedek@gmail.com" 
                           className="text-beauty-600 hover:text-gold-500 transition-colors"
                         >
                           bilgi@goksumguzellik.com

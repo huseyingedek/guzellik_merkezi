@@ -25,13 +25,14 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-display font-bold text-gold-300 mb-4">Hizmetlerimiz</h3>
             <ul className="space-y-2">
-              <FooterLink href="/hizmetlerimiz/cilt-analizi" text="Cilt Analizi" />
               <FooterLink href="/hizmetlerimiz/cilt-bakimi" text="Cilt Bakımı" />
+              <FooterLink href="/hizmetlerimiz/protez-tirnak" text="Protez Tırnak" />
               <FooterLink href="/hizmetlerimiz/lazer-epilasyon" text="Lazer Epilasyon" />
               <FooterLink href="/hizmetlerimiz/bolgesel-zayiflama" text="Bölgesel Zayıflama" />
               <FooterLink href="/hizmetlerimiz/kalici-makyaj" text="Kalıcı Makyaj" />
               <FooterLink href="/hizmetlerimiz/leke-tedavi" text="Leke Tedavi" />
               <FooterLink href="/hizmetlerimiz/sac-mezoterapi" text="Saç Mezoterapi" />
+              <FooterLink href="/hizmetlerimiz/cilt-analizi" text="Cilt Analizi" />
             </ul>
           </div>
 
@@ -73,7 +74,7 @@ export default function Footer() {
                 <span className="text-gold-400 mr-3">
                   <FaEnvelope />
                 </span>
-                <a href="mailto:bilgi@goksumguzellik.com" className="text-beauty-300 hover:text-gold-300 transition-colors">
+                <a href="mailto:huseyinxgedek@gmail.com" className="text-beauty-300 hover:text-gold-300 transition-colors">
                   bilgi@goksumguzellik.com
                 </a>
               </li>

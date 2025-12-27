@@ -5,10 +5,10 @@ import Image from 'next/image';
 const services = [
   {
     id: 1,
-    name: 'Cilt Analizi',
-    description: 'Uzman estetisyenlerimiz tarafından yapılan detaylı cilt analizi ile cildinizin ihtiyaçlarını belirleyin.',
-    icon: '/images/analiz_cilt.png',
-    link: '/hizmetlerimiz/cilt-analizi',
+    name: 'Protez Tırnak',
+    description: 'Kalıcı ve estetik protez tırnak uygulamaları ile hem şık hem de bakımlı tırnaklara sahip olun. Kırılgan ve kısa tırnaklarınızı güçlendirin.',
+    icon: '/images/protez-tirnak.jpg',
+    link: '/hizmetlerimiz/protez-tirnak',
   },
   {
     id: 2,

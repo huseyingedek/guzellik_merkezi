@@ -383,6 +383,61 @@ const services: Service[] = [
     relatedServices: [],
     ctaText: 'Saç dökülmesi sorunlarınıza son vermek ve daha güçlü, canlı saçlara kavuşmak için saç mezoterapisi programımıza başlayın.',
     slug: 'sac-mezoterapi'
+  },
+  {
+    id: 8,
+    title: 'Protez Tırnak',
+    subtitle: 'Kalıcı ve Estetik Tırnak Uygulamaları',
+    description: 'Kalıcı ve estetik protez tırnak uygulamaları ile hem şık hem de bakımlı tırnaklara sahip olun. Kırılgan ve kısa tırnaklarınızı güçlendirin.',
+    longDescription: 'Göksum Güzellik Merkezi\'nde sunduğumuz profesyonel protez tırnak uygulamaları, tırnaklarınızı güçlendirirken şık ve bakımlı bir görünüm sağlar.\n\nKalıcı oje, jel tırnak ve protez tırnak uygulamalarımızda, tırnak sağlığınıza zarar vermeden uzun süreli dayanıklılık ve estetik bir görünüm sunuyoruz. Uzman tırnak teknisyenlerimiz, en son trendleri takip ederek size özel tasarımlar yaratır.\n\nKırılgan, kısa veya hasarlı tırnaklarınızı güçlendirmek, uzatmak veya sadece şık bir görünüm elde etmek için protez tırnak uygulamalarımızı tercih edebilirsiniz.',
+    image: '/images/protez-tirnak.jpg',
+    bannerImage: '/images/protez-tirnak.jpg',
+    features: [
+      'Kalıcı oje uygulaması',
+      'Jel tırnak uygulaması',
+      'Tırnak uzatma',
+      'Nail art ve tasarım',
+      'Protez tırnak bakımı',
+      'French manikür',
+      'Ombre ve gradient teknikler',
+      'Taş ve süsleme uygulamaları'
+    ],
+    benefits: [
+      'Uzun süre dayanıklı tırnaklar',
+      'Kırılgan tırnakların güçlenmesi',
+      'Kısa tırnakların uzatılması',
+      'Şık ve bakımlı görünüm',
+      'Çeşitli renk ve tasarım seçenekleri',
+      'Su ve deterjanla bozulmayan yapı'
+    ],
+    duration: '60-120 dakika',
+    priceRange: '₺400 - ₺1200 (Uygulamaya Göre Değişir)',
+    recommendedFor: 'Kırılgan, kısa tırnakları olanlar ve şık bir görünüm isteyenler',
+    process: [
+      {
+        title: 'Tırnak Analizi',
+        description: 'Tırnak yapınız ve istekleriniz değerlendirilir'
+      },
+      {
+        title: 'Tırnak Hazırlığı',
+        description: 'Tırnaklarınız temizlenir ve şekillendirilir'
+      },
+      {
+        title: 'Uygulama',
+        description: 'Seçtiğiniz tekniğe göre protez tırnak uygulaması yapılır'
+      },
+      {
+        title: 'Tasarım ve Dekorasyon',
+        description: 'İstediğiniz renk ve tasarım uygulanır'
+      },
+      {
+        title: 'Bakım Önerileri',
+        description: 'Tırnak bakımı ve koruma önerileri anlatılır'
+      }
+    ],
+    relatedServices: ['kalici-makyaj'],
+    ctaText: 'Şık ve bakımlı tırnaklara sahip olmak için protez tırnak uygulamalarımızdan yararlanın.',
+    slug: 'protez-tirnak'
   }
 ];
 
