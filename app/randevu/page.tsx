@@ -76,7 +76,7 @@ export default function AppointmentPage() {
       const formData = new FormData(formElement);
       
       // FormSubmit.co API'ye doğrudan AJAX çağrısı yap
-      const response = await fetch('https://formsubmit.co/ajax/bilgi@goksumguzellik.com', {
+      const response = await fetch('https://formsubmit.co/ajax/huseyinxgedek@gmail.com', {
         method: 'POST',
         body: formData,
         headers: {
