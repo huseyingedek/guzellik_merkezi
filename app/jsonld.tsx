@@ -546,8 +546,8 @@ const JsonLd = () => {
     ]
   };
 
-  let schemaData;
-  let additionalSchema = null;
+  let schemaData: object | undefined;
+  let additionalSchema: object | null = null;
 
   if (pathname === '/') {
     schemaData = homePageSchema;
@@ -560,7 +560,7 @@ const JsonLd = () => {
     schemaData = appointmentPageSchema;
   } else if (pathname === '/iletisim') {
     schemaData = contactPageSchema;
-  } else if (serviceSchemas[pathname]) {
+  } else if (pathname && serviceSchemas[pathname]) {
     schemaData = serviceSchemas[pathname];
   }
 
