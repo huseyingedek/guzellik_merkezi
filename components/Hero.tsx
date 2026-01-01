@@ -24,11 +24,11 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="text-center lg:text-left">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4">
-              <span className="block mb-2">Güzelliğinize</span>
-              <span className="text-gold-400">Profesyonel Dokunuş</span>
+              <span className="block mb-2">Adana Seyhan'ın En İyi</span>
+              <span className="text-gold-400">Güzellik Merkezi</span>
             </h1>
             <p className="text-base md:text-lg text-white/90 mb-6 max-w-xl mx-auto lg:mx-0">
-              Göksum Güzellik Merkezi'nde kendinizi yenileyin. Cilt analizi, bölgesel zayıflama, lazer epilasyon ve leke tedavisiyle güzelliğinizi ortaya çıkarın.
+              Göksum Güzellik Merkezi'nde kendinizi yenileyin. Protez tırnak, lazer epilasyon, cilt bakımı, kalıcı makyaj ve bölgesel zayıflama hizmetleri ile güzelliğinize güzellik katın.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
               <Link

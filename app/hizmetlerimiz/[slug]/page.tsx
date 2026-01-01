@@ -394,6 +394,50 @@ const services = [
   
 ];
 
+// SEO keyword mappings for each service
+const serviceSeoData: Record<string, { title: string; description: string; keywords: string }> = {
+  'protez-tirnak': {
+    title: 'Adana En İyi Protez Tırnak | Jel Tırnak, Kalıcı Oje - Göksum Güzellik',
+    description: 'Adana Seyhan\'da en iyi protez tırnak uygulaması. Jel tırnak, kalıcı oje, nail art ve tırnak uzatma hizmetleri. Profesyonel tırnak teknisyenleri ile şık ve bakımlı tırnaklara kavuşun. Göksum Güzellik Merkezi.',
+    keywords: 'adana protez tırnak, adana en iyi protez tırnak, seyhan protez tırnak, adana jel tırnak, adana kalıcı oje, adana nail art, adana tırnak salonu, adana tırnak uzatma'
+  },
+  'lazer-epilasyon': {
+    title: 'Adana En İyi Lazer Epilasyon | Kalıcı Tüy Azaltma - Göksum Güzellik',
+    description: 'Adana Seyhan\'da en iyi lazer epilasyon hizmeti. Alexandrite ve Diode lazer teknolojisi ile kalıcı tüy azaltma. Tüm vücut, yüz, bikini bölgesi uygulamaları. Göksum Güzellik Merkezi.',
+    keywords: 'adana lazer epilasyon, adana en iyi lazer epilasyon, seyhan lazer epilasyon, adana alexandrite lazer, adana lazer epilasyon fiyatları, adana kalıcı epilasyon'
+  },
+  'cilt-bakimi': {
+    title: 'Adana En İyi Cilt Bakımı | Profesyonel Cilt Bakımı - Göksum Güzellik',
+    description: 'Adana Seyhan\'da en iyi cilt bakımı hizmeti. Hydrafacial, akne bakımı, anti-aging ve leke giderici bakımlar. Profesyonel ürünlerle cildinizi yenileyin. Göksum Güzellik Merkezi.',
+    keywords: 'adana cilt bakımı, adana en iyi cilt bakımı, seyhan cilt bakımı, adana hydrafacial, adana akne bakımı, adana profesyonel cilt bakımı'
+  },
+  'kalici-makyaj': {
+    title: 'Adana En İyi Kalıcı Makyaj | Microblading, Kaş Kontür - Göksum Güzellik',
+    description: 'Adana Seyhan\'da en iyi kalıcı makyaj uygulaması. Microblading, kaş kontür, dudak kontür ve eyeliner. Doğal görünümlü kalıcı makyaj için Göksum Güzellik Merkezi.',
+    keywords: 'adana kalıcı makyaj, adana en iyi kalıcı makyaj, seyhan kalıcı makyaj, adana microblading, adana kaş kontür, adana dudak kontür'
+  },
+  'bolgesel-zayiflama': {
+    title: 'Adana Bölgesel Zayıflama | Kavitasyon, Selülit Tedavisi - Göksum Güzellik',
+    description: 'Adana Seyhan\'da profesyonel bölgesel zayıflama hizmeti. Kavitasyon, RF lipoliz, selülit giderme ve vücut şekillendirme. İnatçı yağlara son! Göksum Güzellik Merkezi.',
+    keywords: 'adana bölgesel zayıflama, adana kavitasyon, adana selülit tedavisi, seyhan zayıflama, adana vücut şekillendirme'
+  },
+  'leke-tedavi': {
+    title: 'Adana Leke Tedavisi | Cilt Lekesi Giderme - Göksum Güzellik',
+    description: 'Adana Seyhan\'da profesyonel leke tedavisi. Güneş lekesi, akne lekesi ve melazma tedavisi. Kimyasal peeling ve aydınlatıcı bakımlar. Göksum Güzellik Merkezi.',
+    keywords: 'adana leke tedavisi, adana cilt lekesi giderme, seyhan leke tedavisi, adana melazma tedavisi, adana akne lekesi tedavisi'
+  },
+  'sac-mezoterapi': {
+    title: 'Adana Saç Mezoterapisi | Saç Dökülmesi Tedavisi - Göksum Güzellik',
+    description: 'Adana Seyhan\'da saç mezoterapisi hizmeti. Saç dökülmesi tedavisi, saç güçlendirme ve yeni saç çıkışını teşvik. Vitamin kokteylleri ile sağlıklı saçlar. Göksum Güzellik Merkezi.',
+    keywords: 'adana saç mezoterapisi, adana saç dökülmesi tedavisi, seyhan saç mezoterapisi, adana saç güçlendirme'
+  },
+  'cilt-analizi': {
+    title: 'Adana Cilt Analizi | Profesyonel Cilt Değerlendirmesi - Göksum Güzellik',
+    description: 'Adana Seyhan\'da ücretsiz cilt analizi. Modern cilt analiz cihazları ile cildinizin ihtiyaçlarını belirleyin. Kişiye özel bakım programı. Göksum Güzellik Merkezi.',
+    keywords: 'adana cilt analizi, adana ücretsiz cilt analizi, seyhan cilt analizi, adana cilt tipi belirleme'
+  }
+};
+
 // Dynamic metadata
 export async function generateMetadata({
   params,
@@ -409,14 +453,28 @@ export async function generateMetadata({
     };
   }
 
+  const seoData = serviceSeoData[service.slug];
+  
   return {
-    title: `${service.title} | Adana Göksum Güzellik`,
-    description: service.description,
+    title: seoData?.title || `${service.title} | Adana Seyhan - Göksum Güzellik`,
+    description: seoData?.description || `Adana Seyhan'da profesyonel ${service.title.toLowerCase()} hizmeti. ${service.description} Göksum Güzellik Merkezi.`,
+    keywords: seoData?.keywords || `adana ${service.title.toLowerCase()}, seyhan ${service.title.toLowerCase()}`,
     openGraph: {
-      title: `${service.title} | Adana'nın En İyi Güzellik Hizmetleri`,
-      description: service.description,
+      title: seoData?.title || `${service.title} | Adana Seyhan - Göksum Güzellik`,
+      description: seoData?.description || service.description,
       url: `https://www.goksumguzellik.com/hizmetlerimiz/${service.slug}`,
       type: 'website',
+      images: [
+        {
+          url: `https://www.goksumguzellik.com${service.image}`,
+          width: 1200,
+          height: 630,
+          alt: `${service.title} - Göksum Güzellik Merkezi Adana`,
+        },
+      ],
+    },
+    alternates: {
+      canonical: `https://www.goksumguzellik.com/hizmetlerimiz/${service.slug}`,
     },
   };
 }

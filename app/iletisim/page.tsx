@@ -23,10 +23,10 @@ export default function ContactPage() {
   const [showPopup, setShowPopup] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { id, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: value,
+      [id]: value,
     }));
   };
 
@@ -37,14 +37,24 @@ export default function ContactPage() {
     setSubmissionStatus(null);
     
     try {
-      // Form verilerini topla
-      const formElement = e.currentTarget;
-      const formData = new FormData(formElement);
+      // FormSubmit'e Türkçe alan adlarıyla gönder
+      const submitData = new FormData();
+      submitData.append('Ad Soyad', formData.name);
+      submitData.append('Telefon', formData.phone);
+      if (formData.email) {
+        submitData.append('E-posta', formData.email);
+      }
+      if (formData.service) {
+        submitData.append('Hizmet', formData.service);
+      }
+      submitData.append('Mesaj', formData.message);
+      submitData.append('_subject', 'Göksum Güzellik - Yeni İletişim Mesajı');
+      submitData.append('_template', 'table');
+      submitData.append('_captcha', 'false');
       
-      // FormSubmit.co API'ye doğrudan AJAX çağrısı yap
       const response = await fetch('https://formsubmit.co/ajax/goksumguzellik796@gmail.com', {
         method: 'POST',
-        body: formData,
+        body: submitData,
         headers: {
           'Accept': 'application/json'
         }
@@ -123,9 +133,7 @@ export default function ContactPage() {
                     onSubmit={handleSubmit}
                     className="grid grid-cols-1 gap-4 mt-4"
                   >
-                    {/* FormSubmit.co için gizli alanlar */}
-                    <input type="hidden" name="_subject" value="Göksum Güzellik Merkezi - İletişim Formu" />
-                    <input type="hidden" name="_template" value="table" />
+                    {/* Spam koruması */}
                     <input type="text" name="_honey" style={{ display: 'none' }} />
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -136,7 +144,7 @@ export default function ContactPage() {
                         <input 
                           type="text" 
                           id="name" 
-                          name="name"
+                          name="Ad Soyad"
                           value={formData.name}
                           onChange={handleChange}
                           required
@@ -151,7 +159,7 @@ export default function ContactPage() {
                         <input 
                           type="tel" 
                           id="phone" 
-                          name="phone"
+                          name="Telefon"
                           value={formData.phone}
                           onChange={handleChange}
                           required
@@ -166,7 +174,7 @@ export default function ContactPage() {
                       <input 
                         type="email" 
                         id="email" 
-                        name="email"
+                        name="E-posta"
                         value={formData.email}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-beauty-200 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all"
@@ -178,7 +186,7 @@ export default function ContactPage() {
                       <label htmlFor="service" className="block text-beauty-700 font-medium mb-2">Hizmet</label>
                       <select
                         id="service"
-                        name="service"
+                        name="Hizmet"
                         value={formData.service}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-beauty-200 rounded-lg focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all"
@@ -199,7 +207,7 @@ export default function ContactPage() {
                       </label>
                       <textarea 
                         id="message" 
-                        name="message"
+                        name="Mesaj"
                         value={formData.message}
                         onChange={handleChange}
                         rows={3}

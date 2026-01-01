@@ -1,9 +1,38 @@
-# *
+# Göksum Güzellik Merkezi - Adana Seyhan
+# https://www.goksumguzellik.com
+
 User-agent: *
 Allow: /
+
+# Ana sayfalar
+Allow: /hizmetlerimiz/
+Allow: /hakkimizda
+Allow: /iletisim
+Allow: /randevu
+Allow: /blog/
+Allow: /yorumlar
+
+# Hizmet sayfaları - Önemli SEO sayfaları
+Allow: /hizmetlerimiz/protez-tirnak
+Allow: /hizmetlerimiz/lazer-epilasyon
+Allow: /hizmetlerimiz/cilt-bakimi
+Allow: /hizmetlerimiz/kalici-makyaj
+Allow: /hizmetlerimiz/bolgesel-zayiflama
+Allow: /hizmetlerimiz/leke-tedavi
+Allow: /hizmetlerimiz/sac-mezoterapi
+Allow: /hizmetlerimiz/cilt-analizi
+
+# Engellenen sayfalar
+Disallow: /api/
+Disallow: /_next/
+Disallow: /thank-you
+
+# Crawl delay (arama motorlarının sunucuya aşırı yük bindirmemesi için)
+Crawl-delay: 1
 
 # Host
 Host: https://www.goksumguzellik.com
 
 # Sitemaps
 Sitemap: https://www.goksumguzellik.com/sitemap.xml
+Sitemap: https://www.goksumguzellik.com/sitemap-0.xml

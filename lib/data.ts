@@ -31,9 +31,9 @@ const services: Service[] = [
   {
     id: 1,
     title: 'Cilt Analizi',
-    subtitle: 'Profesyonel Cilt Değerlendirmesi',
-    description: 'Uzman estetisyenlerimiz tarafından detaylı cilt analizi yapılarak, cildinizin ihtiyaçları belirlenir. Cilt tipinize özel bakım programları oluşturulur.',
-    longDescription: 'Göksum Güzellik\'te yapılan detaylı cilt analizi, cilt sağlığınızın mevcut durumunu değerlendirmek ve size özel bakım planları oluşturmak için önemli bir adımdır. Modern cihazlarımız ve uzman ekibimiz ile cildinizin tipini, nem seviyesini, elastikiyetini, gözenek yapısını ve olası sorunları tespit ederek en uygun bakım ve tedavi yöntemlerini belirleriz.',
+    subtitle: 'Adana\'da Ücretsiz Cilt Analizi',
+    description: 'Adana Seyhan\'da ücretsiz profesyonel cilt analizi. Modern cihazlarla cildinizin ihtiyaçlarını belirleyin. Kişiye özel bakım programı.',
+    longDescription: 'Adana Seyhan\'da bulunan Göksum Güzellik Merkezi\'nde yapılan detaylı cilt analizi, cilt sağlığınızın mevcut durumunu değerlendirmek ve size özel bakım planları oluşturmak için önemli bir adımdır. Modern cilt analiz cihazlarımız ve uzman ekibimiz ile cildinizin tipini, nem seviyesini, elastikiyetini, gözenek yapısını ve olası sorunları tespit ederek en uygun bakım ve tedavi yöntemlerini belirleriz.',
     image: '/images/analiz_cilt.png',
     bannerImage: '/images/hero1.jpg',
     features: [
@@ -80,9 +80,9 @@ const services: Service[] = [
   {
     id: 2,
     title: 'Cilt Bakımı',
-    subtitle: 'Profesyonel Cilt Bakım Uygulamaları',
-    description: 'Cildinizin ihtiyaçlarına göre özel olarak hazırlanan bakım programları ile daha canlı, daha sağlıklı bir cilde kavuşun.',
-    longDescription: 'Göksum Güzellik\'te sunduğumuz profesyonel cilt bakımı hizmetleri, cildinizin ihtiyaçlarına göre özel olarak tasarlanır. Klasik cilt bakımından akne tedavisine, anti-aging bakımdan leke giderici uygulamalara kadar geniş bir yelpazede hizmet sunuyoruz. Kullandığımız kaliteli ürünler ve modern teknolojiler sayesinde, cildinizin en iyi haline kavuşmasına yardımcı oluyoruz.',
+    subtitle: 'Adana\'nın En İyi Cilt Bakımı Merkezi',
+    description: 'Adana Seyhan\'da en iyi cilt bakımı hizmeti. Hydrafacial, akne bakımı, anti-aging ve leke giderici bakımlar. Profesyonel ürünlerle cildinizi yenileyin.',
+    longDescription: 'Adana Seyhan\'da bulunan Göksum Güzellik Merkezi\'nde sunduğumuz profesyonel cilt bakımı hizmetleri, cildinizin ihtiyaçlarına göre özel olarak tasarlanır. Adana\'nın en iyi cilt bakımı merkezi olarak, klasik cilt bakımından akne tedavisine, hydrafacial\'dan anti-aging bakıma, leke giderici uygulamalara kadar geniş bir yelpazede hizmet sunuyoruz. Kullandığımız kaliteli ürünler ve modern teknolojiler sayesinde, cildinizin en iyi haline kavuşmasına yardımcı oluyoruz.',
     image: '/images/hero1.jpg',
     bannerImage: '/images/hero1.jpg',
     features: [
@@ -136,9 +136,9 @@ const services: Service[] = [
   {
     id: 3,
     title: 'Lazer Epilasyon',
-    subtitle: 'Kalıcı Tüy Azaltma Çözümü',
-    description: 'Son teknoloji lazer epilasyon cihazlarımız ile istenmeyen tüylerden kalıcı olarak kurtulun. Seans aralarında kısa süreler ve etkili sonuçlar.',
-    longDescription: 'Göksum Güzellik\'te kullandığımız son teknoloji lazer epilasyon cihazları, istenmeyen tüylerden kalıcı olarak kurtulmanızı sağlar. Farklı cilt ve tüy tiplerine uygun lazer sistemlerimiz ile güvenli ve etkili sonuçlar elde ederiz. Uzman ekibimiz, minimum acı ve maksimum konfor ile işleminizi gerçekleştirir.',
+    subtitle: 'Adana\'nın En İyi Lazer Epilasyon Merkezi',
+    description: 'Adana Seyhan\'da en iyi lazer epilasyon hizmeti. Alexandrite ve Diode lazer teknolojisi ile kalıcı tüy azaltma. Uygun fiyatlar ve profesyonel ekip.',
+    longDescription: 'Adana Seyhan\'da bulunan Göksum Güzellik Merkezi\'nde kullandığımız son teknoloji Alexandrite ve Diode lazer epilasyon cihazları, istenmeyen tüylerden kalıcı olarak kurtulmanızı sağlar. Adana\'nın en iyi lazer epilasyon merkezi olarak, farklı cilt ve tüy tiplerine uygun lazer sistemlerimiz ile güvenli ve etkili sonuçlar elde ederiz. Uzman ekibimiz, minimum acı ve maksimum konfor ile işleminizi gerçekleştirir.',
     image: '/images/lazerr.png',
     bannerImage: '/images/lazerr.png',
     features: [
@@ -186,9 +186,9 @@ const services: Service[] = [
   {
     id: 4,
     title: 'Bölgesel Zayıflama',
-    subtitle: 'Etkili İncelme Çözümleri',
-    description: 'Modern zayıflama teknolojileri ile vücudunuzda bölgesel incelme sağlayın. İnatçı yağlardan kurtularak daha fit bir görünüme kavuşun.',
-    longDescription: 'Göksum Güzellik\'te sunduğumuz bölgesel zayıflama ve incelme tedavileri, diyet ve egzersizle çözülemeyen inatçı yağ bölgelerini hedefler. Kavitasyon, RF lipoliz, soğuk lipoliz gibi teknolojiler kullanarak hücre düzeyinde yağ yakımını tetikler, selülit görünümünü azaltır ve vücut hatlarınızı şekillendiririz.',
+    subtitle: 'Adana\'da Profesyonel Bölgesel Zayıflama',
+    description: 'Adana Seyhan\'da profesyonel bölgesel zayıflama. Kavitasyon, RF lipoliz ve selülit giderme uygulamaları ile inatçı yağlara son verin.',
+    longDescription: 'Adana Seyhan\'da bulunan Göksum Güzellik Merkezi\'nde sunduğumuz bölgesel zayıflama ve incelme tedavileri, diyet ve egzersizle çözülemeyen inatçı yağ bölgelerini hedefler. Kavitasyon, RF lipoliz, soğuk lipoliz gibi teknolojiler kullanarak hücre düzeyinde yağ yakımını tetikler, selülit görünümünü azaltır ve vücut hatlarınızı şekillendiririz.',
     image: '/images/zayıflama.png',
     bannerImage: '/images/zayıflama.png',
     features: [
@@ -236,9 +236,9 @@ const services: Service[] = [
   {
     id: 5,
     title: 'Kalıcı Makyaj',
-    subtitle: 'Uzun Süreli Güzellik Çözümü',
-    description: 'Göz, kaş ve dudak için kalıcı makyaj uygulamaları ile her gün makyaj yapma derdinden kurtulun, zamandan tasarruf edin.',
-    longDescription: 'Göksum Güzellik\'te uygulanan kalıcı makyaj hizmetleri, profesyonel ekibimiz tarafından hijyenik ortamda gerçekleştirilir. Kaş, eyeliner, dipliner ve dudak kontürü gibi uygulamalarla doğal görünümlü, uzun süreli güzellik çözümleri sunuyoruz. Özel pigmentler ve modern teknikler kullanarak sizin için en uygun şekil ve rengi belirliyor, her sabah makyaj yapma ihtiyacınızı ortadan kaldırıyoruz.',
+    subtitle: 'Adana\'nın En İyi Kalıcı Makyaj Merkezi',
+    description: 'Adana Seyhan\'da en iyi kalıcı makyaj uygulaması. Microblading, kaş kontür, dudak kontür ve eyeliner. Doğal görünümlü kalıcı makyaj.',
+    longDescription: 'Adana Seyhan\'da bulunan Göksum Güzellik Merkezi\'nde uygulanan kalıcı makyaj hizmetleri, profesyonel ekibimiz tarafından hijyenik ortamda gerçekleştirilir. Adana\'nın en iyi kalıcı makyaj merkezi olarak, microblading, kaş kontür, eyeliner, dipliner ve dudak kontürü gibi uygulamalarla doğal görünümlü, uzun süreli güzellik çözümleri sunuyoruz. Özel pigmentler ve modern teknikler kullanarak sizin için en uygun şekil ve rengi belirliyor, her sabah makyaj yapma ihtiyacınızı ortadan kaldırıyoruz.',
     image: '/images/makyaj.png',
     bannerImage: '/images/makyaj.png',
     features: [
@@ -286,9 +286,9 @@ const services: Service[] = [
   {
     id: 6,
     title: 'Leke Tedavi',
-    subtitle: 'Eşit Tonda Pürüzsüz Cilt',
-    description: 'Yüzünüzdeki lekeleri, güneş hasarlarını ve pigmentasyon sorunlarını etkili tedavi yöntemlerimizle giderin. Daha pürüzsüz ve eşit tonda bir cilde kavuşun.',
-    longDescription: 'Göksum Güzellik\'te leke tedavisi için kullandığımız ileri teknolojiler ve aktif içerikli ürünler, farklı tiplerdeki cilt lekelerini hedefler. Akne izleri, güneş lekeleri, melazma veya hormonal pigmentasyonlar için özel protokoller uygulayarak cildinizin ton eşitliğini sağlıyoruz. Kişiselleştirilmiş tedavi planlarımız, cildinizin ihtiyaçlarına göre cihaz ve kimyasal peeling kombinasyonlarından oluşur.',
+    subtitle: 'Adana\'da Profesyonel Leke Tedavisi',
+    description: 'Adana Seyhan\'da profesyonel leke tedavisi. Güneş lekesi, akne lekesi ve melazma tedavisi. Kimyasal peeling ve aydınlatıcı bakımlar.',
+    longDescription: 'Adana Seyhan\'da bulunan Göksum Güzellik Merkezi\'nde leke tedavisi için kullandığımız ileri teknolojiler ve aktif içerikli ürünler, farklı tiplerdeki cilt lekelerini hedefler. Akne izleri, güneş lekeleri, melazma veya hormonal pigmentasyonlar için özel protokoller uygulayarak cildinizin ton eşitliğini sağlıyoruz. Kişiselleştirilmiş tedavi planlarımız, cildinizin ihtiyaçlarına göre cihaz ve kimyasal peeling kombinasyonlarından oluşur.',
     image: '/images/leketedavi.png',
     bannerImage: '/images/leketedavi.png',
     features: [
@@ -337,9 +337,9 @@ const services: Service[] = [
   {
     id: 7,
     title: 'Saç Mezoterapi',
-    subtitle: 'Doğal Saç Güçlendirme Yöntemi',
-    description: 'Saç dökülmesi ve seyrelmesi sorunlarına karşı etkili mezoterapi yöntemiyle doğal ve güçlü saçlara kavuşun. Saç köklerinizi canlandırın.',
-    longDescription: 'Göksum Güzellik\'te uygulanan saç mezoterapisi, saç dökülmesini durdurma ve saç büyümesini teşvik etme amacı taşır. Saç derisine vitamin, mineral, amino asit ve büyüme faktörleri içeren özel kokteyller mikroenjeksiyon yöntemiyle uygulanır. Bu yöntem saç köklerini besler, kan dolaşımını artırır ve saç foliküllerini yeniden aktif hale getirir.',
+    subtitle: 'Adana\'da Saç Dökülmesi Tedavisi',
+    description: 'Adana Seyhan\'da profesyonel saç mezoterapisi. Saç dökülmesi tedavisi, saç güçlendirme ve yeni saç çıkışını teşvik. Vitamin kokteylleri ile sağlıklı saçlar.',
+    longDescription: 'Adana Seyhan\'da bulunan Göksum Güzellik Merkezi\'nde uygulanan saç mezoterapisi, saç dökülmesini durdurma ve saç büyümesini teşvik etme amacı taşır. Saç derisine vitamin, mineral, amino asit ve büyüme faktörleri içeren özel kokteyller mikroenjeksiyon yöntemiyle uygulanır. Bu yöntem saç köklerini besler, kan dolaşımını artırır ve saç foliküllerini yeniden aktif hale getirir.',
     image: '/images/sac.png',
     bannerImage: '/images/sac.png',
     features: [
@@ -387,9 +387,9 @@ const services: Service[] = [
   {
     id: 8,
     title: 'Protez Tırnak',
-    subtitle: 'Kalıcı ve Estetik Tırnak Uygulamaları',
-    description: 'Kalıcı ve estetik protez tırnak uygulamaları ile hem şık hem de bakımlı tırnaklara sahip olun. Kırılgan ve kısa tırnaklarınızı güçlendirin.',
-    longDescription: 'Göksum Güzellik Merkezi\'nde sunduğumuz profesyonel protez tırnak uygulamaları, tırnaklarınızı güçlendirirken şık ve bakımlı bir görünüm sağlar.\n\nKalıcı oje, jel tırnak ve protez tırnak uygulamalarımızda, tırnak sağlığınıza zarar vermeden uzun süreli dayanıklılık ve estetik bir görünüm sunuyoruz. Uzman tırnak teknisyenlerimiz, en son trendleri takip ederek size özel tasarımlar yaratır.\n\nKırılgan, kısa veya hasarlı tırnaklarınızı güçlendirmek, uzatmak veya sadece şık bir görünüm elde etmek için protez tırnak uygulamalarımızı tercih edebilirsiniz.',
+    subtitle: 'Adana\'nın En İyi Protez Tırnak Merkezi',
+    description: 'Adana Seyhan\'da en iyi protez tırnak uygulaması. Jel tırnak, kalıcı oje, nail art ve tırnak uzatma hizmetleri ile şık ve bakımlı tırnaklara kavuşun.',
+    longDescription: 'Adana Seyhan\'da bulunan Göksum Güzellik Merkezi\'nde sunduğumuz profesyonel protez tırnak uygulamaları, tırnaklarınızı güçlendirirken şık ve bakımlı bir görünüm sağlar.\n\nAdana\'nın en iyi protez tırnak merkezi olarak, kalıcı oje, jel tırnak ve protez tırnak uygulamalarımızda tırnak sağlığınıza zarar vermeden uzun süreli dayanıklılık ve estetik bir görünüm sunuyoruz. Uzman tırnak teknisyenlerimiz, en son trendleri takip ederek size özel tasarımlar yaratır.\n\nKırılgan, kısa veya hasarlı tırnaklarınızı güçlendirmek, uzatmak veya sadece şık bir görünüm elde etmek için Adana\'nın tercih edilen protez tırnak merkezi Göksum Güzellik\'i ziyaret edin.',
     image: '/images/protez-tirnak.jpg',
     bannerImage: '/images/protez-tirnak.jpg',
     features: [

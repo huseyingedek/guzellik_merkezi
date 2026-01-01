@@ -3,15 +3,18 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Güzellik Merkezi Hizmetleri | Adana\'da Profesyonel Güzellik Bakımı',
-  description: 'Adana\'nın en iyi güzellik merkezinde lazer epilasyon, cilt bakımı, kalıcı makyaj, bölgesel zayıflama, protez tırnak ve daha fazla profesyonel güzellik hizmeti. Yüreğir\'de uygun fiyatlı güzellik hizmetleri.',
-  keywords: 'adana güzellik merkezi hizmetleri, adana lazer epilasyon fiyatları, adana cilt bakımı fiyatları, yüreğir güzellik merkezi hizmetleri, adana kalıcı makyaj, adana profesyonel güzellik bakımı, adana protez tırnak',
+  title: 'Adana Seyhan Güzellik Hizmetleri | Protez Tırnak, Lazer, Cilt Bakımı',
+  description: 'Adana Seyhan\'da en iyi protez tırnak, lazer epilasyon, cilt bakımı, kalıcı makyaj ve bölgesel zayıflama hizmetleri. Göksum Güzellik Merkezi\'nde profesyonel ekip ve uygun fiyatlarla güzelliğinize güzellik katın.',
+  keywords: 'adana protez tırnak, adana en iyi protez tırnak, seyhan protez tırnak, adana lazer epilasyon, adana en iyi lazer epilasyon, seyhan lazer epilasyon, adana cilt bakımı, adana en iyi cilt bakımı, seyhan cilt bakımı, adana kalıcı makyaj, adana bölgesel zayıflama, göksum güzellik merkezi hizmetleri',
   openGraph: {
-    title: 'Adana Güzellik Merkezi Hizmetleri | Profesyonel Güzellik Bakımı',
-    description: 'Adana Yüreğir\'de profesyonel güzellik hizmetleri. Lazer epilasyon, cilt bakımı, kalıcı makyaj, protez tırnak ve daha fazlası için en iyi güzellik merkezi.',
+    title: 'Göksum Güzellik Merkezi Hizmetleri | Adana Seyhan',
+    description: 'Adana Seyhan\'da profesyonel güzellik hizmetleri. En iyi protez tırnak, lazer epilasyon, cilt bakımı için Göksum Güzellik Merkezi.',
     url: 'https://www.goksumguzellik.com/hizmetlerimiz',
     type: 'website',
-  }
+  },
+  alternates: {
+    canonical: 'https://www.goksumguzellik.com/hizmetlerimiz',
+  },
 };
 
 const services = [

@@ -5,15 +5,18 @@ import { FaInstagram } from 'react-icons/fa';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Hakkımızda | Adana\'nın Güvenilir Güzellik Merkezi',
-  description: 'Adana Yüreğir\'de yıllardır profesyonel güzellik hizmetleri sunuyoruz. Deneyimli ekibimiz, modern cihazlarımız ve müşteri memnuniyeti odaklı yaklaşımımızla Adana\'nın tercih edilen güzellik merkeziyiz.',
-  keywords: 'adana güzellik merkezi, yüreğir güzellik merkezi, adana güzellik salonu, adana profesyonel güzellik merkezi, adana güvenilir güzellik merkezi, adana yüreğir güzellik merkezi hakkında',
+  title: 'Hakkımızda | Göksum Güzellik Merkezi - Adana Seyhan',
+  description: 'Göksum Güzellik Merkezi, Adana Seyhan\'da profesyonel güzellik hizmetleri sunan güvenilir adresiniz. Deneyimli ekibimiz, son teknoloji cihazlarımız ve müşteri memnuniyeti odaklı yaklaşımımızla hizmetinizdeyiz.',
+  keywords: 'göksum güzellik merkezi, adana güzellik merkezi, seyhan güzellik merkezi, adana güzellik salonu, adana seyhan güzellik merkezi, adana profesyonel güzellik merkezi, adana en iyi güzellik merkezi hakkında',
   openGraph: {
-    title: 'Hakkımızda | Adana\'nın Güvenilir Güzellik Merkezi',
-    description: 'Adana Yüreğir\'de yıllardır profesyonel güzellik hizmetleri sunuyoruz. Deneyimli ekibimiz ve modern cihazlarımızla hizmetinizdeyiz.',
+    title: 'Hakkımızda | Göksum Güzellik Merkezi - Adana Seyhan',
+    description: 'Adana Seyhan\'da yıllardır profesyonel güzellik hizmetleri sunuyoruz. Deneyimli ekibimiz ve modern cihazlarımızla hizmetinizdeyiz.',
     url: 'https://www.goksumguzellik.com/hakkimizda',
     type: 'website',
-  }
+  },
+  alternates: {
+    canonical: 'https://www.goksumguzellik.com/hakkimizda',
+  },
 };
 
 export default function AboutPage() {
@@ -46,7 +49,7 @@ export default function AboutPage() {
               <h2 className="text-3xl font-display font-bold text-beauty-900 mb-6">Hikayemiz</h2>
               <div className="w-20 h-1 bg-gold-400 mb-6"></div>
               <p className="text-beauty-700 mb-4">
-                Göksum Güzellik Merkezi, Adana'nın Yüreğir ilçesinde kurulmuştur. Kurucumuz, güzellik sektöründe uzun yıllar deneyime sahip olan Elif Dartar, merkezimizi müşterilerimize en kaliteli ve güncel hizmetleri sunmak amacıyla açmıştır.
+                Göksum Güzellik Merkezi, Adana'nın Seyhan ilçesinde, Gazipaşa Bulvarı üzerinde kurulmuştur. Kurucumuz, güzellik sektöründe uzun yıllar deneyime sahip olan Elif Dartar, merkezimizi müşterilerimize en kaliteli ve güncel hizmetleri sunmak amacıyla açmıştır.
               </p>
               <p className="text-beauty-700 mb-4">
                 Yıllar içinde, müşterilerimizin ihtiyaçlarını ve isteklerini anlayarak, onlara en iyi hizmeti sunmak için sürekli kendimizi geliştirdik. Estetik ve güzellik alanındaki en son teknolojileri ve yöntemleri takip ederek, merkezimizi güncel tutmaya özen gösterdik.

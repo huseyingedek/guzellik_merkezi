@@ -72,14 +72,39 @@ export default function AppointmentPage() {
     setSubmissionStatus(null);
 
     try {
-      // Form verilerini topla
-      const formElement = e.currentTarget;
-      const formData = new FormData(formElement);
+      // Hizmet adını Türkçeye çevir
+      const serviceNames: Record<string, string> = {
+        'cilt-analizi': 'Cilt Analizi',
+        'cilt-bakimi': 'Cilt Bakımı',
+        'lazer-epilasyon': 'Lazer Epilasyon',
+        'bolgesel-zayiflama': 'Bölgesel Zayıflama',
+        'kalici-makyaj': 'Kalıcı Makyaj',
+        'leke-tedavi': 'Leke Tedavisi',
+        'sac-mezoterapi': 'Saç Mezoterapisi',
+        'protez-tirnak': 'Protez Tırnak',
+      };
+      const serviceName = serviceNames[formData.service] || formData.service;
+
+      // FormSubmit'e Türkçe alan adlarıyla gönder
+      const submitData = new FormData();
+      submitData.append('Ad Soyad', formData.name);
+      submitData.append('Telefon', formData.phone);
+      if (formData.email) {
+        submitData.append('E-posta', formData.email);
+      }
+      submitData.append('Hizmet', serviceName);
+      submitData.append('Tarih', formData.date);
+      submitData.append('Saat', formData.time);
+      if (formData.message) {
+        submitData.append('Not', formData.message);
+      }
+      submitData.append('_subject', `Göksum Güzellik - Randevu Talebi: ${serviceName}`);
+      submitData.append('_template', 'table');
+      submitData.append('_captcha', 'false');
       
-      // FormSubmit.co API'ye doğrudan AJAX çağrısı yap
       const response = await fetch('https://formsubmit.co/ajax/goksumguzellik796@gmail.com', {
         method: 'POST',
-        body: formData,
+        body: submitData,
         headers: {
           'Accept': 'application/json'
         }
@@ -245,9 +270,7 @@ export default function AppointmentPage() {
                 <form onSubmit={handleSubmit} className="bg-white border border-beauty-100 p-8 rounded-lg shadow-sm">
                   <h3 className="text-xl font-display font-semibold text-beauty-900 mb-6">Randevu Formu</h3>
                   
-                  {/* FormSubmit.co için gizli alanlar */}
-                  <input type="hidden" name="_subject" value="Göksum Güzellik Merkezi - Randevu Talebi" />
-                  <input type="hidden" name="_template" value="table" />
+                  {/* Spam koruması */}
                   <input type="text" name="_honey" style={{ display: 'none' }} />
                   
                   <div className="space-y-4">
@@ -259,7 +282,7 @@ export default function AppointmentPage() {
                         <input
                           type="text"
                           id="name"
-                          name="name"
+                          name="Ad Soyad"
                           value={formData.name}
                           onChange={handleChange}
                           className="w-full px-4 py-2 border border-beauty-200 rounded-md focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
@@ -274,7 +297,7 @@ export default function AppointmentPage() {
                         <input
                           type="tel"
                           id="phone"
-                          name="phone"
+                          name="Telefon"
                           value={formData.phone}
                           onChange={handleChange}
                           className="w-full px-4 py-2 border border-beauty-200 rounded-md focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
@@ -291,7 +314,7 @@ export default function AppointmentPage() {
                       <input
                         type="email"
                         id="email"
-                        name="email"
+                        name="E-posta"
                         value={formData.email}
                         onChange={handleChange}
                         className="w-full px-4 py-2 border border-beauty-200 rounded-md focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
@@ -305,7 +328,7 @@ export default function AppointmentPage() {
                       </label>
                       <select
                         id="service"
-                        name="service"
+                        name="Hizmet"
                         value={formData.service}
                         onChange={handleChange}
                         className="w-full px-4 py-2 border border-beauty-200 rounded-md focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
@@ -330,7 +353,7 @@ export default function AppointmentPage() {
                         <input
                           type="date"
                           id="date"
-                          name="date"
+                          name="Tarih"
                           value={formData.date}
                           onChange={handleChange}
                           className="w-full px-4 py-2 border border-beauty-200 rounded-md focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
@@ -344,7 +367,7 @@ export default function AppointmentPage() {
                         <input
                           type="time"
                           id="time"
-                          name="time"
+                          name="Saat"
                           value={formData.time}
                           onChange={handleChange}
                           className="w-full px-4 py-2 border border-beauty-200 rounded-md focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
@@ -362,7 +385,7 @@ export default function AppointmentPage() {
                       </label>
                       <textarea
                         id="message"
-                        name="message"
+                        name="Not"
                         value={formData.message}
                         onChange={handleChange}
                         rows={4}

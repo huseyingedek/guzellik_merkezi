@@ -1,18 +1,14 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+// Force dynamic rendering
+export const dynamic = 'force-dynamic';
+
 export async function POST(request: Request) {
   try {
     const formData = await request.json();
-    const { name, phone, email, service, message } = formData;
+    console.log('İletişim formu verileri alındı:', formData);
     
-    if (!name || !phone || !email || !message) {
-      return NextResponse.json(
-        { error: 'Lütfen tüm gerekli alanları doldurun.' },
-        { status: 400 }
-      );
-    }
-
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -21,31 +17,95 @@ export async function POST(request: Request) {
       },
     });
 
+    const emailContent = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="utf-8">
+        <style>
+          body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+          .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+          .header { background: linear-gradient(135deg, #d4a853 0%, #c9983e 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
+          .header h1 { margin: 0; font-size: 24px; }
+          .header p { margin: 10px 0 0; opacity: 0.9; }
+          .content { background: #ffffff; padding: 30px; border: 1px solid #e0e0e0; border-top: none; }
+          .info-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+          .info-table th { background: #f8f4eb; color: #8b6914; padding: 12px 15px; text-align: left; border: 1px solid #e8e0d0; font-weight: 600; }
+          .info-table td { padding: 12px 15px; border: 1px solid #e8e0d0; background: #fff; }
+          .info-table tr:nth-child(even) td { background: #fdfcfa; }
+          .message-box { background: #f8f8f8; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 4px solid #d4a853; }
+          .footer { background: #2d2d2d; color: #999; padding: 20px; text-align: center; font-size: 12px; border-radius: 0 0 10px 10px; }
+          .footer a { color: #d4a853; text-decoration: none; }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <h1>📩 Yeni İletişim Formu Mesajı</h1>
+            <p>Göksum Güzellik Merkezi</p>
+          </div>
+          
+          <div class="content">
+            <p>Merhaba,</p>
+            <p>Web siteniz üzerinden yeni bir iletişim formu mesajı aldınız.</p>
+            
+            <table class="info-table">
+              <tr>
+                <th style="width: 35%;">Bilgiler</th>
+                <th>Değer</th>
+              </tr>
+              <tr>
+                <td><strong>👤 Ad Soyad</strong></td>
+                <td>${formData.name || '-'}</td>
+              </tr>
+              <tr>
+                <td><strong>📞 Telefon</strong></td>
+                <td>${formData.phone || '-'}</td>
+              </tr>
+              <tr>
+                <td><strong>✉️ E-posta</strong></td>
+                <td>${formData.email || '-'}</td>
+              </tr>
+              <tr>
+                <td><strong>💅 Hizmet</strong></td>
+                <td>${formData.service || '-'}</td>
+              </tr>
+            </table>
+            
+            ${formData.message ? `
+            <p><strong>💬 Mesaj:</strong></p>
+            <div class="message-box">
+              ${formData.message}
+            </div>
+            ` : ''}
+          </div>
+          
+          <div class="footer">
+            <p>Bu e-posta <a href="https://www.goksumguzellik.com">goksumguzellik.com</a> iletişim formu üzerinden gönderilmiştir.</p>
+            <p>Göksum Güzellik Merkezi | Cemalpaşa, Gazipaşa Blv. No:30 Kat:1, Seyhan/Adana</p>
+          </div>
+        </div>
+      </body>
+      </html>
+    `;
+
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_TO,
-      subject: `Göksum Güzellik Merkezi - İletişim Formu: ${service || 'Genel İletişim'}`,
-      html: `
-        <h2>Yeni İletişim Formu Mesajı</h2>
-        <p><strong>İsim:</strong> ${name}</p>
-        <p><strong>Telefon:</strong> ${phone}</p>
-        <p><strong>E-posta:</strong> ${email}</p>
-        <p><strong>Hizmet:</strong> ${service || 'Belirtilmemiş'}</p>
-        <p><strong>Mesaj:</strong> ${message}</p>
-      `,
+      from: `"Göksum Güzellik" <${process.env.EMAIL_USER}>`,
+      to: process.env.RECIPIENT_EMAIL || 'goksumguzellik796@gmail.com',
+      subject: `📩 İletişim Formu - ${formData.name}`,
+      html: emailContent,
+      replyTo: formData.email || undefined,
     };
 
-    await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
+    console.log('İletişim e-postası gönderildi:', info.messageId);
 
+    return NextResponse.json({ success: true, message: 'E-posta başarıyla gönderildi' });
+  } catch (error: any) {
+    console.error('E-posta gönderimi sırasında hata:', error);
     return NextResponse.json(
-      { success: true, message: 'Mesajınız başarıyla gönderildi.' },
-      { status: 200 }
-    );
-  } catch (error) {
-    console.error('Contact form submission error:', error);
-    return NextResponse.json(
-      { error: 'Mesajınız gönderilirken bir hata oluştu. Lütfen daha sonra tekrar deneyin.' },
+      { success: false, message: 'E-posta gönderilemedi', error: error.message },
       { status: 500 }
     );
   }
-} 
+}
