@@ -2,7 +2,7 @@
 
 import React, { useState, FormEvent } from "react";
 import Image from 'next/image';
-import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaInstagram, FaWhatsapp, FaFacebook } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaInstagram, FaWhatsapp, FaFacebook, FaCheck, FaTimes } from 'react-icons/fa';
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -20,6 +20,7 @@ export default function ContactPage() {
     message?: string;
   } | null>(null);
   const [loading, setLoading] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -41,7 +42,7 @@ export default function ContactPage() {
       const formData = new FormData(formElement);
       
       // FormSubmit.co API'ye doğrudan AJAX çağrısı yap
-      const response = await fetch('https://formsubmit.co/ajax/huseyinxgedek@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/goksumguzellik796@gmail.com', {
         method: 'POST',
         body: formData,
         headers: {
@@ -68,6 +69,7 @@ export default function ContactPage() {
         success: true,
         message: 'Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.',
       });
+      setShowPopup(true);
       
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -75,6 +77,7 @@ export default function ContactPage() {
         success: false,
         message: error instanceof Error ? error.message : 'Form gönderimi sırasında bir hata oluştu',
       });
+      setShowPopup(true);
     } finally {
       setIsSubmitting(false);
     }
@@ -115,11 +118,6 @@ export default function ContactPage() {
             >
               <div className="pb-0">
                 <h2 className="text-2xl font-display font-bold text-beauty-900 mb-4">Bize Yazın</h2>
-                {submissionStatus && (
-                  <div className={`p-4 mb-4 rounded-md ${submissionStatus.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
-                    {submissionStatus.message}
-                  </div>
-                )}
                 <div className="mt-4 mb-8 bg-white rounded-lg shadow-lg p-4 overflow-hidden">
                   <form
                     onSubmit={handleSubmit}
@@ -283,7 +281,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold text-beauty-800 mb-1">E-posta</h3>
                         <a 
-                          href="mailto:huseyinxgedek@gmail.com" 
+                          href="mailto:goksumguzellik796@gmail.com" 
                           className="text-beauty-600 hover:text-gold-500 transition-colors"
                         >
                           bilgi@goksumguzellik.com
@@ -361,6 +359,45 @@ export default function ContactPage() {
           title="Göksum Güzellik Merkezi Konum"
         ></iframe>
       </section>
+      
+      {/* Pop-up Modal */}
+      {showPopup && submissionStatus && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className={`bg-white rounded-lg shadow-xl max-w-md w-full p-6 relative ${submissionStatus.success ? 'border-2 border-green-500' : 'border-2 border-red-500'}`}>
+            <button
+              onClick={() => setShowPopup(false)}
+              className="absolute top-4 right-4 text-beauty-600 hover:text-beauty-800 transition-colors"
+            >
+              <FaTimes size={20} />
+            </button>
+            <div className="text-center">
+              <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${submissionStatus.success ? 'bg-green-100' : 'bg-red-100'}`}>
+                {submissionStatus.success ? (
+                  <FaCheck className="text-green-500" size={32} />
+                ) : (
+                  <FaTimes className="text-red-500" size={32} />
+                )}
+              </div>
+              <h3 className={`text-2xl font-display font-bold mb-2 ${submissionStatus.success ? 'text-green-600' : 'text-red-600'}`}>
+                {submissionStatus.success ? 'Başarılı' : 'Başarısız'}
+              </h3>
+              <p className="text-beauty-700 mt-4">
+                {submissionStatus.message}
+              </p>
+              <button
+                onClick={() => setShowPopup(false)}
+                className={`mt-6 px-6 py-2 rounded-md font-semibold transition-colors ${
+                  submissionStatus.success 
+                    ? 'bg-green-500 hover:bg-green-600 text-white' 
+                    : 'bg-red-500 hover:bg-red-600 text-white'
+                }`}
+              >
+                Tamam
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 } 

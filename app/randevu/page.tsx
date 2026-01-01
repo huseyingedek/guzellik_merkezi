@@ -4,7 +4,7 @@ import React, { useState, useEffect, FormEvent } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import { FaCalendarAlt, FaPhone, FaWhatsapp, FaCheck } from 'react-icons/fa';
+import { FaCalendarAlt, FaPhone, FaWhatsapp, FaCheck, FaTimes } from 'react-icons/fa';
 
 export default function AppointmentPage() {
   const [formData, setFormData] = useState({
@@ -21,6 +21,7 @@ export default function AppointmentPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [timeRange, setTimeRange] = useState({ min: '09:00', max: '19:00' });
   const [submissionStatus, setSubmissionStatus] = useState<{ success: boolean; message: string } | null>(null);
+  const [showPopup, setShowPopup] = useState(false);
   
   // Tarih değiştiğinde saat aralığını güncelle
   useEffect(() => {
@@ -76,7 +77,7 @@ export default function AppointmentPage() {
       const formData = new FormData(formElement);
       
       // FormSubmit.co API'ye doğrudan AJAX çağrısı yap
-      const response = await fetch('https://formsubmit.co/ajax/huseyinxgedek@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/goksumguzellik796@gmail.com', {
         method: 'POST',
         body: formData,
         headers: {
@@ -105,6 +106,7 @@ export default function AppointmentPage() {
         success: true,
         message: 'Randevu talebiniz başarıyla alındı. Ekibimiz kısa süre içinde sizinle iletişime geçecektir.',
       });
+      setShowPopup(true);
       
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -112,6 +114,7 @@ export default function AppointmentPage() {
         success: false,
         message: error instanceof Error ? error.message : 'Randevu formu gönderimi sırasında bir hata oluştu',
       });
+      setShowPopup(true);
     } finally {
       setIsSubmitting(false);
     }
@@ -242,12 +245,6 @@ export default function AppointmentPage() {
                 <form onSubmit={handleSubmit} className="bg-white border border-beauty-100 p-8 rounded-lg shadow-sm">
                   <h3 className="text-xl font-display font-semibold text-beauty-900 mb-6">Randevu Formu</h3>
                   
-                  {submissionStatus && (
-                    <div className={`p-4 mb-6 rounded-md ${submissionStatus.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
-                      {submissionStatus.message}
-                    </div>
-                  )}
-                  
                   {/* FormSubmit.co için gizli alanlar */}
                   <input type="hidden" name="_subject" value="Göksum Güzellik Merkezi - Randevu Talebi" />
                   <input type="hidden" name="_template" value="table" />
@@ -377,9 +374,10 @@ export default function AppointmentPage() {
                     <div className="pt-2">
                       <button
                         type="submit"
-                        className="w-full bg-gold-500 hover:bg-gold-600 text-white font-semibold py-3 px-6 rounded-md transition-colors duration-300 flex justify-center items-center"
+                        disabled={isSubmitting}
+                        className="w-full bg-gold-500 hover:bg-gold-600 disabled:bg-gold-300 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-md transition-colors duration-300 flex justify-center items-center"
                       >
-                        Randevu Talebi Gönder
+                        {isSubmitting ? 'Gönderiliyor...' : 'Randevu Talebi Gönder'}
                       </button>
                       <p className="text-xs text-beauty-500 mt-2 text-center">
                         <span className="text-red-500">*</span> işaretli alanlar zorunludur<br />
@@ -467,6 +465,45 @@ export default function AppointmentPage() {
           </div>
         </div>
       </section>
+      
+      {/* Pop-up Modal */}
+      {showPopup && submissionStatus && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className={`bg-white rounded-lg shadow-xl max-w-md w-full p-6 relative ${submissionStatus.success ? 'border-2 border-green-500' : 'border-2 border-red-500'}`}>
+            <button
+              onClick={() => setShowPopup(false)}
+              className="absolute top-4 right-4 text-beauty-600 hover:text-beauty-800 transition-colors"
+            >
+              <FaTimes size={20} />
+            </button>
+            <div className="text-center">
+              <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${submissionStatus.success ? 'bg-green-100' : 'bg-red-100'}`}>
+                {submissionStatus.success ? (
+                  <FaCheck className="text-green-500" size={32} />
+                ) : (
+                  <FaTimes className="text-red-500" size={32} />
+                )}
+              </div>
+              <h3 className={`text-2xl font-display font-bold mb-2 ${submissionStatus.success ? 'text-green-600' : 'text-red-600'}`}>
+                {submissionStatus.success ? 'Başarılı' : 'Başarısız'}
+              </h3>
+              <p className="text-beauty-700 mt-4">
+                {submissionStatus.message}
+              </p>
+              <button
+                onClick={() => setShowPopup(false)}
+                className={`mt-6 px-6 py-2 rounded-md font-semibold transition-colors ${
+                  submissionStatus.success 
+                    ? 'bg-green-500 hover:bg-green-600 text-white' 
+                    : 'bg-red-500 hover:bg-red-600 text-white'
+                }`}
+              >
+                Tamam
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       
       <Footer />
     </>

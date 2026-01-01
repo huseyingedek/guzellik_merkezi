@@ -3,6 +3,8 @@ import { Inter, Playfair_Display } from 'next/font/google'
 import './styles/globals.css'
 import JsonLd from './jsonld'
 import Script from 'next/script'
+import FloatingWhatsApp from '@/components/FloatingWhatsApp'
+import FloatingDirections from '@/components/FloatingDirections'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const playfair = Playfair_Display({ 
@@ -135,6 +137,8 @@ export default function RootLayout({
         </Script>
         <JsonLd />
         {children}
+        <FloatingWhatsApp />
+        <FloatingDirections />
       </body>
     </html>
   )

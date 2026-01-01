@@ -4,8 +4,6 @@ import Services from '@/components/Services'
 import Features from '@/components/Features'
 import Footer from '@/components/Footer'
 import Testimonials from '@/components/Testimonials'
-import FloatingWhatsApp from '@/components/FloatingWhatsApp'
-import FloatingDirections from '@/components/FloatingDirections'
 
 export default function Home() {
   return (
@@ -16,8 +14,6 @@ export default function Home() {
       <Services />
       <Testimonials />
       <Footer />
-      <FloatingWhatsApp />
-      <FloatingDirections />
     </main>
   )
 } 

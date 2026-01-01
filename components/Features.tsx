@@ -36,16 +36,29 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="bg-beauty-50 py-16">
+    <section className="bg-beauty-50 py-6">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        {/* Mobilde kaydırılabilir, masaüstünde grid */}
+        <div className="sm:hidden flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {features.map((feature) => (
-            <div key={feature.id} className="flex flex-col items-center text-center p-6">
-              <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gold-500 text-white mb-4">
-                <div className="w-6 h-6">{feature.icon}</div>
+            <div key={feature.id} className="flex flex-col items-center text-center p-4 min-w-[280px] snap-center bg-white rounded-lg shadow-sm">
+              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gold-500 text-white mb-3">
+                <div className="w-5 h-5">{feature.icon}</div>
               </div>
-              <h3 className="text-xl font-display font-semibold text-beauty-800 mb-2">{feature.title}</h3>
-              <p className="text-beauty-600">{feature.description}</p>
+              <h3 className="text-lg font-display font-semibold text-beauty-800 mb-1">{feature.title}</h3>
+              <p className="text-sm text-beauty-600">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+        {/* Tablet ve masaüstünde grid */}
+        <div className="hidden sm:grid grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {features.map((feature) => (
+            <div key={feature.id} className="flex flex-col items-center text-center p-4">
+              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gold-500 text-white mb-3">
+                <div className="w-5 h-5">{feature.icon}</div>
+              </div>
+              <h3 className="text-lg font-display font-semibold text-beauty-800 mb-1">{feature.title}</h3>
+              <p className="text-sm text-beauty-600">{feature.description}</p>
             </div>
           ))}
         </div>
