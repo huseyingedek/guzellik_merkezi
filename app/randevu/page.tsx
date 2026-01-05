@@ -404,7 +404,7 @@ export default function AppointmentPage() {
                       </button>
                       <p className="text-xs text-beauty-500 mt-2 text-center">
                         <span className="text-red-500">*</span> işaretli alanlar zorunludur<br />
-                        Alternatif olarak telefonla da randevu alabilirsiniz: <a href="tel:+905411901390" className="text-gold-600 hover:underline">0544 859 72 80</a>
+                        Alternatif olarak telefonla da randevu alabilirsiniz: <a href="tel:+905411901390" className="text-gold-600 hover:underline">0541 190 13 90</a>
                       </p>
                     </div>
                   </div>

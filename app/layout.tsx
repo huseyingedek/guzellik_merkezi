@@ -5,6 +5,7 @@ import JsonLd from './jsonld'
 import Script from 'next/script'
 import FloatingWhatsApp from '@/components/FloatingWhatsApp'
 import FloatingDirections from '@/components/FloatingDirections'
+import MobileContactBar from '@/components/MobileContactBar'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const playfair = Playfair_Display({ 
@@ -127,7 +128,7 @@ export default function RootLayout({
           })(window,document,'script','dataLayer','GTM-ND87639Q');`}
         </Script>
       </head>
-      <body className="bg-white" suppressHydrationWarning>
+      <body className="bg-white pb-16 md:pb-0" suppressHydrationWarning>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe 
@@ -177,8 +178,15 @@ export default function RootLayout({
         </Script>
         <JsonLd />
         {children}
-        <FloatingWhatsApp />
-        <FloatingDirections />
+        
+        {/* Desktop floating butonlar - Sadece md ve üzeri ekranlarda görünür */}
+        <div className="hidden md:block">
+          <FloatingWhatsApp />
+          <FloatingDirections />
+        </div>
+        
+        {/* Mobil contact bar - Sadece mobilde görünür */}
+        <MobileContactBar />
       </body>
     </html>
   )
