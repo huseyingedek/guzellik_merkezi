@@ -239,7 +239,7 @@ export default function AppointmentPage() {
                         </li>
                         <li className="flex justify-between">
                           <span>Pazar:</span>
-                          <span>10:00 - 18:00</span>
+                          <span>10:00 - 20:00</span>
                         </li>
                       </ul>
                     </div>

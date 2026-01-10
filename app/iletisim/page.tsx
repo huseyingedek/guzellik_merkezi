@@ -336,7 +336,7 @@ export default function ContactPage() {
                   <ul className="space-y-2">
                     <li className="flex justify-between">
                       <span className="text-beauty-700">Pazartesi - Cumartesi:</span>
-                      <span className="font-medium text-beauty-900">08:00 - 20:00</span>
+                      <span className="font-medium text-beauty-900">09:00 - 19:00</span>
                     </li>
                     <li className="flex justify-between">
                       <span className="text-beauty-700">Pazar:</span>
