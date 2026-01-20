@@ -353,7 +353,7 @@ export default function ContactPage() {
       {/* Map Section */}
       <section className="h-96 relative">
         <div className="absolute top-4 left-4 z-10 bg-beauty-900/90 text-white px-4 py-3 rounded-lg shadow-lg max-w-xs">
-          <p className="font-bold text-red-400">Göksum Güzellik Merkezi</p>
+          <p className="font-bold text-red-400">Göksum Güzellik Salonu</p>
           <p className="font-semibold">Cemalpaşa Mah, Seyhan</p>
           <p className="text-white/80 text-xs mt-1">Cemalpaşa, Gazipaşa Blv. Apartmanı No:30 Kat:1, 01120 Seyhan/Adana</p>
         </div>
