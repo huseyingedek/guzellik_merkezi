@@ -4,210 +4,209 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Adana Seyhan Güzellik Hizmetleri | Protez Tırnak, Lazer, Cilt Bakımı',
-  description: 'Adana Seyhan\'da en iyi protez tırnak, lazer epilasyon, cilt bakımı, kalıcı makyaj ve bölgesel zayıflama hizmetleri. Göksum Güzellik Merkezi\'nde profesyonel ekip ve uygun fiyatlarla güzelliğinize güzellik katın.',
-  keywords: 'adana protez tırnak, adana en iyi protez tırnak, seyhan protez tırnak, adana lazer epilasyon, adana en iyi lazer epilasyon, seyhan lazer epilasyon, adana cilt bakımı, adana en iyi cilt bakımı, seyhan cilt bakımı, adana kalıcı makyaj, adana bölgesel zayıflama, göksum güzellik merkezi hizmetleri',
+  description:
+    "Adana Seyhan'da en iyi protez tırnak, lazer epilasyon, cilt bakımı, kalıcı makyaj ve bölgesel zayıflama hizmetleri. Göksum Güzellik Merkezi'nde profesyonel ekip ve uygun fiyatlarla güzelliğinize güzellik katın.",
   openGraph: {
     title: 'Göksum Güzellik Merkezi Hizmetleri | Adana Seyhan',
-    description: 'Adana Seyhan\'da profesyonel güzellik hizmetleri. En iyi protez tırnak, lazer epilasyon, cilt bakımı için Göksum Güzellik Merkezi.',
+    description: "Adana Seyhan'da profesyonel güzellik hizmetleri. Protez tırnak, lazer epilasyon, cilt bakımı.",
     url: 'https://www.goksumguzellik.com/hizmetlerimiz',
     type: 'website',
   },
-  alternates: {
-    canonical: 'https://www.goksumguzellik.com/hizmetlerimiz',
-  },
+  alternates: { canonical: 'https://www.goksumguzellik.com/hizmetlerimiz' },
 };
 
 const services = [
   {
     id: 8,
     title: 'Protez Tırnak',
-    description: 'Kalıcı ve estetik protez tırnak uygulamaları ile hem şık hem de bakımlı tırnaklara sahip olun. Kırılgan ve kısa tırnaklarınızı güçlendirin.',
+    description: 'Kalıcı ve estetik protez tırnak uygulamaları ile hem şık hem de bakımlı tırnaklara sahip olun.',
     image: '/images/protez-tirnak.jpg',
-    features: [
-      'Kalıcı oje uygulaması',
-      'Jel tırnak uygulaması',
-      'Tırnak uzatma',
-      'Nail art ve tasarım',
-      'Protez tırnak bakımı'
-    ],
-    slug: 'protez-tirnak'
+    features: ['Kalıcı oje', 'Jel tırnak', 'Tırnak uzatma', 'Nail art & tasarım', 'Protez tırnak bakımı'],
+    slug: 'protez-tirnak',
+    tag: 'En Popüler',
   },
-
   {
     id: 2,
     title: 'Cilt Bakımı',
-    description: 'Cildinizin ihtiyaçlarına göre özel olarak hazırlanan bakım programları ile daha canlı, daha sağlıklı bir cilde kavuşun.',
+    description: 'Cildinizin ihtiyaçlarına göre hazırlanan özel bakım programları ile daha canlı, sağlıklı bir cilde kavuşun.',
     image: '/images/hero1.jpg',
-    features: [
-      'Klasik cilt bakımı',
-      'Akne bakımı',
-      'Anti-aging bakım',
-      'Leke giderici bakım',
-      'Hydrafacial bakım'
-    ],
-    slug: 'cilt-bakimi'
+    features: ['Klasik cilt bakımı', 'Akne bakımı', 'Anti-aging bakım', 'Hydrafacial', 'Leke giderici bakım'],
+    slug: 'cilt-bakimi',
+    tag: null,
   },
   {
     id: 3,
     title: 'Lazer Epilasyon',
-    description: 'Son teknoloji lazer epilasyon cihazlarımız ile istenmeyen tüylerden kalıcı olarak kurtulun. Seans aralarında kısa süreler ve etkili sonuçlar.',
+    description: 'Son teknoloji lazer cihazlarımız ile istenmeyen tüylerden kalıcı olarak kurtulun.',
     image: '/images/lazerr.png',
-    features: [
-      'Tüm vücut uygulamaları',
-      'Yüz bölgesi uygulamaları',
-      'Bikini bölgesi',
-      'Erkekler için özel uygulamalar'
-    ],
-    slug: 'lazer-epilasyon'
+    features: ['Tüm vücut', 'Yüz bölgesi', 'Bikini bölgesi', 'Erkekler için'],
+    slug: 'lazer-epilasyon',
+    tag: 'Öne Çıkan',
   },
   {
     id: 4,
-    title: 'Bölesel Zayıflama',
-    description: 'Modern zayıflama teknolojileri ile vücudunuzda bölgesel incelme sağlayın. İnatçı yağlardan kurtularak daha fit bir görünüme kavuşun.',
+    title: 'Bölgesel Zayıflama',
+    description: 'Modern zayıflama teknolojileri ile vücudunuzda bölgesel incelme sağlayın.',
     image: '/images/zayıflama.png',
-    features: [
-      'Kavitasyon uygulaması',
-      'RF lipoliz tedavisi',
-      'Selülit giderici uygulamalar',
-      'Kişiye özel zayıflama protokolleri'
-    ],
-    slug: 'bolgesel-zayiflama'
+    features: ['Kavitasyon', 'RF lipoliz', 'Selülit giderme', 'Kişiye özel protokol'],
+    slug: 'bolgesel-zayiflama',
+    tag: null,
   },
   {
     id: 5,
     title: 'Kalıcı Makyaj',
-    description: 'Göz, kaş ve dudak için kalıcı makyaj uygulamaları ile her gün makyaj yapma derdinden kurtulun, zamandan tasarruf edin.',
+    description: 'Her gün makyaj yapma derdinden kurtulun, zamandan tasarruf edin.',
     image: '/images/makyaj.png',
-    features: [
-      'Dudak kontür ve renklendirme',
-      'Eyeliner uygulaması',
-      'Dipliner uygulaması',
-      'Kaş kontür'
-    ],
-    slug: 'kalici-makyaj'
+    features: ['Dudak kontür', 'Eyeliner', 'Kaş kontür', 'Microblading'],
+    slug: 'kalici-makyaj',
+    tag: null,
   },
   {
     id: 6,
     title: 'Leke Tedavi',
-    description: 'Yüzünüzdeki lekeleri, güneş hasarlarını ve pigmentasyon sorunlarını etkili tedavi yöntemlerimizle giderin. Daha pürüzsüz ve eşit tonda bir cilde kavuşun.',
+    description: 'Güneş lekesi, akne izi ve pigmentasyon sorunlarını etkili tedavi yöntemlerimizle giderin.',
     image: '/images/leketedavi.png',
-    features: [
-      'Özel leke giderici serumlar',
-      'Kimyasal peeling uygulamaları',
-      'Akne lekesi tedavisi',
-      'Güneş lekesi tedavisi',
-      'Melazma tedavisi'
-    ],
-    slug: 'leke-tedavi'
+    features: ['Kimyasal peeling', 'Akne lekesi', 'Güneş lekesi', 'Melazma tedavisi'],
+    slug: 'leke-tedavi',
+    tag: null,
   },
   {
     id: 7,
     title: 'Saç Mezoterapi',
-    description: 'Saç dökülmesi ve seyrelmesi sorunlarına karşı etkili mezoterapi yöntemiyle doğal ve güçlü saçlara kavuşun. Saç köklerinizi canlandırın.',
+    description: 'Saç dökülmesi sorunlarına mezoterapi yöntemiyle etkili çözüm.',
     image: '/images/sac.png',
-    features: [
-      'Vitamin ve mineral kokteylleri',
-      'Kök hücre takviyeleri',
-      'Saç kökü besleme',
-      'Dökülme önleyici bakım'
-    ],
-    slug: 'sac-mezoterapi'
+    features: ['Vitamin kokteylleri', 'Kök hücre takviyeleri', 'Saç kökü besleme', 'Dökülme önleme'],
+    slug: 'sac-mezoterapi',
+    tag: null,
   },
   {
     id: 1,
     title: 'Cilt Analizi',
-    description: 'Uzman estetisyenlerimiz tarafından detaylı cilt analizi yapılarak, cildinizin ihtiyaçları belirlenir. Cilt tipinize özel bakım programları oluşturulur.',
+    description: 'Modern cihazlarla ücretsiz profesyonel cilt analizi. Cildinizin ihtiyaçlarını keşfedin.',
     image: '/images/analiz_cilt.png',
-    features: [
-      'Detaylı cilt tipi analizi',
-      'Cilt problemlerinin tespiti',
-      'Kişiye özel bakım önerileri',
-      'Ürün kullanım tavsiyeleri'
-    ],
-    slug: 'cilt-analizi'
+    features: ['Cilt tipi analizi', 'Problem tespiti', 'Kişiye özel öneriler', 'Ürün tavsiyeleri'],
+    slug: 'cilt-analizi',
+    tag: 'Ücretsiz',
   },
 ];
 
 export default function ServicesPage() {
   return (
-    <>      
-      {/* Page Banner */}
-      <div className="relative h-[250px] sm:h-[300px] bg-beauty-900">
-        <div className="absolute inset-0 bg-beauty-900/60 z-10"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/hero1.jpg')" }}
-        ></div>
-        <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-3 md:mb-4">Hizmetlerimiz</h1>
-          <div className="flex items-center gap-2">
-            <div className="w-6 sm:w-8 h-0.5 bg-gold-300"></div>
-            <p className="text-white text-sm md:text-base">Kaliteli Güzellik & Bakım</p>
-            <div className="w-6 sm:w-8 h-0.5 bg-gold-300"></div>
+    <>
+      {/* ── Banner ──────────────────────────────────────────────────────── */}
+      <div className="relative h-[260px] sm:h-[320px] overflow-hidden">
+        <Image src="/images/hero1.jpg" alt="Hizmetlerimiz" fill className="object-cover" priority />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+
+        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center">
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3 mb-4">
+            <div className="h-px w-8" style={{ background: '#C9A84C' }} />
+            <span className="text-xs tracking-widest uppercase font-medium" style={{ color: '#C9A84C' }}>
+              Göksum Güzellik Merkezi
+            </span>
+          </div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-3">
+            Hizmetlerimiz
+          </h1>
+          <div className="flex items-center gap-3">
+            <div className="h-px w-12" style={{ background: '#C9A84C' }} />
+            <p className="text-white/70 text-sm md:text-base">Kaliteli Güzellik & Premium Bakım</p>
           </div>
         </div>
       </div>
-      
-      {/* Services List */}
-      <section className="py-10 md:py-16 bg-white">
+
+      {/* ── Hizmet kartları ──────────────────────────────────────────────── */}
+      <section className="py-14 md:py-20" style={{ background: '#FAF7F0' }}>
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
+
+          {/* Bölüm başlığı */}
+          <div className="text-center mb-12">
+            <span className="inline-block text-xs tracking-[0.35em] uppercase font-medium mb-3"
+                  style={{ color: '#C9A84C' }}>
+              Tüm Hizmetler
+            </span>
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-beauty-900 mb-4">
+              Size Özel Güzellik Çözümleri
+            </h2>
+            <div className="flex items-center justify-center gap-4">
+              <div className="h-px w-16" style={{ background: 'linear-gradient(to right, transparent, #C9A84C)' }} />
+              <div className="w-1.5 h-1.5 rounded-full" style={{ background: '#C9A84C' }} />
+              <div className="h-px w-16" style={{ background: 'linear-gradient(to left, transparent, #C9A84C)' }} />
+            </div>
+          </div>
+
+          {/* Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service) => (
-              <div key={service.id} className="bg-white border border-beauty-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
-                <div className="aspect-video relative overflow-hidden">
+              <div
+                key={service.id}
+                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl
+                           transition-all duration-400 group hover:-translate-y-1.5"
+                style={{ border: '1px solid rgba(201,168,76,0.12)' }}
+              >
+                {/* Görsel */}
+                <div className="relative aspect-video overflow-hidden">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="object-cover transition-transform duration-600 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gold-500/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Link href={`/hizmetlerimiz/${service.slug}`} className="text-white font-semibold text-sm px-4 py-2 border border-white/50 rounded-full hover:bg-white/10 transition-colors">
-                      Detaylı Bilgi
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400
+                                  flex items-center justify-center"
+                       style={{ background: 'rgba(12,11,8,0.6)' }}>
+                    <Link
+                      href={`/hizmetlerimiz/${service.slug}`}
+                      className="text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-300"
+                      style={{
+                        border: '1px solid rgba(201,168,76,0.6)',
+                        color: '#D8B266',
+                        background: 'rgba(0,0,0,0.4)',
+                      }}
+                    >
+                      Detaylı İncele
                     </Link>
                   </div>
+                  {/* Etiket */}
+                  {service.tag && (
+                    <div className="absolute top-3 left-3 text-white text-xs font-semibold px-2.5 py-1 rounded-full"
+                         style={{ background: '#C9A84C' }}>
+                      {service.tag}
+                    </div>
+                  )}
                 </div>
-                <div className="p-4 md:p-6">
-                  <h3 className="text-lg md:text-xl font-display font-semibold text-beauty-800 mb-2 md:mb-3">
+
+                {/* İçerik */}
+                <div className="p-5">
+                  <h3 className="text-lg font-display font-semibold text-beauty-900 mb-2 group-hover:text-gold-600 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-beauty-600 text-sm mb-3 md:mb-4">{service.description}</p>
-                  <div className="mb-3 md:mb-4">
-                    <h4 className="font-medium text-beauty-700 mb-1.5 md:mb-2 text-sm">Hizmet Kapsamı:</h4>
-                    <ul className="space-y-0.5 md:space-y-1">
-                      {service.features.slice(0, 3).map((feature, index) => (
-                        <li key={index} className="text-beauty-600 text-sm flex items-start">
-                          <span className="text-gold-500 mr-2 flex-shrink-0">•</span>
-                          <span className="line-clamp-1">{feature}</span>
-                        </li>
+                  <p className="text-beauty-600 text-sm mb-4 leading-relaxed">{service.description}</p>
+
+                  {/* Özellikler */}
+                  <div className="mb-4">
+                    <div className="flex flex-wrap gap-1.5">
+                      {service.features.slice(0, 4).map((f, i) => (
+                        <span key={i} className="text-xs px-2.5 py-1 rounded-full"
+                              style={{ background: '#FAF7F0', border: '1px solid rgba(201,168,76,0.25)', color: '#A8893A' }}>
+                          {f}
+                        </span>
                       ))}
-                      {service.features.length > 3 && (
-                        <li className="text-beauty-600 text-sm flex items-start">
-                          <span className="text-gold-500 mr-2 flex-shrink-0">•</span>
-                          <span className="italic">Ve daha fazlası...</span>
-                        </li>
-                      )}
-                    </ul>
+                    </div>
                   </div>
+
                   <Link
                     href={`/hizmetlerimiz/${service.slug}`}
-                    className="text-gold-500 font-medium text-sm flex items-center"
+                    className="flex items-center gap-1.5 text-sm font-medium transition-colors duration-200"
+                    style={{ color: '#C9A84C' }}
                   >
-                    Daha Fazla
-                    <svg
-                      className="ml-1 w-3 h-3 md:w-4 md:h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M9 5l7 7-7 7"
-                      ></path>
+                    Detaylara Git
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>
                 </div>
@@ -216,28 +215,44 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-      
-      {/* Call to Action */}
-      <section className="py-10 md:py-16 bg-beauty-50">
+
+      {/* ── CTA bölümü ───────────────────────────────────────────────────── */}
+      <section className="py-14 md:py-18" style={{ background: '#0C0B08' }}>
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-display font-bold text-beauty-900 mb-3 md:mb-4">
-            Hizmetlerimiz Hakkında Bilgi Almak İster misiniz?
+          {/* Gold çizgi */}
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div className="h-px w-16" style={{ background: 'linear-gradient(to right, transparent, rgba(201,168,76,0.6))' }} />
+            <div className="w-1.5 h-1.5 rounded-full" style={{ background: '#C9A84C' }} />
+            <div className="h-px w-16" style={{ background: 'linear-gradient(to left, transparent, rgba(201,168,76,0.6))' }} />
+          </div>
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-3">
+            Hemen Randevu Alın
           </h2>
-          <p className="text-beauty-700 max-w-2xl mx-auto mb-6 md:mb-8 text-sm md:text-base">
-            Detaylı bilgi almak ve randevu oluşturmak için bize ulaşabilirsiniz. Uzman ekibimiz tüm sorularınızı yanıtlamak için hazır.
+          <p className="max-w-xl mx-auto mb-8 text-sm md:text-base leading-relaxed"
+             style={{ color: 'rgba(255,255,255,0.55)' }}>
+            Detaylı bilgi almak ve randevu oluşturmak için bize ulaşın. Uzman ekibimiz tüm
+            sorularınızı yanıtlamak için hazır.
           </p>
-          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-            <Link
-              href="/iletisim"
-              className="bg-gold-500 hover:bg-gold-600 text-white py-2.5 md:py-3 px-6 md:px-8 rounded-full transition-colors duration-300 font-semibold text-sm md:text-base"
-            >
-              Bize Ulaşın
-            </Link>
+          <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/randevu"
-              className="bg-white border border-gold-500 text-gold-500 hover:bg-gold-50 py-2.5 md:py-3 px-6 md:px-8 rounded-full transition-colors duration-300 font-semibold text-sm md:text-base"
+              className="inline-flex items-center gap-2 text-white font-semibold
+                         py-3 px-8 rounded-full transition-all duration-300"
+              style={{ background: '#C9A84C' }}
             >
-              Randevu Alın
+              Randevu Al
+            </Link>
+            <Link
+              href="/iletisim"
+              className="inline-flex items-center gap-2 font-semibold
+                         py-3 px-8 rounded-full transition-all duration-300"
+              style={{
+                border: '1px solid rgba(201,168,76,0.4)',
+                color: '#D8B266',
+                background: 'transparent',
+              }}
+            >
+              Bize Ulaşın
             </Link>
           </div>
         </div>

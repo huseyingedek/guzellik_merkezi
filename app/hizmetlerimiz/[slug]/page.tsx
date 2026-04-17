@@ -2,499 +2,135 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { BsCheckCircleFill, BsClock, BsArrowLeft, BsClockHistory, BsCurrencyDollar, BsPeople } from 'react-icons/bs';
-import { FaClock, FaMoneyBill } from 'react-icons/fa';
-import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
+import { BsPeople } from 'react-icons/bs';
+import { FaCheckCircle, FaArrowLeft } from 'react-icons/fa';
 import { MdOutlineArrowForward } from 'react-icons/md';
 import { getServicesStaticPaths, getServiceData } from '@/lib/data';
 import { Metadata } from 'next';
-import { Button } from '@/components/ui/button';
 
-// Hizmetler veritabanı
-const services = [
-  {
-    id: 8,
-    title: 'Protez Tırnak',
-    description: 'Kalıcı ve estetik protez tırnak uygulamaları ile hem şık hem de bakımlı tırnaklara sahip olun. Kırılgan ve kısa tırnaklarınızı güçlendirin.',
-    image: '/images/protez-tirnak.png',
-    longDescription: `
-      Göksum Güzellik Merkezi'nde sunduğumuz profesyonel protez tırnak uygulamaları, tırnaklarınızı güçlendirirken şık ve bakımlı bir görünüm sağlar.
-      
-      Kalıcı oje, jel tırnak ve protez tırnak uygulamalarımızda, tırnak sağlığınıza zarar vermeden uzun süreli dayanıklılık ve estetik bir görünüm sunuyoruz. Uzman tırnak teknisyenlerimiz, en son trendleri takip ederek size özel tasarımlar yaratır.
-      
-      Kırılgan, kısa veya hasarlı tırnaklarınızı güçlendirmek, uzatmak veya sadece şık bir görünüm elde etmek için protez tırnak uygulamalarımızı tercih edebilirsiniz.
-    `,
-    features: [
-      'Kalıcı oje uygulaması',
-      'Jel tırnak uygulaması',
-      'Tırnak uzatma',
-      'Nail art ve tasarım',
-      'Protez tırnak bakımı',
-      'French manikür',
-      'Ombre ve gradient teknikler',
-      'Taş ve süsleme uygulamaları'
-    ],
-    benefits: [
-      'Uzun süre dayanıklı tırnaklar',
-      'Kırılgan tırnakların güçlenmesi',
-      'Kısa tırnakların uzatılması',
-      'Şık ve bakımlı görünüm',
-      'Çeşitli renk ve tasarım seçenekleri',
-      'Su ve deterjanla bozulmayan yapı'
-    ],
-    faq: [
-      {
-        question: 'Protez tırnak ne kadar süre dayanır?',
-        answer: 'Bakım ve kullanıma bağlı olarak, jel tırnak uygulamaları 3-4 hafta, kalıcı oje ise 2-3 hafta dayanabilir. Düzenli dolgu ile bu süre uzatılabilir.'
-      },
-      {
-        question: 'Protez tırnak doğal tırnağa zarar verir mi?',
-        answer: 'Profesyonel uygulama ve doğru bakım ile protez tırnak, doğal tırnağınıza zarar vermez. Aksine kırılgan tırnakları korur ve güçlendirir.'
-      },
-      {
-        question: 'Protez tırnak bakımı nasıl yapılmalıdır?',
-        answer: 'Tırnaklarınızı aşırı kimyasal maddelerden koruyun, eldiven kullanın ve düzenli olarak tırnak bakım kremlerinizi uygulayın. Çatlak veya kırık varsa hemen tamir ettirin.'
-      }
-    ],
-    duration: '60-120 dakika',
-    price: '₺400 - ₺1200 (Uygulamaya Göre Değişir)',
-    slug: 'protez-tirnak'
-  },
-  {
-    id: 1,
-    title: 'Cilt Analizi',
-    description: 'Uzman estetisyenlerimiz tarafından detaylı cilt analizi yapılarak, cildinizin ihtiyaçları belirlenir. Cilt tipinize özel bakım programları oluşturulur.',
-    image: '/images/analiz_cilt.png',
-    longDescription: `
-      Etkili bir cilt bakımının ilk adımı, doğru bir cilt analizidir. Göksum Güzellik Merkezi'nde uzman estetisyenlerimiz, modern cilt analiz cihazları yardımıyla cildinizin durumunu detaylı bir şekilde inceliyor.
-      
-      Cilt analizimiz, cildinizin nem seviyesi, elastikiyeti, gözenek yapısı, kırışıklık durumu, leke ve pigmentasyon, sebum üretimi gibi birçok faktörü değerlendirerek cildinizin genel sağlık profilini ortaya çıkarır.
-      
-      Analiz sonrasında, yalnızca sizin cildinize özel, kişiselleştirilmiş bakım programları ve ürün önerileri sunuyoruz. Bu sayede cildinizin gerçekten ihtiyacı olan bakımı almasını sağlıyoruz.
-    `,
-    features: [
-      'Detaylı cilt tipi analizi',
-      'Cilt problemlerinin tespiti',
-      'Kişiye özel bakım önerileri',
-      'Ürün kullanım tavsiyeleri',
-      'UV hasarı tespiti',
-      'Nem ve yağ dengesinin ölçümü',
-      'Pigmentasyon analizi'
-    ],
-    benefits: [
-      'Cildinizin gerçek ihtiyaçlarını keşfedin',
-      'Gereksiz ürün kullanımını önleyin',
-      'Cildinize özel bakım rutini oluşturun',
-      'Cilt problemlerinizin kaynağını öğrenin',
-      'Cildinizin geleceğini koruyun'
-    ],
-    faq: [
-      {
-        question: 'Cilt analizi ne kadar sürer?',
-        answer: 'Cilt analizi işlemi ortalama 30 dakika sürmektedir. Bu süre içinde cildinizin detaylı incelemesi yapılır ve sonuçlar değerlendirilir.'
-      },
-      {
-        question: 'Cilt analizi için önceden hazırlık gerekli mi?',
-        answer: 'Daha doğru sonuçlar için cilt analizine makyajsız olarak gelmenizi ve analiz öncesinde yüzünüzü özel bir ürünle temizlememizi öneririz.'
-      },
-      {
-        question: 'Hangi sıklıkta cilt analizi yaptırmalıyım?',
-        answer: 'Cildinizin durumuna göre değişmekle birlikte, genellikle her mevsim değişiminde veya yılda 2 kez cilt analizi yaptırmanızı tavsiye ederiz.'
-      }
-    ],
-    duration: '30 dakika',
-    price: 'Ücretsiz (Bakım Hizmeti İle Birlikte)',
-    slug: 'cilt-analizi'
-  },
-  {
-    id: 2,
-    title: 'Cilt Bakımı',
-    description: 'Cildinizin ihtiyaçlarına göre özel olarak hazırlanan bakım programları ile daha canlı, daha sağlıklı bir cilde kavuşun.',
-    image: '/images/hero1.jpg',
-    longDescription: `
-      Göksum Güzellik Merkezi'nde sunduğumuz profesyonel cilt bakımı uygulamaları, cildinizin kendini yenilemesine ve doğal parlaklığını yeniden kazanmasına yardımcı olur.
-      
-      Cilt analizi sonrasında, cilt tipinize ve ihtiyaçlarınıza özel olarak seçilen bakım programımızda; derin temizlik, peeling, canlandırma maskesi, serum uygulaması, nemlendirme gibi adımlar bulunmaktadır.
-      
-      Kullandığımız tüm ürünler, cildinize zarar vermeden maksimum fayda sağlayacak şekilde seçilmiş, profesyonel kalitede ürünlerdir. Düzenli cilt bakımı ile cildiniz daha sağlıklı, daha parlak ve daha genç bir görünüme kavuşacaktır.
-    `,
-    features: [
-      'Klasik cilt bakımı',
-      'Akne bakımı',
-      'Anti-aging bakım',
-      'Leke giderici bakım',
-      'Hydrafacial bakım',
-      'Vitamin C bakımı',
-      'Gençleştirme bakımı',
-      'Hassas cilt bakımı'
-    ],
-    benefits: [
-      'Cildinizin daha canlı ve parlak görünmesi',
-      'Akne ve sivilcelerin azalması',
-      'Gözenek sıkılaşması',
-      'Cilt tonunun eşitlenmesi',
-      'Kırışıklıkların görünümünün azalması',
-      'Cildin nem dengesinin korunması'
-    ],
-    faq: [
-      {
-        question: 'Cilt bakımı ne sıklıkta yaptırılmalıdır?',
-        answer: 'Cilt tipinize ve problemlerinize bağlı olarak, genellikle 3-4 haftada bir cilt bakımı yaptırmanızı öneririz.'
-      },
-      {
-        question: 'Cilt bakımı sonrası nelere dikkat etmeliyim?',
-        answer: 'Bakım sonrası 24 saat boyunca makyaj yapmamanızı, güneşten korunmanızı ve cildinizi nemlendirmenizi tavsiye ederiz.'
-      },
-      {
-        question: 'Akne bakımı klasik cilt bakımından farklı mıdır?',
-        answer: 'Evet, akne bakımı klasik bakıma göre daha farklı ürünler ve teknikler içerir. Özellikle akneye yönelik antibakteriyel ürünler kullanılır.'
-      }
-    ],
-    duration: '60-90 dakika',
-    price: '₺800 - ₺1500 (Bakım Türüne Göre Değişir)',
-    slug: 'cilt-bakimi'
-  },
-  {
-    id: 3,
-    title: 'Lazer Epilasyon',
-    description: 'Son teknoloji lazer epilasyon cihazlarımız ile istenmeyen tüylerden kalıcı olarak kurtulun. Seans aralarında kısa süreler ve etkili sonuçlar.',
-    image: '/images/lazerr.png',
-    longDescription: `
-      Göksum Güzellik Merkezi'nde en son teknoloji lazer epilasyon cihazları kullanarak, istenmeyen tüylerden kalıcı olarak kurtulmanızı sağlıyoruz.
-      
-      Kullandığımız lazer sistemleri, farklı cilt ve kıl tiplerine göre ayarlanabilir, bu sayede her müşterimize özel, etkili ve güvenli bir epilasyon deneyimi sunuyoruz.
-      
-      Lazer epilasyon, ışık enerjisini kullanarak kıl köklerini hedefler ve onları kalıcı olarak etkisiz hale getirir. Her seans sonrasında, kıl yoğunluğu azalır ve sonunda pürüzsüz bir cilde kavuşursunuz.
-    `,
-    features: [
-      'Tüm vücut uygulamaları',
-      'Yüz bölgesi uygulamaları',
-      'Bikini bölgesi',
-      'Erkekler için özel uygulamalar',
-      'Alexandrite lazer teknolojisi',
-      'Diode lazer teknolojisi',
-      'Nd:YAG lazer uygulaması'
-    ],
-    benefits: [
-      'Kalıcı tüy azalması',
-      'Jilet yanığı ve batık sorununun çözümü',
-      'Zamandan tasarruf',
-      'Uzun vadede ekonomik çözüm',
-      'Pürüzsüz ve bakımlı bir cilt'
-    ],
-    faq: [
-      {
-        question: 'Lazer epilasyon acı verir mi?',
-        answer: 'Modern cihazlarımız soğutma sistemlerine sahiptir ve acıyı minimuma indirir. Genel olarak hafif bir ısı hissi ve lastik bant çekme hissi şeklinde tanımlanır.'
-      },
-      {
-        question: 'Kaç seans gereklidir?',
-        answer: 'Kişinin kıl yapısına, hormonlarına ve tedavi edilen bölgeye bağlı olarak değişir. Genellikle 6-8 seans yeterli olur, ancak bazı durumlarda ek seanslar gerekebilir.'
-      },
-      {
-        question: 'Seanslar arası ne kadar süre beklemeliyim?',
-        answer: 'Tedavi edilen bölgeye bağlı olarak, genellikle yüz için 4 hafta, vücut için 6-8 hafta aralıklarla seans planlanır.'
-      }
-    ],
-    duration: 'Bölgeye göre 15-120 dakika',
-    price: '₺300 - ₺2000 (Bölgeye Göre Değişir)',
-    slug: 'lazer-epilasyon'
-  },
-  {
-    id: 4,
-    title: 'Bölesel Zayıflama',
-    description: 'Modern zayıflama teknolojileri ile vücudunuzda bölgesel incelme sağlayın. İnatçı yağlardan kurtularak daha fit bir görünüme kavuşun.',
-    image: '/images/zayıflama.png',
-    longDescription: `
-      Göksum Güzellik Merkezi'nde sunduğumuz bölgesel zayıflama uygulamaları, diyet ve egzersizle zor verilen inatçı yağ depolarını hedefleyerek, vücudunuzu yeniden şekillendirmenize yardımcı olur.
-      
-      Kavitasyon, radyofrekans, vakum ve lipoliz teknolojilerini bir arada kullanan bölgesel zayıflama uygulamalarımız, hücrelerde biriken yağların parçalanmasını ve vücuttan atılmasını sağlar.
-      
-      Özellikle karın, basen, kalça, bacak içi ve kol bölgelerindeki inatçı yağlara karşı etkili olan bu uygulamalar, düzenli seanslarla ölçülerinizde gözle görülür bir azalma sağlar.
-    `,
-    features: [
-      'Kavitasyon uygulaması',
-      'RF lipoliz tedavisi',
-      'Selülit giderici uygulamalar',
-      'Kişiye özel zayıflama protokolleri',
-      'Vakum terapisi',
-      'Lenf drenaj masajı',
-      'G5 masajı'
-    ],
-    benefits: [
-      'İnatçı bölgesel yağların azalması',
-      'Selülit görünümünün iyileşmesi',
-      'Cilt sıkılaşması',
-      'Vücut ölçülerinde incelme',
-      'Kan dolaşımının düzenlenmesi',
-      'Toksinlerin vücuttan atılması'
-    ],
-    faq: [
-      {
-        question: 'Bölgesel zayıflama uygulamaları acı verir mi?',
-        answer: 'Hayır, bu uygulamalar genellikle ağrısız veya minimum rahatsızlıkla gerçekleştirilir. Hafif bir sıcaklık veya titreşim hissi olabilir.'
-      },
-      {
-        question: 'Kaç seans sonra sonuç görülür?',
-        answer: 'Kişiye ve hedeflenen bölgeye bağlı olarak değişmekle birlikte, genellikle 4-6 seans sonra gözle görülür sonuçlar elde edilir.'
-      },
-      {
-        question: 'Bölgesel zayıflama ile kaç cm incelme sağlanabilir?',
-        answer: 'Düzenli seanslar ve doğru uygulama ile 4-8 cm arasında incelme sağlamak mümkündür.'
-      }
-    ],
-    duration: '40-60 dakika',
-    price: '₺500 - ₺1000 (Bölgeye Göre Değişir)',
-    slug: 'bolgesel-zayiflama'
-  
-  },
-  {
-    id: 5,
-    title: 'Kalıcı Makyaj',
-    description: 'Göz, kaş ve dudak için kalıcı makyaj uygulamaları ile her gün makyaj yapma derdinden kurtulun, zamandan tasarruf edin.',
-    image: '/images/makyaj.png',
-    longDescription: `
-      Göksum Güzellik Merkezi'nde sunduğumuz kalıcı makyaj uygulamaları, her sabah makyaj yapma zahmetinden sizi kurtarırken, doğal ve etkileyici bir görünüm sağlar.
-      
-      Uygulamalarımızda kullandığımız renk pigmentleri, tamamen organik ve hipoalerjenik olup, doğal bir görünüm için özel olarak seçilir. Uzman kalıcı makyaj artistlerimiz, yüz şeklinize ve isteklerinize uygun tasarımlar yaratır.
-      
-      Kaş kontürü, dudak kontürü, eyeliner ve dipliner gibi farklı uygulamalarla, yüzünüzün çekici hatlarını vurgulayabilir ve kusursuz bir görünüm elde edebilirsiniz.
-    `,
-    features: [
-      'Dudak kontür ve renklendirme',
-      'Eyeliner uygulaması',
-      'Dipliner uygulaması',
-      'Kaş kontür',
-      'Microblading',
-      'Pudralama tekniği',
-      'Ombre kaş',
-      '3D teknikler'
-    ],
-    benefits: [
-      'Her sabah zaman kazanma',
-      'Su ve terle bozulmayan makyaj',
-      'Doğal ve etkileyici görünüm',
-      'İnce kaşları dolgunlaştırma',
-      'Simetrik ve kusursuz hatlar',
-      'Uzun süreli kalıcılık (1-3 yıl)'
-    ],
-    faq: [
-      {
-        question: 'Kalıcı makyaj acı verir mi?',
-        answer: 'Uygulama öncesi anestezik krem kullanılır, böylece acı minimuma indirilir. Genellikle hafif bir rahatsızlık hissi şeklinde tanımlanır.'
-      },
-      {
-        question: 'Kalıcı makyaj ne kadar süre kalır?',
-        answer: 'Uygulamaya, cilt tipine ve bakıma bağlı olarak 1-3 yıl arasında kalıcıdır. Zaman içinde solmaya başladığında rötuş yapılabilir.'
-      },
-      {
-        question: 'İyileşme süreci nasıldır?',
-        answer: 'İlk hafta içinde kabuklama ve soyulma olabilir. Tam iyileşme 2-4 hafta sürer. Bu süre zarfında güneşten korunma ve nemlendirme önemlidir.'
-      }
-    ],
-    duration: '1-2 saat',
-    price: '₺1500 - ₺3000 (Uygulamaya Göre Değişir)',
-    slug: 'kalici-makyaj'
-  },
-  {
-    id: 6,
-    title: 'Leke Tedavi',
-    description: 'Yüzünüzdeki lekeleri, güneş hasarlarını ve pigmentasyon sorunlarını etkili tedavi yöntemlerimizle giderin. Daha pürüzsüz ve eşit tonda bir cilde kavuşun.',
-    image: '/images/leketedavi.png',
-    longDescription: `
-      Göksum Güzellik Merkezi'nde sunduğumuz leke tedavileri, cildinizde oluşan güneş lekelerini, akne izlerini, melazma ve diğer pigmentasyon bozukluklarını hedefler.
-      
-      Tedavilerimizde kimyasal peeling, leke giderici serumlar, özel tedavi maskeleri ve lazer teknolojileri kullanılarak, lekelerin açılması ve yeni leke oluşumunun önlenmesi sağlanır.
-      
-      Uzman estetisyenlerimiz, cildinizin durumuna ve leke tipine göre özel tedavi protokolleri hazırlar. Düzenli uygulamalarla, cildiniz daha eşit tonlu ve pürüzsüz bir görünüme kavuşur.
-    `,
-    features: [
-      'Özel leke giderici serumlar',
-      'Kimyasal peeling uygulamaları',
-      'Akne lekesi tedavisi',
-      'Güneş lekesi tedavisi',
-      'Melazma tedavisi',
-      'Konsantre C vitamini uygulaması',
-      'Dermapen ile serum infüzyonu',
-      'Aydınlatıcı maskeler'
-    ],
-    benefits: [
-      'Daha eşit ton ve pürüzsüz cilt',
-      'Lekelerin açılması',
-      'Cilt bariyerinin güçlenmesi',
-      'Yeni leke oluşumunun önlenmesi',
-      'Ciltte aydınlanma ve parlaklık',
-      'Akne izlerinin hafiflemesi'
-    ],
-    faq: [
-      {
-        question: 'Leke tedavisi ne kadar sürer?',
-        answer: 'Lekenin tipine, büyüklüğüne ve derinliğine bağlı olarak 6-10 seans gerekebilir. Seanslar genellikle 2-3 hafta arayla planlanır.'
-      },
-      {
-        question: 'Tedavi sonrası güneşe çıkabilir miyim?',
-        answer: 'Tedavi süresince ve sonrasında güneş koruması çok önemlidir. Minimum SPF 50 güneş koruyucu kullanmalı ve direkt güneş ışığından kaçınmalısınız.'
-      },
-      {
-        question: 'Lekelerim tamamen geçer mi?',
-        answer: 'Tedavi sonucunda, çoğu lekede belirgin bir açılma ve iyileşme görülür. Ancak, leke tipine ve cildinizin tepkisine bağlı olarak sonuçlar değişebilir.'
-      }
-    ],
-    duration: '30-60 dakika',
-    price: '₺500 - ₺1500 (Uygulamaya Göre Değişir)',
-    slug: 'leke-tedavi'
-  },
-  {
-    id: 7,
-    title: 'Saç Mezoterapi',
-    description: 'Saç dökülmesi ve seyrelmesi sorunlarına karşı etkili mezoterapi yöntemiyle doğal ve güçlü saçlara kavuşun. Saç köklerinizi canlandırın.',
-    image: '/images/sac.png',
-    longDescription: `
-      Göksum Güzellik Merkezi'nde sunduğumuz saç mezoterapisi, saç dökülmesi, seyrelmesi ve zayıflaması sorunlarına karşı etkili bir çözüm sunar.
-      
-      Saç mezoterapisi, saç derisine vitamin, mineral, amino asit ve peptit içeren özel kokteyllerin enjekte edilmesi işlemidir. Bu uygulama, saç köklerini besler, güçlendirir ve yeni saç büyümesini teşvik eder.
-      
-      Stres, hormonsal değişimler, genetik faktörler veya beslenme eksikliklerine bağlı saç problemlerinde etkili olan mezoterapi, düzenli uygulamalarla saçlarınızın daha gür, daha sağlıklı ve daha parlak görünmesini sağlar.
-    `,
-    features: [
-      'Vitamin ve mineral kokteylleri',
-      'Kök hücre takviyeleri',
-      'Saç kökü besleme',
-      'Dökülme önleyici bakım',
-      'Saç derisi canlandırma',
-      'Anti-DHT formüller',
-      'PRP ile kombine uygulamalar'
-    ],
-    benefits: [
-      'Saç dökülmesinin azalması',
-      'Mevcut saçların güçlenmesi',
-      'Yeni saç çıkışının uyarılması',
-      'Saç kalitesinin artması',
-      'Saç derisinin sağlığının iyileşmesi',
-      'Daha dolgun ve canlı saçlar'
-    ],
-    faq: [
-      {
-        question: 'Saç mezoterapisi acılı mıdır?',
-        answer: 'Uygulama öncesi anestezik krem kullanıldığından, acı minimum düzeydedir. Genellikle hafif bir batma hissi şeklinde tanımlanır.'
-      },
-      {
-        question: 'Kaç seans saç mezoterapisi gerekir?',
-        answer: 'Genellikle ilk ay haftada bir, sonraki iki ay 15 günde bir, sonrasında aylık seanslar şeklinde toplam 8-10 seans uygulanır.'
-      },
-      {
-        question: 'Saç mezoterapisinin sonuçları ne zaman görülür?',
-        answer: 'İlk sonuçlar genellikle 3-4 seans sonra görülmeye başlar. Tam sonuç için 8-10 seans tamamlanmalıdır.'
-      }
-    ],
-    duration: '30-45 dakika',
-    price: '₺800 - ₺1500 (Uygulama Alanına Göre Değişir)',
-    slug: 'sac-mezoterapi'
-  },
-  
-];
+/* ─── FAQ veri haritası ────────────────────────────────────────────────────── */
+const faqMap: Record<string, { question: string; answer: string }[]> = {
+  'protez-tirnak': [
+    { question: 'Protez tırnak ne kadar süre dayanır?', answer: 'Bakım ve kullanıma bağlı olarak jel tırnak 3–4 hafta, kalıcı oje ise 2–3 hafta dayanır. Düzenli dolgu ile süre uzatılabilir.' },
+    { question: 'Doğal tırnağa zarar verir mi?', answer: 'Profesyonel uygulama ve doğru bakım ile doğal tırnağınıza zarar vermez; aksine kırılgan tırnakları korur ve güçlendirir.' },
+    { question: 'Bakım nasıl yapılmalı?', answer: 'Tırnaklarınızı aşırı kimyasal maddelerden koruyun, eldiven kullanın, düzenli olarak tırnak bakım kremlerinizi uygulayın.' },
+  ],
+  'lazer-epilasyon': [
+    { question: 'Lazer epilasyon acı verir mi?', answer: 'Modern soğutma sistemleri sayesinde acı minimuma indirilmiştir. Genellikle hafif bir ısı ve lastik çekme hissi şeklinde tanımlanır.' },
+    { question: 'Kaç seans gereklidir?', answer: 'Kişinin kıl yapısı ve hormonlarına bağlı olarak 6–8 seans yeterli olmaktadır; bazı durumlarda ek seanslar gerekebilir.' },
+    { question: 'Seanslar arası kaç hafta beklenmeli?', answer: 'Yüz için 4 hafta, vücut için 6–8 hafta aralık önerilir.' },
+  ],
+  'cilt-bakimi': [
+    { question: 'Cilt bakımı ne sıklıkta yapılmalı?', answer: 'Cilt tipinize göre genellikle 3–4 haftada bir bakım yaptırmanızı öneririz.' },
+    { question: 'Bakım sonrası nelere dikkat etmeli?', answer: 'İlk 24 saat makyaj yapmayın, güneşten korunun ve cildinizi düzenli nemlendirin.' },
+    { question: 'Akne bakımı klasikten farklı mı?', answer: 'Evet, antibakteriyel ürünler ve akneye özel teknikler kullanılır; daha yoğun bir protokol uygulanır.' },
+  ],
+  'kalici-makyaj': [
+    { question: 'Kalıcı makyaj acı verir mi?', answer: 'Uygulama öncesi anestezik krem uygulanır. Genellikle hafif bir rahatsızlık hissi olup acı minimuma indirilir.' },
+    { question: 'Ne kadar süre kalıcıdır?', answer: 'Cilt tipine ve bakıma bağlı olarak 1–3 yıl kalıcıdır. Solmaya başladığında rötuş yapılabilir.' },
+    { question: 'İyileşme süreci nasıl geçer?', answer: 'İlk hafta kabuklama ve soyulma görülebilir. Tam iyileşme 2–4 hafta sürer; güneşten korunma ve nemlendirme önemlidir.' },
+  ],
+  'bolgesel-zayiflama': [
+    { question: 'Uygulamalar acı verir mi?', answer: 'Hayır, genellikle ağrısız gerçekleştirilir. Hafif bir sıcaklık veya titreşim hissi olabilir.' },
+    { question: 'Kaç seans sonra sonuç görülür?', answer: 'Genellikle 4–6 seans sonra gözle görülür sonuçlar elde edilir.' },
+    { question: 'Kaç cm incelme sağlanabilir?', answer: 'Düzenli seanslar ve doğru uygulama ile 4–8 cm arasında incelme mümkündür.' },
+  ],
+  'leke-tedavi': [
+    { question: 'Tedavi ne kadar sürer?', answer: 'Leke tipine bağlı olarak 6–10 seans gerekebilir. Seanslar 2–3 hafta arayla planlanır.' },
+    { question: 'Güneşe çıkabilir miyim?', answer: 'Tedavi süresince minimum SPF 50 güneş koruyucu kullanmalı ve direkt güneş ışığından kaçınmalısınız.' },
+    { question: 'Lekelerim tamamen geçer mi?', answer: 'Çoğu lekede belirgin açılma görülür; leke tipine ve cilt tepkisine bağlı olarak sonuçlar değişebilir.' },
+  ],
+  'sac-mezoterapi': [
+    { question: 'Saç mezoterapisi acılı mıdır?', answer: 'Anestezik krem kullanıldığından acı minimum düzeydedir. Genellikle hafif bir batma hissi şeklinde tanımlanır.' },
+    { question: 'Kaç seans gerekir?', answer: 'İlk ay haftada bir, sonraki iki ay 15 günde bir, ardından aylık; toplam 8–10 seans önerilir.' },
+    { question: 'Sonuçlar ne zaman görülür?', answer: 'İlk sonuçlar genellikle 3–4 seans sonra görülmeye başlar. Tam sonuç için 8–10 seans tamamlanmalıdır.' },
+  ],
+  'cilt-analizi': [
+    { question: 'Cilt analizi ne kadar sürer?', answer: 'Ortalama 30 dakika sürmektedir.' },
+    { question: 'Önceden hazırlık gerekli mi?', answer: 'Daha doğru sonuç için makyajsız gelmenizi ve analiz öncesinde yüz temizliği yapılmasını öneririz.' },
+    { question: 'Ne sıklıkta yaptırmalıyım?', answer: 'Genel olarak her mevsim değişiminde ya da yılda 2 kez cilt analizi yaptırmanızı tavsiye ederiz.' },
+  ],
+};
 
-// SEO keyword mappings for each service
+/* ─── SEO metadata ─────────────────────────────────────────────────────────── */
 const serviceSeoData: Record<string, { title: string; description: string; keywords: string }> = {
   'protez-tirnak': {
     title: 'Adana En İyi Protez Tırnak | Jel Tırnak, Kalıcı Oje - Göksum Güzellik',
-    description: 'Adana Seyhan\'da en iyi protez tırnak uygulaması. Jel tırnak, kalıcı oje, nail art ve tırnak uzatma hizmetleri. Profesyonel tırnak teknisyenleri ile şık ve bakımlı tırnaklara kavuşun. Göksum Güzellik Merkezi.',
-    keywords: 'adana protez tırnak, adana en iyi protez tırnak, seyhan protez tırnak, adana jel tırnak, adana kalıcı oje, adana nail art, adana tırnak salonu, adana tırnak uzatma'
+    description: "Adana Seyhan'da en iyi protez tırnak uygulaması. Jel tırnak, kalıcı oje, nail art ve tırnak uzatma hizmetleri. Göksum Güzellik Merkezi.",
+    keywords: 'adana protez tırnak, adana en iyi protez tırnak, seyhan protez tırnak, adana jel tırnak, adana kalıcı oje',
   },
   'lazer-epilasyon': {
     title: 'Adana En İyi Lazer Epilasyon | Kalıcı Tüy Azaltma - Göksum Güzellik',
-    description: 'Adana Seyhan\'da en iyi lazer epilasyon hizmeti. Alexandrite ve Diode lazer teknolojisi ile kalıcı tüy azaltma. Tüm vücut, yüz, bikini bölgesi uygulamaları. Göksum Güzellik Merkezi.',
-    keywords: 'adana lazer epilasyon, adana en iyi lazer epilasyon, seyhan lazer epilasyon, adana alexandrite lazer, adana lazer epilasyon fiyatları, adana kalıcı epilasyon'
+    description: "Adana Seyhan'da en iyi lazer epilasyon. Alexandrite ve Diode lazer teknolojisi ile kalıcı tüy azaltma. Göksum Güzellik Merkezi.",
+    keywords: 'adana lazer epilasyon, adana en iyi lazer epilasyon, seyhan lazer epilasyon',
   },
   'cilt-bakimi': {
     title: 'Adana En İyi Cilt Bakımı | Profesyonel Cilt Bakımı - Göksum Güzellik',
-    description: 'Adana Seyhan\'da en iyi cilt bakımı hizmeti. Hydrafacial, akne bakımı, anti-aging ve leke giderici bakımlar. Profesyonel ürünlerle cildinizi yenileyin. Göksum Güzellik Merkezi.',
-    keywords: 'adana cilt bakımı, adana en iyi cilt bakımı, seyhan cilt bakımı, adana hydrafacial, adana akne bakımı, adana profesyonel cilt bakımı'
+    description: "Adana Seyhan'da en iyi cilt bakımı. Hydrafacial, akne bakımı, anti-aging. Göksum Güzellik Merkezi.",
+    keywords: 'adana cilt bakımı, adana en iyi cilt bakımı, seyhan cilt bakımı',
   },
   'kalici-makyaj': {
     title: 'Adana En İyi Kalıcı Makyaj | Microblading, Kaş Kontür - Göksum Güzellik',
-    description: 'Adana Seyhan\'da en iyi kalıcı makyaj uygulaması. Microblading, kaş kontür, dudak kontür ve eyeliner. Doğal görünümlü kalıcı makyaj için Göksum Güzellik Merkezi.',
-    keywords: 'adana kalıcı makyaj, adana en iyi kalıcı makyaj, seyhan kalıcı makyaj, adana microblading, adana kaş kontür, adana dudak kontür'
+    description: "Adana Seyhan'da en iyi kalıcı makyaj. Microblading, kaş kontür, dudak kontür. Göksum Güzellik Merkezi.",
+    keywords: 'adana kalıcı makyaj, adana microblading, adana kaş kontür',
   },
   'bolgesel-zayiflama': {
     title: 'Adana Bölgesel Zayıflama | Kavitasyon, Selülit Tedavisi - Göksum Güzellik',
-    description: 'Adana Seyhan\'da profesyonel bölgesel zayıflama hizmeti. Kavitasyon, RF lipoliz, selülit giderme ve vücut şekillendirme. İnatçı yağlara son! Göksum Güzellik Merkezi.',
-    keywords: 'adana bölgesel zayıflama, adana kavitasyon, adana selülit tedavisi, seyhan zayıflama, adana vücut şekillendirme'
+    description: "Adana Seyhan'da bölgesel zayıflama. Kavitasyon, RF lipoliz, selülit giderme. Göksum Güzellik Merkezi.",
+    keywords: 'adana bölgesel zayıflama, adana kavitasyon, adana selülit tedavisi',
   },
   'leke-tedavi': {
     title: 'Adana Leke Tedavisi | Cilt Lekesi Giderme - Göksum Güzellik',
-    description: 'Adana Seyhan\'da profesyonel leke tedavisi. Güneş lekesi, akne lekesi ve melazma tedavisi. Kimyasal peeling ve aydınlatıcı bakımlar. Göksum Güzellik Merkezi.',
-    keywords: 'adana leke tedavisi, adana cilt lekesi giderme, seyhan leke tedavisi, adana melazma tedavisi, adana akne lekesi tedavisi'
+    description: "Adana Seyhan'da profesyonel leke tedavisi. Güneş lekesi, melazma, akne izi tedavisi. Göksum Güzellik Merkezi.",
+    keywords: 'adana leke tedavisi, adana cilt lekesi, seyhan leke tedavisi',
   },
   'sac-mezoterapi': {
     title: 'Adana Saç Mezoterapisi | Saç Dökülmesi Tedavisi - Göksum Güzellik',
-    description: 'Adana Seyhan\'da saç mezoterapisi hizmeti. Saç dökülmesi tedavisi, saç güçlendirme ve yeni saç çıkışını teşvik. Vitamin kokteylleri ile sağlıklı saçlar. Göksum Güzellik Merkezi.',
-    keywords: 'adana saç mezoterapisi, adana saç dökülmesi tedavisi, seyhan saç mezoterapisi, adana saç güçlendirme'
+    description: "Adana Seyhan'da saç mezoterapisi. Saç dökülmesi tedavisi ve saç güçlendirme. Göksum Güzellik Merkezi.",
+    keywords: 'adana saç mezoterapisi, adana saç dökülmesi tedavisi',
   },
   'cilt-analizi': {
-    title: 'Adana Cilt Analizi | Profesyonel Cilt Değerlendirmesi - Göksum Güzellik',
-    description: 'Adana Seyhan\'da ücretsiz cilt analizi. Modern cilt analiz cihazları ile cildinizin ihtiyaçlarını belirleyin. Kişiye özel bakım programı. Göksum Güzellik Merkezi.',
-    keywords: 'adana cilt analizi, adana ücretsiz cilt analizi, seyhan cilt analizi, adana cilt tipi belirleme'
-  }
+    title: 'Adana Cilt Analizi | Ücretsiz Cilt Değerlendirmesi - Göksum Güzellik',
+    description: "Adana Seyhan'da ücretsiz cilt analizi. Modern cihazlarla cilt tipinizi belirleyin. Göksum Güzellik Merkezi.",
+    keywords: 'adana cilt analizi, adana ücretsiz cilt analizi',
+  },
 };
 
-// Dynamic metadata
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const service = getServiceData(params.slug);
-
-  if (!service) {
-    return {
-      title: 'Hizmet Bulunamadı',
-      description: 'Aradığınız hizmet bulunamadı.',
-    };
-  }
-
-  const seoData = serviceSeoData[service.slug];
-  
+  if (!service) return { title: 'Hizmet Bulunamadı' };
+  const seo = serviceSeoData[service.slug];
   return {
-    title: seoData?.title || `${service.title} | Adana Seyhan - Göksum Güzellik`,
-    description: seoData?.description || `Adana Seyhan'da profesyonel ${service.title.toLowerCase()} hizmeti. ${service.description} Göksum Güzellik Merkezi.`,
-    keywords: seoData?.keywords || `adana ${service.title.toLowerCase()}, seyhan ${service.title.toLowerCase()}`,
+    title: seo?.title || `${service.title} | Adana Seyhan - Göksum Güzellik`,
+    description: seo?.description || service.description,
+    keywords: seo?.keywords,
     openGraph: {
-      title: seoData?.title || `${service.title} | Adana Seyhan - Göksum Güzellik`,
-      description: seoData?.description || service.description,
+      title: seo?.title || service.title,
+      description: seo?.description || service.description,
       url: `https://www.goksumguzellik.com/hizmetlerimiz/${service.slug}`,
       type: 'website',
-      images: [
-        {
-          url: `https://www.goksumguzellik.com${service.image}`,
-          width: 1200,
-          height: 630,
-          alt: `${service.title} - Göksum Güzellik Merkezi Adana`,
-        },
-      ],
+      images: [{ url: `https://www.goksumguzellik.com${service.image}`, width: 1200, height: 630, alt: service.title }],
     },
-    alternates: {
-      canonical: `https://www.goksumguzellik.com/hizmetlerimiz/${service.slug}`,
-    },
+    alternates: { canonical: `https://www.goksumguzellik.com/hizmetlerimiz/${service.slug}` },
   };
 }
 
-// Dynamic route generation
 export async function generateStaticParams() {
   return getServicesStaticPaths();
 }
 
+/* ─── Sayfa bileşeni ───────────────────────────────────────────────────────── */
 export default function ServicePage({ params }: { params: { slug: string } }) {
   const service = getServiceData(params.slug);
+  if (!service) notFound();
 
-  if (!service) {
-    notFound();
-  }
+  const faqs = faqMap[service.slug] ?? [];
 
   return (
     <div className="bg-white">
-      {/* Page Banner */}
-      <div className="relative w-full h-[300px] md:h-[400px]">
+
+      {/* ── Banner ──────────────────────────────────────────────────────── */}
+      <div className="relative w-full h-[300px] md:h-[420px] overflow-hidden">
         <Image
           src={service.bannerImage || service.image}
           alt={service.title}
@@ -502,190 +138,282 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <div className="text-center px-4">
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
+        {/* Çok katmanlı overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+
+        <div className="absolute inset-0 flex flex-col justify-center px-4">
+          <div className="container mx-auto">
+            {/* Breadcrumb */}
+            <div className="flex items-center gap-2 text-xs mb-4" style={{ color: 'rgba(255,255,255,0.55)' }}>
+              <Link href="/" className="hover:text-white transition-colors">Ana Sayfa</Link>
+              <span>/</span>
+              <Link href="/hizmetlerimiz" className="hover:text-white transition-colors">Hizmetlerimiz</Link>
+              <span>/</span>
+              <span className="text-white">{service.title}</span>
+            </div>
+
+            {/* Eyebrow */}
+            <div className="flex items-center gap-3 mb-3">
+              <div className="h-px w-8" style={{ background: '#C9A84C' }} />
+              <span className="text-xs tracking-widest uppercase font-medium" style={{ color: '#C9A84C' }}>
+                Göksum Güzellik
+              </span>
+            </div>
+
+            <h1 className="text-3xl md:text-5xl font-display font-bold text-white mb-2">
               {service.title}
             </h1>
-            <p className="text-white text-lg md:text-xl max-w-2xl mx-auto">
-              {service.subtitle}
-            </p>
+            {service.subtitle && (
+              <p className="text-base md:text-lg max-w-2xl" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                {service.subtitle}
+              </p>
+            )}
           </div>
         </div>
       </div>
 
-      {/* Main Content Area */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Main Service Content */}
-          <div className="lg:col-span-2 space-y-8">
-            <div className="prose max-w-none">
-              <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
-                {service.longTitle || service.title}
+      {/* ── Ana içerik ──────────────────────────────────────────────────── */}
+      <div className="container mx-auto px-4 py-14">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+          {/* ── Sol: içerik ─────────────────────────────────────────────── */}
+          <div className="lg:col-span-2 space-y-10">
+
+            {/* Açıklama */}
+            <div>
+              <h2 className="text-2xl md:text-3xl font-display font-semibold text-beauty-900 mb-4">
+                {service.longTitle || service.title} Nedir?
               </h2>
-              <p className="text-gray-700 whitespace-pre-line mb-6">
+              <div className="h-0.5 w-16 mb-5" style={{ background: '#C9A84C' }} />
+              <div className="text-beauty-700 leading-relaxed whitespace-pre-line text-base">
                 {service.longDescription || service.description}
-              </p>
-            </div>
-
-            {/* Features Section */}
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                Bu Hizmette Neler Sunuyoruz?
-              </h3>
-              <ul className="space-y-2">
-                {service.features.map((feature, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="text-gold-500 mr-2">✓</span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Benefits Section (if available) */}
-            {service.benefits && service.benefits.length > 0 && (
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                  Faydaları
-                </h3>
-                <ul className="space-y-2">
-                  {service.benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start">
-                      <span className="text-gold-500 mr-2">✓</span>
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
-            )}
+            </div>
 
-            {/* Process Section (if available) */}
-            {service.process && service.process.length > 0 && (
-              <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                  Hizmet Süreci
+            {/* Hizmet kapsamı */}
+            <div className="rounded-2xl p-7" style={{ background: '#FAF7F0', border: '1px solid rgba(201,168,76,0.18)' }}>
+              <h3 className="text-xl font-display font-semibold text-beauty-900 mb-5 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-white"
+                      style={{ background: '#C9A84C' }}>✓</span>
+                Hizmet Kapsamı
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                {service.features.map((f, i) => (
+                  <div key={i} className="flex items-start gap-2.5">
+                    <FaCheckCircle className="mt-0.5 flex-shrink-0" style={{ color: '#C9A84C' }} size={14} />
+                    <span className="text-beauty-700 text-sm">{f}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Faydalar */}
+            {service.benefits && service.benefits.length > 0 && (
+              <div className="rounded-2xl p-7" style={{ background: '#0C0B08' }}>
+                <h3 className="text-xl font-display font-semibold text-white mb-5">
+                  Bu Hizmetin Faydaları
                 </h3>
-                <div className="space-y-4">
-                  {service.process.map((step, index) => (
-                    <div
-                      key={index}
-                      className="border-l-4 border-gold-500 pl-4 py-2"
-                    >
-                      <h4 className="font-medium text-gray-800">
-                        {index + 1}. {step.title}
-                      </h4>
-                      <p className="text-gray-600 mt-1">{step.description}</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {service.benefits.map((b, i) => (
+                    <div key={i} className="flex items-start gap-2.5">
+                      <div className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0"
+                           style={{ background: '#C9A84C' }} />
+                      <span className="text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>{b}</span>
                     </div>
                   ))}
                 </div>
               </div>
             )}
 
-            {/* Additional Content (if available) */}
-            {service.additionalContent && (
-              <div className="prose max-w-none">
-                <div
-                  dangerouslySetInnerHTML={{ __html: service.additionalContent }}
-                />
+            {/* Uygulama süreci — timeline */}
+            {service.process && service.process.length > 0 && (
+              <div>
+                <h3 className="text-xl font-display font-semibold text-beauty-900 mb-6">
+                  Uygulama Süreci
+                </h3>
+                <div className="space-y-0">
+                  {service.process.map((step, i) => (
+                    <div key={i} className="relative flex gap-5">
+                      {/* Dikey çizgi */}
+                      {i < service.process!.length - 1 && (
+                        <div className="absolute left-5 top-10 bottom-0 w-px"
+                             style={{ background: 'rgba(201,168,76,0.25)' }} />
+                      )}
+                      {/* Numara balonu */}
+                      <div className="w-10 h-10 rounded-full flex items-center justify-center
+                                      text-sm font-bold text-white flex-shrink-0 z-10"
+                           style={{ background: '#C9A84C', minWidth: '2.5rem' }}>
+                        {i + 1}
+                      </div>
+                      {/* İçerik */}
+                      <div className="pb-7">
+                        <h4 className="font-semibold text-beauty-900 mb-1">{step.title}</h4>
+                        <p className="text-beauty-600 text-sm leading-relaxed">{step.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
 
-            {/* CTA Section */}
-            <div className="bg-beauty-50 p-6 md:p-8 rounded-lg text-center md:text-left">
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                Daha Fazla Bilgi Almak İster misiniz?
+            {/* SSS */}
+            {faqs.length > 0 && (
+              <div>
+                <h3 className="text-xl font-display font-semibold text-beauty-900 mb-5">
+                  Sıkça Sorulan Sorular
+                </h3>
+                <div className="space-y-3">
+                  {faqs.map((faq, i) => (
+                    <div key={i} className="rounded-xl p-5"
+                         style={{ border: '1px solid rgba(201,168,76,0.2)', background: '#FFFEF9' }}>
+                      <h4 className="font-semibold text-beauty-900 mb-2 text-sm">{faq.question}</h4>
+                      <p className="text-beauty-600 text-sm leading-relaxed">{faq.answer}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Yerel SEO içerik */}
+            {service.seoContent && (
+              <div className="rounded-2xl p-7" style={{ background: '#FFFEF9', border: '1px solid rgba(201,168,76,0.15)' }}>
+                <h3 className="text-xl font-display font-semibold text-beauty-900 mb-4 flex items-center gap-2">
+                  <span style={{ color: '#C9A84C' }}>📍</span>
+                  Adana Seyhan&apos;da {service.title}
+                </h3>
+                <div className="h-0.5 w-12 mb-5" style={{ background: '#C9A84C' }} />
+                <div className="text-beauty-700 leading-relaxed text-sm space-y-4 whitespace-pre-line">
+                  {service.seoContent}
+                </div>
+              </div>
+            )}
+
+            {/* CTA bölümü */}
+            <div className="rounded-2xl p-7 md:p-9 text-center md:text-left"
+                 style={{ background: 'linear-gradient(135deg, #FAF7F0 0%, #F5EEE0 100%)', border: '1px solid rgba(201,168,76,0.25)' }}>
+              <h3 className="text-xl font-display font-semibold text-beauty-900 mb-3">
+                Randevu Almak İster misiniz?
               </h3>
-              <p className="text-gray-700 mb-4">
-                {service.ctaText ||
-                  'Bu hizmet hakkında daha fazla bilgi almak veya randevu oluşturmak için bizimle iletişime geçin.'}
+              <p className="text-beauty-700 mb-6 text-sm leading-relaxed">
+                {service.ctaText || 'Bu hizmet hakkında daha fazla bilgi almak veya randevu oluşturmak için bizimle iletişime geçin.'}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <Link href="/iletisim">
-                  <Button className="w-full sm:w-auto bg-gold-500 hover:bg-gold-600">
-                    İletişime Geçin
-                  </Button>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+                <Link
+                  href="/randevu"
+                  className="inline-flex items-center justify-center gap-2 text-white font-semibold
+                             py-3 px-7 rounded-full transition-all duration-300"
+                  style={{ background: '#C9A84C' }}
+                >
+                  Randevu Al
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                  </svg>
                 </Link>
-                <Link href="/randevu">
-                  <Button className="w-full sm:w-auto bg-white text-gold-500 border border-gold-500 hover:bg-beauty-50">
-                    Randevu Alın
-                  </Button>
+                <Link
+                  href="/iletisim"
+                  className="inline-flex items-center justify-center gap-2 font-semibold
+                             py-3 px-7 rounded-full transition-all duration-300"
+                  style={{ border: '1px solid #C9A84C', color: '#A8893A', background: 'transparent' }}
+                >
+                  İletişime Geç
                 </Link>
               </div>
             </div>
+
           </div>
 
-          {/* Service Sidebar */}
+          {/* ── Sağ: Kenar çubuğu ────────────────────────────────────────── */}
           <div className="order-first lg:order-last">
-            <div className="sticky top-24 space-y-6">
-              {/* Quick Info Card */}
-              <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
-                <div className="bg-beauty-600 py-4 px-6">
-                  <h3 className="text-lg font-semibold text-white">
-                    Hizmet Bilgileri
-                  </h3>
+            <div className="sticky top-28 space-y-5">
+
+              {/* Hizmet bilgileri kartı */}
+              <div className="rounded-2xl overflow-hidden shadow-lg"
+                   style={{ border: '1px solid rgba(201,168,76,0.2)' }}>
+                {/* Kart başlığı */}
+                <div className="py-4 px-6" style={{ background: '#0C0B08' }}>
+                  <h3 className="text-base font-semibold text-white">Hizmet Bilgileri</h3>
                 </div>
-                <div className="p-6 space-y-4">
-                  {/* Recommended For */}
+                <div className="p-6 space-y-4 bg-white">
+                  {/* Kimler için */}
                   {service.recommendedFor && (
-                    <div className="flex items-start">
-                      <div className="mr-3 mt-1">
-                        <BsPeople className="text-gold-500" size={18} />
-                      </div>
+                    <div className="flex items-start gap-3">
+                      <BsPeople className="mt-0.5 flex-shrink-0" style={{ color: '#C9A84C' }} size={15} />
                       <div>
-                        <p className="text-sm text-gray-500">
-                          Kimler İçin Uygun
-                        </p>
-                        <p className="text-gray-800">{service.recommendedFor}</p>
+                        <p className="text-xs text-beauty-500 mb-0.5">Kimler İçin Uygun</p>
+                        <p className="text-beauty-800 text-sm">{service.recommendedFor}</p>
                       </div>
                     </div>
                   )}
 
-                  <div className="pt-4">
-                    <Link href="/randevu">
-                      <Button className="w-full bg-gold-500 hover:bg-gold-600">
-                        Randevu Alın
-                      </Button>
+                  {/* Randevu butonu */}
+                  <div className="pt-2">
+                    <Link
+                      href="/randevu"
+                      className="flex items-center justify-center gap-2 w-full text-white font-semibold
+                                 py-3 rounded-full transition-all duration-300 text-sm"
+                      style={{ background: '#C9A84C' }}
+                    >
+                      Hemen Randevu Al
                     </Link>
                   </div>
                 </div>
               </div>
 
-              {/* Related Services */}
+              {/* İlgili hizmetler */}
               {service.relatedServices && service.relatedServices.length > 0 && (
-                <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
-                  <div className="bg-gray-100 py-4 px-6">
-                    <h3 className="text-lg font-semibold text-gray-800">
-                      İlgili Hizmetler
-                    </h3>
+                <div className="rounded-2xl overflow-hidden shadow-sm"
+                     style={{ border: '1px solid rgba(201,168,76,0.15)' }}>
+                  <div className="py-4 px-6" style={{ background: '#FAF7F0' }}>
+                    <h3 className="text-sm font-semibold text-beauty-800">İlgili Hizmetler</h3>
                   </div>
-                  <div className="p-4">
-                    <div className="space-y-2">
-                      {service.relatedServices.map((slug) => {
-                        const relatedService = getServiceData(slug);
-                        if (!relatedService) return null;
-                        
-                        return (
-                          <Link
-                            key={slug}
-                            href={`/hizmetlerimiz/${slug}`}
-                            className="flex items-center justify-between p-3 hover:bg-gray-50 rounded-md transition-colors"
-                          >
-                            <span className="text-gray-800">
-                              {relatedService.title}
-                            </span>
-                            <MdOutlineArrowForward className="text-gold-500" size={16} />
-                          </Link>
-                        );
-                      })}
-                    </div>
+                  <div className="p-4 bg-white">
+                    {service.relatedServices.map((slug) => {
+                      const rel = getServiceData(slug);
+                      if (!rel) return null;
+                      return (
+                        <Link
+                          key={slug}
+                          href={`/hizmetlerimiz/${slug}`}
+                          className="flex items-center justify-between p-3 rounded-lg
+                                     hover:bg-cream-100 transition-colors group"
+                        >
+                          <span className="text-beauty-800 text-sm group-hover:text-gold-600 transition-colors">
+                            {rel.title}
+                          </span>
+                          <MdOutlineArrowForward style={{ color: '#C9A84C' }} size={15} />
+                        </Link>
+                      );
+                    })}
                   </div>
                 </div>
               )}
+
+              {/* WhatsApp hızlı iletişim */}
+              <a
+                href="https://wa.me/905411901390"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 rounded-2xl transition-all duration-300"
+                style={{
+                  background: '#25D366',
+                  color: 'white',
+                }}
+              >
+                <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                <div>
+                  <div className="font-semibold text-sm">WhatsApp ile Yaz</div>
+                  <div className="text-xs opacity-80">Hızlı randevu & bilgi</div>
+                </div>
+              </a>
+
             </div>
           </div>
+
         </div>
       </div>
     </div>
   );
-} 
+}

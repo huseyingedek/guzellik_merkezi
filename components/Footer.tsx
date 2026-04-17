@@ -1,90 +1,112 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaFacebook, FaInstagram, FaWhatsapp, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <footer className="bg-beauty-900 text-white">
-      <div className="container mx-auto px-4 pt-16 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {/* About */}
+    <footer className="relative" style={{ background: '#0E0D09' }}>
+      <div className="h-px w-full"
+           style={{ background: 'linear-gradient(to right, transparent, #C9A84C, transparent)' }} />
+      <div className="container mx-auto px-4 pt-14 pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
           <div>
-            <h3 className="text-xl font-display font-bold text-gold-300 mb-4">Göksum Güzellik</h3>
-            <p className="text-beauty-300 mb-4">
-              Profesyonel güzellik ve bakım hizmetleri sunan merkezimizde, en yeni teknolojiler ve uzman kadromuzla
-              hizmetinizdeyiz.
+            <div className="relative h-32 w-72 mb-5 -ml-1">
+              <Image src="/images/logo.png" alt="Goksum Guzellik" fill className="object-contain object-left brightness-90" />
+            </div>
+            <p className="text-sm leading-relaxed mb-5" style={{ color: 'rgba(255,255,255,0.45)' }}>
+              Adana Seyhan'da profesyonel guzellik ve bakim hizmetleri. Modern teknoloji, uzman ekip ve luks deneyim.
             </p>
-            <div className="flex space-x-4">
-              <SocialLink href="https://www.facebook.com/profile.php?id=61574776514786" icon={<FaFacebook size={18} />} />
-              <SocialLink href="https://www.instagram.com/goksum_guzellik01" icon={<FaInstagram size={18} />} />
-              <SocialLink href="https://wa.me/905411901390" icon={<FaWhatsapp size={18} />} />
+            <div className="flex gap-3">
+              <SocialLink href="https://www.facebook.com/profile.php?id=61574776514786" icon={<FaFacebook size={15} />} />
+              <SocialLink href="https://www.instagram.com/goksum_guzellik01" icon={<FaInstagram size={15} />} />
+              <SocialLink href="https://wa.me/905411901390" icon={<FaWhatsapp size={15} />} />
             </div>
           </div>
 
-          {/* Services */}
           <div>
-            <h3 className="text-xl font-display font-bold text-gold-300 mb-4">Hizmetlerimiz</h3>
-            <ul className="space-y-2">
-              <FooterLink href="/hizmetlerimiz/cilt-bakimi" text="Cilt Bakımı" />
-              <FooterLink href="/hizmetlerimiz/protez-tirnak" text="Protez Tırnak" />
-              <FooterLink href="/hizmetlerimiz/lazer-epilasyon" text="Lazer Epilasyon" />
-              <FooterLink href="/hizmetlerimiz/bolgesel-zayiflama" text="Bölgesel Zayıflama" />
-              <FooterLink href="/hizmetlerimiz/kalici-makyaj" text="Kalıcı Makyaj" />
-              <FooterLink href="/hizmetlerimiz/leke-tedavi" text="Leke Tedavi" />
-              <FooterLink href="/hizmetlerimiz/sac-mezoterapi" text="Saç Mezoterapi" />
-              <FooterLink href="/hizmetlerimiz/cilt-analizi" text="Cilt Analizi" />
+            <h3 className="text-sm font-semibold tracking-widest uppercase mb-5" style={{ color: '#C9A84C' }}>
+              Hizmetlerimiz
+            </h3>
+            <ul className="space-y-2.5">
+              {[
+                ['Cilt Bakimi', '/hizmetlerimiz/cilt-bakimi'],
+                ['Protez Tirnak', '/hizmetlerimiz/protez-tirnak'],
+                ['Lazer Epilasyon', '/hizmetlerimiz/lazer-epilasyon'],
+                ['Bolgesel Zayiflama', '/hizmetlerimiz/bolgesel-zayiflama'],
+                ['Kalici Makyaj', '/hizmetlerimiz/kalici-makyaj'],
+                ['Leke Tedavi', '/hizmetlerimiz/leke-tedavi'],
+                ['Sac Mezoterapi', '/hizmetlerimiz/sac-mezoterapi'],
+                ['Cilt Analizi', '/hizmetlerimiz/cilt-analizi'],
+              ].map(([text, href]) => (
+                <li key={href}>
+                  <Link href={href} className="text-sm transition-colors duration-200 hover:text-gold-400"
+                        style={{ color: 'rgba(255,255,255,0.45)' }}>{text}</Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-display font-bold text-gold-300 mb-4">Hızlı Bağlantılar</h3>
-            <ul className="space-y-2">
-              <FooterLink href="/hakkimizda" text="Hakkımızda" />
-              <FooterLink href="/hizmetlerimiz" text="Hizmetlerimiz" />
-              <FooterLink href="/randevu" text="Randevu Alın" />
-              <FooterLink href="/blog" text="Blog" />
-              <FooterLink href="/iletisim" text="İletişim" />
+            <h3 className="text-sm font-semibold tracking-widest uppercase mb-5" style={{ color: '#C9A84C' }}>
+              Hizli Baglantilar
+            </h3>
+            <ul className="space-y-2.5">
+              {[
+                ['Hakkimizda', '/hakkimizda'],
+                ['Hizmetlerimiz', '/hizmetlerimiz'],
+                ['Randevu Al', '/randevu'],
+                ['Blog', '/blog'],
+                ['Iletisim', '/iletisim'],
+              ].map(([text, href]) => (
+                <li key={href}>
+                  <Link href={href} className="text-sm transition-colors duration-200 hover:text-gold-400"
+                        style={{ color: 'rgba(255,255,255,0.45)' }}>{text}</Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h3 className="text-xl font-display font-bold text-gold-300 mb-4">İletişim</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <span className="text-gold-400 mr-3 mt-1">
-                  <FaMapMarkerAlt />
-                </span>
-                <span className="text-beauty-300">
-                  Cemalpaşa, Gazipaşa Blv. Apartmanı No:30 Kat:1
-                  <br />
-                  01120 Seyhan/Adana
+            <h3 className="text-sm font-semibold tracking-widest uppercase mb-5" style={{ color: '#C9A84C' }}>
+              Iletisim
+            </h3>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <FaMapMarkerAlt className="mt-0.5 flex-shrink-0" style={{ color: '#C9A84C' }} size={14} />
+                <span className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.45)' }}>
+                  Cemalpasa, Gazipasa Blv. No:30 Kat:1, 01120 Seyhan / Adana
                 </span>
               </li>
-              <li className="flex items-center">
-                <span className="text-gold-400 mr-3">
-                  <FaPhone />
-                </span>
-                <a href="tel:+905411901390" className="text-beauty-300 hover:text-gold-300 transition-colors">
-                  +90 541 190 13 90
-                </a>
+              <li className="flex items-center gap-3">
+                <FaPhone style={{ color: '#C9A84C' }} size={13} />
+                <a href="tel:+905411901390" className="text-sm transition-colors duration-200 hover:text-gold-400"
+                   style={{ color: 'rgba(255,255,255,0.45)' }}>+90 541 190 13 90</a>
               </li>
-              <li className="flex items-center">
-                <span className="text-gold-400 mr-3">
-                  <FaEnvelope />
-                </span>
-                <a href="mailto:goksumguzellik796@gmail.com" className="text-beauty-300 hover:text-gold-300 transition-colors">
-                  bilgi@goksumguzellik.com
-                </a>
+              <li className="flex items-center gap-3">
+                <FaEnvelope style={{ color: '#C9A84C' }} size={13} />
+                <a href="mailto:goksumguzellik796@gmail.com"
+                   className="text-sm transition-colors duration-200 hover:text-gold-400"
+                   style={{ color: 'rgba(255,255,255,0.45)' }}>goksumguzellik796@gmail.com</a>
               </li>
             </ul>
+            <div className="mt-6">
+              <Link href="/randevu"
+                    className="inline-flex items-center gap-2 text-sm font-semibold py-2.5 px-5 rounded-full transition-all duration-300"
+                    style={{ background: 'rgba(201,168,76,0.12)', border: '1px solid rgba(201,168,76,0.35)', color: '#D8B266' }}>
+                Randevu Al
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="border-t border-beauty-800 pt-8 text-center text-beauty-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} Göksum Güzellik Merkezi. Tüm hakları saklıdır.</p>
+        <div className="pt-6 text-center text-xs"
+             style={{ borderTop: '1px solid rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.25)' }}>
+          <p>&copy; {new Date().getFullYear()} Goksum Guzellik Merkezi. Tum haklari saklidir.</p>
         </div>
       </div>
     </footer>
@@ -93,23 +115,10 @@ export default function Footer() {
 
 function SocialLink({ href, icon }: { href: string; icon: React.ReactNode }) {
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="w-9 h-9 rounded-full bg-beauty-800 flex items-center justify-center text-white hover:bg-gold-500 transition-colors"
-    >
+    <a href={href} target="_blank" rel="noopener noreferrer"
+       className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5 hover:text-gold-400"
+       style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.5)' }}>
       {icon}
     </a>
   );
 }
-
-function FooterLink({ href, text }: { href: string; text: string }) {
-  return (
-    <li>
-      <Link href={href} className="text-beauty-300 hover:text-gold-300 transition-colors">
-        {text}
-      </Link>
-    </li>
-  );
-} 

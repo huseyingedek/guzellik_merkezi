@@ -1,534 +1,283 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, FormEvent } from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import Link from 'next/link';
-import { FaCalendarAlt, FaPhone, FaWhatsapp, FaCheck, FaTimes } from 'react-icons/fa';
+import React, { useState, useEffect, FormEvent } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Link from "next/link";
+import { FaCalendarAlt, FaPhone, FaWhatsapp, FaCheck, FaTimes } from "react-icons/fa";
 
 export default function AppointmentPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    service: '',
-    date: '',
-    time: '',
-    message: ''
-  });
-  
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formData, setFormData] = useState({ name: "", phone: "", email: "", service: "", date: "", time: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [timeRange, setTimeRange] = useState({ min: '09:00', max: '19:00' });
+  const [timeRange, setTimeRange] = useState({ min: "09:00", max: "19:00" });
   const [submissionStatus, setSubmissionStatus] = useState<{ success: boolean; message: string } | null>(null);
   const [showPopup, setShowPopup] = useState(false);
-  
-  // Tarih değiştiğinde saat aralığını güncelle
+
   useEffect(() => {
     if (formData.date) {
-      const selectedDate = new Date(formData.date);
-      const day = selectedDate.getDay(); // 0 = pazar, 6 = cumartesi
-      
-      if (day === 0) { // Pazar günü
-        setTimeRange({ min: '10:00', max: '18:00' });
-      } else { // Pazartesi-Cumartesi
-        setTimeRange({ min: '09:00', max: '19:00' });
-      }
-      
-      // Eğer seçilen saat aralık dışındaysa sıfırla
-      if (formData.time) {
-        const currentTime = formData.time;
-        if (currentTime < timeRange.min || currentTime > timeRange.max) {
-          setFormData(prev => ({
-            ...prev,
-            time: ''
-          }));
-        }
-      }
+      const day = new Date(formData.date).getDay();
+      setTimeRange(day === 0 ? { min: "10:00", max: "18:00" } : { min: "09:00", max: "19:00" });
     }
   }, [formData.date]);
-  
-  const handleChange = (e) => {
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { id, value } = e.target;
-    
-    // Normal güncelleme
-    setFormData(prev => ({
-      ...prev,
-      [id]: value
-    }));
-    
-    // Eğer saat seçiliyorsa ve çalışma saatleri dışındaysa uyarı ver
-    if (id === 'time' && value !== '') {
-      if (value < timeRange.min || value > timeRange.max) {
-        alert(`Lütfen çalışma saatleri içinde bir saat seçin: ${timeRange.min} - ${timeRange.max}`);
-        return;
-      }
+    if (id === "time" && value && (value < timeRange.min || value > timeRange.max)) {
+      alert(`Lütfen çalışma saatleri içinde bir saat seçin: ${timeRange.min} - ${timeRange.max}`);
+      return;
     }
+    setFormData((prev) => ({ ...prev, [id]: value }));
   };
-  
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmissionStatus(null);
-
+    const serviceNames: Record<string, string> = {
+      "cilt-analizi": "Cilt Analizi", "cilt-bakimi": "Cilt Bakımı", "lazer-epilasyon": "Lazer Epilasyon",
+      "bolgesel-zayiflama": "Bölgesel Zayıflama", "kalici-makyaj": "Kalıcı Makyaj",
+      "leke-tedavi": "Leke Tedavisi", "sac-mezoterapi": "Saç Mezoterapisi", "protez-tirnak": "Protez Tırnak",
+    };
+    const serviceName = serviceNames[formData.service] || formData.service;
     try {
-      // Hizmet adını Türkçeye çevir
-      const serviceNames: Record<string, string> = {
-        'cilt-analizi': 'Cilt Analizi',
-        'cilt-bakimi': 'Cilt Bakımı',
-        'lazer-epilasyon': 'Lazer Epilasyon',
-        'bolgesel-zayiflama': 'Bölgesel Zayıflama',
-        'kalici-makyaj': 'Kalıcı Makyaj',
-        'leke-tedavi': 'Leke Tedavisi',
-        'sac-mezoterapi': 'Saç Mezoterapisi',
-        'protez-tirnak': 'Protez Tırnak',
-      };
-      const serviceName = serviceNames[formData.service] || formData.service;
-
-      // FormSubmit'e Türkçe alan adlarıyla gönder
       const submitData = new FormData();
-      submitData.append('Ad Soyad', formData.name);
-      submitData.append('Telefon', formData.phone);
-      if (formData.email) {
-        submitData.append('E-posta', formData.email);
-      }
-      submitData.append('Hizmet', serviceName);
-      submitData.append('Tarih', formData.date);
-      submitData.append('Saat', formData.time);
-      if (formData.message) {
-        submitData.append('Not', formData.message);
-      }
-      submitData.append('_subject', `Göksum Güzellik - Randevu Talebi: ${serviceName}`);
-      submitData.append('_template', 'table');
-      submitData.append('_captcha', 'false');
-      
-      const response = await fetch('https://formsubmit.co/ajax/goksumguzellik796@gmail.com', {
-        method: 'POST',
-        body: submitData,
-        headers: {
-          'Accept': 'application/json'
-        }
+      submitData.append("Ad Soyad", formData.name);
+      submitData.append("Telefon", formData.phone);
+      if (formData.email) submitData.append("E-posta", formData.email);
+      submitData.append("Hizmet", serviceName);
+      submitData.append("Tarih", formData.date);
+      submitData.append("Saat", formData.time);
+      if (formData.message) submitData.append("Not", formData.message);
+      submitData.append("_subject", `Göksum Güzellik - Randevu Talebi: ${serviceName}`);
+      submitData.append("_template", "table");
+      submitData.append("_captcha", "false");
+      const response = await fetch("https://formsubmit.co/ajax/goksumguzellik796@gmail.com", {
+        method: "POST", body: submitData, headers: { Accept: "application/json" },
       });
-      
       const result = await response.json();
-      
-      if (!result.success) {
-        throw new Error('Randevu formu gönderimi sırasında bir hata oluştu');
-      }
-      
-      // Form verilerini sıfırla
-      setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        service: '',
-        date: '',
-        time: '',
-        message: '',
-      });
-      
-      setSubmissionStatus({
-        success: true,
-        message: 'Randevu talebiniz başarıyla alındı. Ekibimiz kısa süre içinde sizinle iletişime geçecektir.',
-      });
-      setShowPopup(true);
-      
+      if (!result.success) throw new Error("Randevu formu gönderimi sırasında bir hata oluştu");
+      setFormData({ name: "", phone: "", email: "", service: "", date: "", time: "", message: "" });
+      setSubmissionStatus({ success: true, message: "Randevu talebiniz başarıyla alındı. Ekibimiz kısa süre içinde sizinle iletişime geçecektir." });
     } catch (error) {
-      console.error('Error submitting form:', error);
-      setSubmissionStatus({
-        success: false,
-        message: error instanceof Error ? error.message : 'Randevu formu gönderimi sırasında bir hata oluştu',
-      });
-      setShowPopup(true);
+      setSubmissionStatus({ success: false, message: error instanceof Error ? error.message : "Randevu formu gönderimi sırasında bir hata oluştu" });
     } finally {
       setIsSubmitting(false);
+      setShowPopup(true);
     }
   };
-  
+
+  const inputCls = "w-full px-4 py-3 rounded-xl text-sm border focus:outline-none focus:ring-2 transition-all bg-beauty-50";
+  const inputStyle = { borderColor: "rgba(201,168,76,0.25)" };
+
   return (
     <>
       <Header />
-      
-      {/* Banner */}
-      <div className="relative h-[300px] bg-beauty-900">
-        <div className="absolute inset-0 bg-beauty-900/60 z-10"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/hero2.jpg')" }}
-        ></div>
-        <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Randevu Alın</h1>
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-0.5 bg-gold-300"></div>
-            <p className="text-white">Güzelliğiniz İçin Zaman Ayırın</p>
-            <div className="w-8 h-0.5 bg-gold-300"></div>
+
+      {/* ── Banner ──────────────────────────────────────────────── */}
+      <div className="relative h-[260px] sm:h-[320px] overflow-hidden">
+        <div className="absolute inset-0" style={{ background: "#0C0B08" }}>
+          <div className="absolute inset-0 opacity-25"
+               style={{ backgroundImage: "url(/images/hero1.jpg)", backgroundSize: "cover", backgroundPosition: "center" }} />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/35" />
+        </div>
+        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="h-px w-8" style={{ background: "#C9A84C" }} />
+            <span className="text-xs tracking-widest uppercase font-medium" style={{ color: "#C9A84C" }}>
+              Göksum Güzellik Merkezi
+            </span>
           </div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-3">Randevu Al</h1>
+          <p className="text-white/60 text-sm md:text-base">Güzelliğiniz için zaman ayırın</p>
         </div>
       </div>
-      
-      {/* Main Content */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-display font-bold text-beauty-900 mb-4">
-              Nasıl Randevu Alabilirim?
-            </h2>
-            <div className="w-20 h-1 bg-gold-400 mx-auto mb-6"></div>
-            <p className="text-beauty-700 mb-2">
-              Randevu almak için aşağıdaki formu doldurabilir, telefonla arayabilir veya WhatsApp üzerinden mesaj gönderebilirsiniz.
-            </p>
-            <p className="text-beauty-700">
-              Size en kısa sürede dönüş yapacağız.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
-            {/* Alternative Options */}
-            <div className="lg:col-span-2 order-2 lg:order-1">
-              <div className="bg-beauty-50 p-8 rounded-lg">
-                <h3 className="text-xl font-display font-semibold text-beauty-900 mb-6">Alternatif İletişim Kanalları</h3>
-                
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 rounded-full bg-gold-100 flex items-center justify-center mr-4 flex-shrink-0">
-                      <FaPhone className="text-gold-500" size={18} />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-beauty-800 mb-1">Telefonla Arayın</h4>
-                      <p className="text-beauty-600 text-sm mb-2">
-                        Doğrudan konuşmak ve randevu almak isterseniz bizi arayabilirsiniz.
-                      </p>
-                      <a 
-                        href="tel:+905411901390" 
-                        className="text-gold-500 font-medium hover:text-gold-600 transition-colors"
-                      >
-                        +90 541 190 13 90
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 rounded-full bg-gold-100 flex items-center justify-center mr-4 flex-shrink-0">
-                      <FaWhatsapp className="text-gold-500" size={18} />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-beauty-800 mb-1">WhatsApp</h4>
-                      <p className="text-beauty-600 text-sm mb-2">
-                        Mesaj göndermek isterseniz WhatsApp üzerinden bize ulaşabilirsiniz.
-                      </p>
-                      <a 
-                        href="https://wa.me/905411901390" 
-                        target="_blank"
-                        className="text-gold-500 font-medium hover:text-gold-600 transition-colors"
-                      >
-                        WhatsApp Üzerinden Mesaj Gönder
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 rounded-full bg-gold-100 flex items-center justify-center mr-4 flex-shrink-0">
-                      <FaCalendarAlt className="text-gold-500" size={18} />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-beauty-800 mb-1">Çalışma Saatlerimiz</h4>
-                      <ul className="text-beauty-600 text-sm">
-                        <li className="flex justify-between mb-1">
-                          <span>Pazartesi - Cumartesi:</span>
-                          <span>09:00 - 19:00</span>
-                        </li>
-                        <li className="flex justify-between">
-                          <span>Pazar:</span>
-                          <span>10:00 - 20:00</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Form */}
-            <div className="lg:col-span-3 order-1 lg:order-2">
-              {formSubmitted ? (
-                <div className="bg-white border border-green-200 p-8 rounded-lg shadow-sm text-center">
-                  <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
-                    <FaCheck className="text-green-500" size={24} />
-                  </div>
-                  <h3 className="text-xl font-display font-semibold text-beauty-900 mb-4">Randevu Talebiniz Alındı</h3>
-                  <p className="text-beauty-700 mb-6">
-                    Teşekkürler! Randevu talebiniz alınmıştır. En kısa sürede sizinle iletişime geçeceğiz.
-                  </p>
-                  <button
-                    onClick={() => setFormSubmitted(false)}
-                    className="bg-gold-500 hover:bg-gold-600 text-white font-semibold py-2 px-6 rounded-md transition-colors duration-300"
-                  >
-                    Yeni Randevu Oluştur
-                  </button>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="bg-white border border-beauty-100 p-8 rounded-lg shadow-sm">
-                  <h3 className="text-xl font-display font-semibold text-beauty-900 mb-6">Randevu Formu</h3>
-                  
-                  {/* Spam koruması */}
-                  <input type="text" name="_honey" style={{ display: 'none' }} />
-                  
-                  <div className="space-y-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <label htmlFor="name" className="block text-beauty-800 text-sm font-medium mb-2">
-                          Ad Soyad <span className="text-red-500">*</span>
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="Ad Soyad"
-                          value={formData.name}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 border border-beauty-200 rounded-md focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
-                          placeholder="Adınız ve soyadınız"
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="phone" className="block text-beauty-800 text-sm font-medium mb-2">
-                          Telefon <span className="text-red-500">*</span>
-                        </label>
-                        <input
-                          type="tel"
-                          id="phone"
-                          name="Telefon"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 border border-beauty-200 rounded-md focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
-                          placeholder="Telefon numaranız"
-                          required
-                        />
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="email" className="block text-beauty-800 text-sm font-medium mb-2">
-                        E-posta
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="E-posta"
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="w-full px-4 py-2 border border-beauty-200 rounded-md focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
-                        placeholder="E-posta adresiniz"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="service" className="block text-beauty-800 text-sm font-medium mb-2">
-                        Hizmet <span className="text-red-500">*</span>
-                      </label>
-                      <select
-                        id="service"
-                        name="Hizmet"
-                        value={formData.service}
-                        onChange={handleChange}
-                        className="w-full px-4 py-2 border border-beauty-200 rounded-md focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
-                        required
-                      >
-                        <option value="">Hizmet seçiniz</option>
-                        <option value="cilt-analizi">Cilt Analizi</option>
-                        <option value="cilt-bakimi">Cilt Bakımı</option>
-                        <option value="lazer-epilasyon">Lazer Epilasyon</option>
-                        <option value="bolgesel-zayiflama">Bölgesel Zayıflama</option>
-                        <option value="kalici-makyaj">Kalıcı Makyaj</option>
-                        <option value="leke-tedavi">Leke Tedavi</option>
-                        <option value="sac-mezoterapi">Saç Mezoterapi</option>
-                      </select>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <label htmlFor="date" className="block text-beauty-800 text-sm font-medium mb-2">
-                          Tarih <span className="text-red-500">*</span>
-                        </label>
-                        <input
-                          type="date"
-                          id="date"
-                          name="Tarih"
-                          value={formData.date}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 border border-beauty-200 rounded-md focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="time" className="block text-beauty-800 text-sm font-medium mb-2">
-                          Saat <span className="text-red-500">*</span>
-                        </label>
-                        <input
-                          type="time"
-                          id="time"
-                          name="Saat"
-                          value={formData.time}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 border border-beauty-200 rounded-md focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
-                          required
-                        />
-                        <p className="text-xs text-beauty-500 mt-1">
-                          Çalışma saatlerimiz: Hafta içi 09:00-19:00, Pazar 10:00-18:00
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="message" className="block text-beauty-800 text-sm font-medium mb-2">
-                        Mesajınız
-                      </label>
-                      <textarea
-                        id="message"
-                        name="Not"
-                        value={formData.message}
-                        onChange={handleChange}
-                        rows={4}
-                        className="w-full px-4 py-2 border border-beauty-200 rounded-md focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none resize-none"
-                        placeholder="Eklemek istediğiniz notlar veya sorularınız"
-                      ></textarea>
-                    </div>
-                    
-                    <div className="pt-2">
-                      <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="w-full bg-gold-500 hover:bg-gold-600 disabled:bg-gold-300 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-md transition-colors duration-300 flex justify-center items-center"
-                      >
-                        {isSubmitting ? 'Gönderiliyor...' : 'Randevu Talebi Gönder'}
-                      </button>
-                      <p className="text-xs text-beauty-500 mt-2 text-center">
-                        <span className="text-red-500">*</span> işaretli alanlar zorunludur<br />
-                        Alternatif olarak telefonla da randevu alabilirsiniz: <a href="tel:+905411901390" className="text-gold-600 hover:underline">0541 190 13 90</a>
-                      </p>
-                    </div>
-                  </div>
-                </form>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* FAQ Section */}
-      <section className="py-16 bg-beauty-50">
+      {/* ── Ana içerik ──────────────────────────────────────────── */}
+      <section className="py-14 md:py-20" style={{ background: "#FAF7F0" }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-display font-bold text-beauty-900 mb-4">
-                Sıkça Sorulan Sorular
-              </h2>
-              <div className="w-20 h-1 bg-gold-400 mx-auto mb-6"></div>
-              <p className="text-beauty-700">
-                Randevu süreciyle ilgili en çok sorulan sorular ve cevapları.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
+
+            {/* Sol: alternatif iletişim */}
+            <div className="lg:col-span-2 order-2 lg:order-1">
+              <div className="bg-white rounded-2xl p-8 shadow-sm sticky top-28" style={{ border: "1px solid rgba(201,168,76,0.12)" }}>
+                <span className="inline-block text-xs tracking-[0.3em] uppercase font-medium mb-2" style={{ color: "#C9A84C" }}>
+                  Hızlı Ulaşım
+                </span>
+                <h3 className="text-lg font-display font-bold text-beauty-900 mb-6">Diğer Kanallar</h3>
+                <div className="space-y-6">
+                  <a href="tel:+905411901390"
+                     className="flex items-start gap-4 p-4 rounded-xl transition-all duration-300"
+                     style={{ background: "rgba(201,168,76,0.06)", border: "1px solid rgba(201,168,76,0.15)" }}>
+                    <div className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0"
+                         style={{ background: "rgba(201,168,76,0.12)", color: "#C9A84C" }}>
+                      <FaPhone size={16} />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-beauty-900 text-sm mb-0.5">Telefonla Arayın</p>
+                      <p className="text-beauty-500 text-xs mb-1">Doğrudan konuşmak için</p>
+                      <p className="font-bold text-sm" style={{ color: "#C9A84C" }}>+90 541 190 13 90</p>
+                    </div>
+                  </a>
+                  <a href="https://wa.me/905411901390" target="_blank" rel="noopener noreferrer"
+                     className="flex items-start gap-4 p-4 rounded-xl transition-all duration-300"
+                     style={{ background: "rgba(201,168,76,0.06)", border: "1px solid rgba(201,168,76,0.15)" }}>
+                    <div className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0"
+                         style={{ background: "rgba(201,168,76,0.12)", color: "#C9A84C" }}>
+                      <FaWhatsapp size={18} />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-beauty-900 text-sm mb-0.5">WhatsApp</p>
+                      <p className="text-beauty-500 text-xs mb-1">Mesaj göndermek için</p>
+                      <p className="font-bold text-sm" style={{ color: "#C9A84C" }}>Mesaj Gönder</p>
+                    </div>
+                  </a>
+                  <div className="p-4 rounded-xl" style={{ background: "rgba(201,168,76,0.06)", border: "1px solid rgba(201,168,76,0.15)" }}>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0"
+                           style={{ background: "rgba(201,168,76,0.12)", color: "#C9A84C" }}>
+                        <FaCalendarAlt size={16} />
+                      </div>
+                      <p className="font-semibold text-beauty-900 text-sm">Çalışma Saatleri</p>
+                    </div>
+                    <ul className="space-y-1.5 text-xs text-beauty-600">
+                      <li className="flex justify-between"><span>Pzt – Cmt</span><span className="font-semibold">09:00 – 19:00</span></li>
+                      <li className="flex justify-between"><span>Pazar</span><span className="font-semibold">10:00 – 18:00</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <div className="space-y-6">
-              {/* FAQ Item */}
-              <div className="bg-white border border-beauty-100 rounded-lg p-6">
-                <h3 className="text-beauty-900 font-display font-semibold text-lg mb-2">
-                  Randevu iptal edebilir miyim?
-                </h3>
-                <p className="text-beauty-700">
-                  Evet, randevunuzu en az 24 saat öncesinden iptal edebilirsiniz. İptal için bize telefon veya WhatsApp üzerinden ulaşabilirsiniz.
-                </p>
-              </div>
-              
-              {/* FAQ Item */}
-              <div className="bg-white border border-beauty-100 rounded-lg p-6">
-                <h3 className="text-beauty-900 font-display font-semibold text-lg mb-2">
-                  Randevuma geç kalırsam ne olur?
-                </h3>
-                <p className="text-beauty-700">
-                  Randevunuza 15 dakikadan fazla geç kalmanız durumunda, diğer müşterilerimizi bekletmemek için randevunuz iptal edilebilir veya kısaltılabilir.
-                </p>
-              </div>
-              
-              {/* FAQ Item */}
-              <div className="bg-white border border-beauty-100 rounded-lg p-6">
-                <h3 className="text-beauty-900 font-display font-semibold text-lg mb-2">
-                  Hangi ödeme yöntemlerini kabul ediyorsunuz?
-                </h3>
-                <p className="text-beauty-700">
-                  Nakit, kredi kartı ve banka kartı ile ödeme yapabilirsiniz. Ayrıca bazı hizmetlerimizde taksit imkanımız da bulunmaktadır.
-                </p>
+
+            {/* Sağ: form */}
+            <div className="lg:col-span-3 order-1 lg:order-2">
+              <div className="bg-white rounded-2xl p-8 shadow-sm" style={{ border: "1px solid rgba(201,168,76,0.12)" }}>
+                <span className="inline-block text-xs tracking-[0.3em] uppercase font-medium mb-2" style={{ color: "#C9A84C" }}>
+                  Online Randevu
+                </span>
+                <h2 className="text-xl md:text-2xl font-display font-bold text-beauty-900 mb-6">Randevu Formu</h2>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <input type="text" name="_honey" style={{ display: "none" }} />
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="name" className="block text-xs font-semibold text-beauty-700 uppercase tracking-wider mb-2">
+                        Ad Soyad <span className="text-red-400">*</span>
+                      </label>
+                      <input type="text" id="name" value={formData.name} onChange={handleChange} required
+                             className={inputCls} style={inputStyle} placeholder="Adınız Soyadınız" />
+                    </div>
+                    <div>
+                      <label htmlFor="phone" className="block text-xs font-semibold text-beauty-700 uppercase tracking-wider mb-2">
+                        Telefon <span className="text-red-400">*</span>
+                      </label>
+                      <input type="tel" id="phone" value={formData.phone} onChange={handleChange} required
+                             className={inputCls} style={inputStyle} placeholder="05XX XXX XX XX" />
+                    </div>
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-xs font-semibold text-beauty-700 uppercase tracking-wider mb-2">E-posta</label>
+                    <input type="email" id="email" value={formData.email} onChange={handleChange}
+                           className={inputCls} style={inputStyle} placeholder="ornek@email.com" />
+                  </div>
+                  <div>
+                    <label htmlFor="service" className="block text-xs font-semibold text-beauty-700 uppercase tracking-wider mb-2">
+                      Hizmet <span className="text-red-400">*</span>
+                    </label>
+                    <select id="service" value={formData.service} onChange={handleChange} required
+                            className={inputCls} style={inputStyle}>
+                      <option value="">Hizmet seçiniz</option>
+                      <option value="protez-tirnak">Protez Tırnak</option>
+                      <option value="cilt-bakimi">Cilt Bakımı</option>
+                      <option value="lazer-epilasyon">Lazer Epilasyon</option>
+                      <option value="bolgesel-zayiflama">Bölgesel Zayıflama</option>
+                      <option value="kalici-makyaj">Kalıcı Makyaj</option>
+                      <option value="leke-tedavi">Leke Tedavi</option>
+                      <option value="sac-mezoterapi">Saç Mezoterapi</option>
+                      <option value="cilt-analizi">Cilt Analizi</option>
+                    </select>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="date" className="block text-xs font-semibold text-beauty-700 uppercase tracking-wider mb-2">
+                        Tarih <span className="text-red-400">*</span>
+                      </label>
+                      <input type="date" id="date" value={formData.date} onChange={handleChange} required
+                             className={inputCls} style={inputStyle} />
+                    </div>
+                    <div>
+                      <label htmlFor="time" className="block text-xs font-semibold text-beauty-700 uppercase tracking-wider mb-2">
+                        Saat <span className="text-red-400">*</span>
+                      </label>
+                      <input type="time" id="time" value={formData.time} onChange={handleChange} required
+                             min={timeRange.min} max={timeRange.max}
+                             className={inputCls} style={inputStyle} />
+                      <p className="text-xs text-beauty-400 mt-1">Hft içi 09-19, Pazar 10-18</p>
+                    </div>
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-xs font-semibold text-beauty-700 uppercase tracking-wider mb-2">Not</label>
+                    <textarea id="message" value={formData.message} onChange={handleChange} rows={3}
+                              className={inputCls + " resize-none"} style={inputStyle}
+                              placeholder="Eklemek istediğiniz notlar..." />
+                  </div>
+                  <button type="submit" disabled={isSubmitting}
+                          className="w-full text-white font-semibold py-3.5 rounded-full transition-all duration-300 disabled:opacity-60"
+                          style={{ background: "#C9A84C" }}>
+                    {isSubmitting ? "Gönderiliyor..." : "Randevu Talebi Gönder"}
+                  </button>
+                  <p className="text-xs text-beauty-400 text-center">
+                    <span className="text-red-400">*</span> zorunlu alanlar · Telefonla da randevu alabilirsiniz:{" "}
+                    <a href="tel:+905411901390" className="text-gold-600 hover:underline">0541 190 13 90</a>
+                  </p>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </section>
-      
-      {/* CTA Section */}
-      <section className="py-12 bg-beauty-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">Profesyonel Güzellik Hizmetlerimizden Faydalanın</h2>
-          <p className="text-white/80 max-w-2xl mx-auto mb-8">
-            Siz de Adana'nın en sevilen güzellik merkezinde uzman kadromuzdan hizmet alın.
-            Bakımlı ve güzel görünmenin keyfini çıkarın.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/hizmetlerimiz"
-              className="bg-gold-500 hover:bg-gold-600 text-white py-3 px-8 rounded-full transition-colors duration-300 font-semibold"
-            >
-              Hizmetlerimizi İnceleyin
-            </Link>
-            <a
-              href="tel:+905411901390"
-              className="bg-white text-beauty-900 hover:bg-beauty-50 py-3 px-8 rounded-full transition-colors duration-300 font-semibold"
-            >
-              Hemen Arayın
-            </a>
+
+      {/* ── SSS ─────────────────────────────────────────────────── */}
+      <section className="py-14 md:py-20" style={{ background: "#0C0B08" }}>
+        <div className="container mx-auto px-4 max-w-3xl">
+          <div className="text-center mb-10">
+            <span className="inline-block text-xs tracking-[0.35em] uppercase font-medium mb-3" style={{ color: "#C9A84C" }}>SSS</span>
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-white">Sıkça Sorulan Sorular</h2>
+          </div>
+          <div className="space-y-4">
+            {[
+              { q: "Randevu iptal edebilir miyim?", a: "Evet, randevunuzu en az 24 saat öncesinden iptal edebilirsiniz. Telefon veya WhatsApp üzerinden bize ulaşmanız yeterlidir." },
+              { q: "Randevuma geç kalırsam ne olur?", a: "15 dakikadan fazla geç kalmanız durumunda diğer müşterilerimizi bekletmemek için randevunuz kısaltılabilir veya iptal edilebilir." },
+              { q: "Hangi ödeme yöntemlerini kabul ediyorsunuz?", a: "Nakit, kredi kartı ve banka kartı kabul ediyoruz. Bazı hizmetlerimizde taksit imkânı da mevcuttur." },
+            ].map((faq, i) => (
+              <div key={i} className="p-6 rounded-2xl" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <h3 className="font-display font-semibold text-white mb-2">{faq.q}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-      
-      {/* Pop-up Modal */}
+
+      {/* ── Pop-up ──────────────────────────────────────────────── */}
       {showPopup && submissionStatus && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className={`bg-white rounded-lg shadow-xl max-w-md w-full p-6 relative ${submissionStatus.success ? 'border-2 border-green-500' : 'border-2 border-red-500'}`}>
-            <button
-              onClick={() => setShowPopup(false)}
-              className="absolute top-4 right-4 text-beauty-600 hover:text-beauty-800 transition-colors"
-            >
-              <FaTimes size={20} />
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-8 relative text-center">
+            <button onClick={() => setShowPopup(false)} className="absolute top-4 right-4 text-beauty-400 hover:text-beauty-700">
+              <FaTimes size={18} />
             </button>
-            <div className="text-center">
-              <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${submissionStatus.success ? 'bg-green-100' : 'bg-red-100'}`}>
-                {submissionStatus.success ? (
-                  <FaCheck className="text-green-500" size={32} />
-                ) : (
-                  <FaTimes className="text-red-500" size={32} />
-                )}
-              </div>
-              <h3 className={`text-2xl font-display font-bold mb-2 ${submissionStatus.success ? 'text-green-600' : 'text-red-600'}`}>
-                {submissionStatus.success ? 'Başarılı' : 'Başarısız'}
-              </h3>
-              <p className="text-beauty-700 mt-4">
-                {submissionStatus.message}
-              </p>
-              <button
-                onClick={() => setShowPopup(false)}
-                className={`mt-6 px-6 py-2 rounded-md font-semibold transition-colors ${
-                  submissionStatus.success 
-                    ? 'bg-green-500 hover:bg-green-600 text-white' 
-                    : 'bg-red-500 hover:bg-red-600 text-white'
-                }`}
-              >
-                Tamam
-              </button>
+            <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${submissionStatus.success ? "bg-green-100" : "bg-red-100"}`}>
+              {submissionStatus.success ? <FaCheck className="text-green-500" size={28} /> : <FaTimes className="text-red-500" size={28} />}
             </div>
+            <h3 className={`text-xl font-display font-bold mb-3 ${submissionStatus.success ? "text-green-600" : "text-red-600"}`}>
+              {submissionStatus.success ? "Randevunuz Alındı\!" : "Hata Oluştu"}
+            </h3>
+            <p className="text-beauty-600 text-sm">{submissionStatus.message}</p>
+            <button onClick={() => setShowPopup(false)} className="mt-6 px-8 py-2.5 rounded-full font-semibold text-white" style={{ background: "#C9A84C" }}>
+              Tamam
+            </button>
           </div>
         </div>
       )}
-      
+
       <Footer />
     </>
   );
-} 
+}

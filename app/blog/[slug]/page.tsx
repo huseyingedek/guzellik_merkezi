@@ -279,6 +279,328 @@ const blogPosts: BlogPost[] = [
       }
     ],
     related: ['bahar-makyaj-trendleri', 'kis-aylarinda-cilt-bakimi', 'cilt-sagligi-beslenme']
+  }  ,
+  {
+    slug: 'jel-tirnak-vs-kalici-oje',
+    title: 'Jel Tırnak mı, Kalıcı Oje mi? Farkları ve Doğru Tercih',
+    category: 'Protez Tırnak',
+    date: '5 Mayıs 2024',
+    image: '/images/protez-tirnak.jpg',
+    author: 'Elif Dartar',
+    authorTitle: 'Tırnak Uzmanı',
+    authorImage: '/images/testimonial-1.jpg',
+    content: [
+      {
+        type: 'paragraph',
+        content: 'Jel tırnak ve kalıcı oje, tırnak bakımında en çok tercih edilen iki yöntemdir. Her ikisi de uzun süreli dayanıklılık sunar; ancak uygulama teknikleri, dayanma süreleri ve bakım gereksinimleri açısından birbirinden ayrılır. Doğru seçimi yapabilmek için bu farkları bilmek önemlidir.'
+      },
+      {
+        type: 'subtitle',
+        content: 'Kalıcı Oje Nedir?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Kalıcı oje, UV veya LED lamba altında sertleştirilen özel bir oje formülüdür. Doğal tırnak üzerine uygulanır ve 2-3 hafta boyunca çatlamadan, solmadan kalır. Tırnak yüzeyini inceltmez ve çıkarılması nispeten kolaydır.'
+      },
+      {
+        type: 'subtitle',
+        content: 'Jel Tırnak Nedir?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Jel tırnak ise tırnağı uzatmak veya güçlendirmek amacıyla uygulanan, daha kalın yapılı bir üründür. Kırılgan ya da kısa tırnaklar için idealdir. 3-4 hafta dayanır ve profesyonel çıkarma gerektirir.'
+      },
+      {
+        type: 'tips',
+        content: [
+          'Kısa ve kırılgan tırnaklar için jel tırnak tercih edin',
+          'Doğal tırnağınızı korumak istiyorsanız kalıcı oje daha uygundur',
+          'Her iki uygulamada da düzenli bakım randevusu planlayın',
+          'Çıkarma işlemini mutlaka uzmana yaptırın'
+        ]
+      },
+      {
+        type: 'conclusion',
+        content: 'Her iki yöntem de doğru uygulandığında tırnak sağlığına zarar vermez. Göksum Güzellik Merkezi\'nde uzman ekibimiz, tırnak yapınızı değerlendirerek size en uygun seçeneği önerir.'
+      }
+    ],
+    related: ['kalici-makyaj-uygulamalari', 'lazer-epilasyon-bilgiler', 'adana-lazer-epilasyon-rehberi']
+  },
+  {
+    slug: 'adana-lazer-epilasyon-rehberi',
+    title: "Adana\'da Lazer Epilasyon: Merak Edilenlerin Tamamı",
+    category: 'Lazer Epilasyon',
+    date: '20 Mayıs 2024',
+    image: '/images/lazerr.png',
+    author: 'Elif Dartar',
+    authorTitle: 'Lazer Epilasyon Uzmanı',
+    authorImage: '/images/testimonial-2.jpg',
+    content: [
+      {
+        type: 'paragraph',
+        content: "Adana\'da lazer epilasyon yaptırmayı düşünüyorsanız, doğru merkezi ve teknolojiyi seçmek sonuçlarınızı doğrudan etkiler. Bu rehberde Adana lazer epilasyon sürecini, fiyatları, cihaz seçeneklerini ve dikkat edilmesi gerekenleri ele alıyoruz."
+      },
+      {
+        type: 'subtitle',
+        content: "Adana\'da Lazer Epilasyon Nasıl Yapılır?"
+      },
+      {
+        type: 'paragraph',
+        content: "Adana\'da lazer epilasyon, sertifikalı cihazlar ve uzman kadro eşliğinde gerçekleştirilmelidir. Alexandrite ve Diode lazer cihazları, farklı cilt ve kıl tiplerine göre kişiselleştirilen parametrelerle güvenli ve etkili sonuçlar verir."
+      },
+      {
+        type: 'subtitle',
+        content: 'Seans Sayısı ve Fiyatlar'
+      },
+      {
+        type: 'paragraph',
+        content: "Adana lazer epilasyon fiyatları, uygulama bölgesine ve seans sayısına göre değişir. Genellikle 6-8 seans yeterli olmakla birlikte, kişisel farklılıklar gözetilerek bireysel programlar oluşturulur. Göksum Güzellik Merkezi\'nde şeffaf fiyatlandırma politikası uygulanmaktadır."
+      },
+      {
+        type: 'tips',
+        content: [
+          'Seans öncesi bölgeyi tıraş edin, ağda veya cımbız kullanmayın',
+          'Güneş yanığı olan cilde lazer uygulanmaz, koruyucu kullanın',
+          'Seanslar arası önerilen süreye uyun',
+          'Uygulama sonrası nemlendirici ve güneş koruyucu kullanın'
+        ]
+      },
+      {
+        type: 'conclusion',
+        content: "Adana Seyhan'da güvenilir lazer epilasyon için Göksum Güzellik Merkezi\'ni tercih edebilirsiniz. Ücretsiz konsültasyon ile başlayın ve kişisel programınızı oluşturun."
+      }
+    ],
+    related: ['lazer-epilasyon-bilgiler', 'cilt-sagligi-beslenme', 'jel-tirnak-vs-kalici-oje']
+  },
+  {
+    slug: 'microblading-kas-kontur',
+    title: 'Microblading Nedir? Kaş Kontür Uygulaması Hakkında Her Şey',
+    category: 'Kalıcı Makyaj',
+    date: '8 Haziran 2024',
+    image: '/images/makyaj.png',
+    author: 'Elif Kara',
+    authorTitle: 'Kalıcı Makyaj Uzmanı',
+    authorImage: '/images/testimonial-9.jpg',
+    content: [
+      {
+        type: 'paragraph',
+        content: 'Microblading, kaşlara doğal tüy tüye görünüm kazandıran bir kalıcı makyaj tekniğidir. El aleti ya da özel kalemler aracılığıyla ince kesikler oluşturulur ve pigment yerleştirilir. Sonuç, oldukça doğal ve uzun ömürlü kaşlar olur.'
+      },
+      {
+        type: 'subtitle',
+        content: 'Microblading ile Kaş Kontür Arasındaki Fark'
+      },
+      {
+        type: 'paragraph',
+        content: 'Microblading tel tel, tüy tüye bir görünüm sağlarken; kaş kontür daha dolu ve tanımlı bir görünüm sunar. Yüz yapısına ve istenilen efekte göre uzman tercih yapar.'
+      },
+      {
+        type: 'subtitle',
+        content: 'İyileşme Süreci'
+      },
+      {
+        type: 'paragraph',
+        content: 'İlk hafta hafif kabuklama ve renk yoğunluğu normaldir. 10-14 gün içinde kabuklar dökülür ve renk yerleşir. Tam sonuç 4 hafta sonra görülür. Rötuş seansı genellikle 4-6 hafta sonra yapılır.'
+      },
+      {
+        type: 'tips',
+        content: [
+          'İlk hafta bölgeyi ıslatmaktan kaçının',
+          'Güneş koruyucu kullanın',
+          'Kabukları kendiniz koparmayın',
+          'Alerjik reaksiyon için önceden yama testi yaptırın'
+        ]
+      },
+      {
+        type: 'conclusion',
+        content: "Microblading ve kaş kontür, doğru uzman eliyle uygulandığında yüz çizgilerini belirginleştiren, doğal ve uzun ömürlü bir güzellik çözümüdür. Adana\'da bu uygulamayı Göksum Güzellik Merkezi\'nde yaptırabilirsiniz."
+      }
+    ],
+    related: ['kalici-makyaj-uygulamalari', 'bahar-makyaj-trendleri', 'jel-tirnak-vs-kalici-oje']
+  },
+  {
+    slug: 'kavitasyon-bolgesel-incelme',
+    title: 'Kavitasyon ile Bölgesel İncelme: Gerçekten İşe Yarıyor mu?',
+    category: 'Bölgesel Zayıflama',
+    date: '25 Haziran 2024',
+    image: '/images/zayıflama.png',
+    author: 'Ayşe Yılmaz',
+    authorTitle: 'Estetik Uzmanı',
+    authorImage: '/images/testimonial-1.jpg',
+    content: [
+      {
+        type: 'paragraph',
+        content: 'Kavitasyon, ultrasonik dalgalar aracılığıyla yağ hücrelerini parçalayan non-invaziv bir zayıflama yöntemidir. Diyet ve egzersizle gidemeyen bölgesel yağ birikintilerine karşı etkili sonuçlar verir.'
+      },
+      {
+        type: 'subtitle',
+        content: 'Kavitasyon Nasıl Çalışır?'
+      },
+      {
+        type: 'paragraph',
+        content: 'Cihaz, hedefe alınan bölgedeki yağ hücrelerine düşük frekanslı ultrasonik dalgalar gönderir. Bu dalgalar, yağ hücrelerinin içinde mikro kabarcıklar oluşturarak hücre zarını parçalar. Serbest kalan yağ asitleri lenfatik sistem aracılığıyla vücuttan atılır.'
+      },
+      {
+        type: 'subtitle',
+        content: 'Gerçekçi Beklentiler'
+      },
+      {
+        type: 'paragraph',
+        content: 'Kavitasyon, obezite tedavisi değildir. Bölgesel incelme ve şekillendirme için etkilidir; ancak sağlıklı beslenme ve yeterli su tüketimiyle desteklenmelidir. Ortalama 4-6 seans sonra gözle görülür sonuçlar elde edilir.'
+      },
+      {
+        type: 'tips',
+        content: [
+          'Seans öncesi ve sonrası bol su için',
+          'Düzenli seanslar için programınıza sadık kalın',
+          'Dengeli beslenmeyle destekleyin',
+          'Lenfatik masajla kombinleme sonuçları hızlandırır'
+        ]
+      },
+      {
+        type: 'conclusion',
+        content: "Kavitasyon, doğru beklentilerle yaklaşıldığında bölgesel incelme için güvenli ve etkili bir seçenektir. Göksum Güzellik Merkezi\'nde kişiye özel bölgesel zayıflama programları oluşturuyoruz."
+      }
+    ],
+    related: ['lazer-epilasyon-bilgiler', 'cilt-sagligi-beslenme', 'adana-lazer-epilasyon-rehberi']
+  },
+  {
+    slug: 'sac-dokulmesi-tedavisi',
+    title: 'Saç Dökülmesini Durdurmak İçin Etkili Yöntemler',
+    category: 'Saç Bakımı',
+    date: '10 Temmuz 2024',
+    image: '/images/sac.png',
+    author: 'Elif Dartar',
+    authorTitle: 'Saç Bakım Uzmanı',
+    authorImage: '/images/testimonial-3.jpg',
+    content: [
+      {
+        type: 'paragraph',
+        content: 'Saç dökülmesi; stres, hormonal değişimler, beslenme eksiklikleri veya genetik faktörler nedeniyle ortaya çıkabilir. Doğru teşhis ve erken müdahale ile saç dökülmesini önemli ölçüde yavaşlatmak ve durdurmak mümkündür.'
+      },
+      {
+        type: 'subtitle',
+        content: 'Saç Mezoterapisi ile Tedavi'
+      },
+      {
+        type: 'paragraph',
+        content: 'Saç mezoterapisi, saç derisine vitamin, mineral ve büyüme faktörlerinin mikroenjeksiyonla verilmesidir. Saç köklerini besler, kan dolaşımını artırır ve uyku halindeki folikültleri yeniden aktive eder. Düzenli seanslarla belirgin sonuç alınır.'
+      },
+      {
+        type: 'subtitle',
+        content: 'Evde Alınabilecek Önlemler'
+      },
+      {
+        type: 'paragraph',
+        content: 'Demir, çinko ve biyotin açısından zengin beslenmek, saça sert davranmaktan kaçınmak ve stres yönetimi saç dökülmesini azaltmada önemli rol oynar. Sıcak şekillendirme araçlarını minimum düzeyde kullanın.'
+      },
+      {
+        type: 'tips',
+        content: [
+          'Saçı kuru haldeyken tarayın, ıslakken hassastır',
+          'Biyotin ve demir takviyesi hakkında uzman görüşü alın',
+          'Saç derisini düzenli masaj ile uyarın',
+          'Profesyonel saç analizi yaptırın'
+        ]
+      },
+      {
+        type: 'conclusion',
+        content: "Saç dökülmesiyle mücadelede en etkili adım, nedenini tespit etmek ve kişiselleştirilmiş bir tedavi planı oluşturmaktır. Adana\'da saç mezoterapisi için Göksum Güzellik Merkezi\'ni ziyaret edebilirsiniz."
+      }
+    ],
+    related: ['dogal-sac-bakimi', 'cilt-sagligi-beslenme', 'kisaylarinda-cilt-bakimi']
+  },
+  {
+    slug: 'gunes-lekesi-tedavisi',
+    title: 'Güneş Lekesinden Kurtulmanın Yolları',
+    category: 'Cilt Bakımı',
+    date: '1 Ağustos 2024',
+    image: '/images/leketedavi.png',
+    author: 'Ayşe Yılmaz',
+    authorTitle: 'Cilt Bakım Uzmanı',
+    authorImage: '/images/testimonial-1.jpg',
+    content: [
+      {
+        type: 'paragraph',
+        content: 'Güneş lekeleri, UV ışınlarına uzun süreli maruz kalan bölgelerde melanin artışı sonucu oluşur. Yüz, el sırtı ve dekolte gibi bölgelerde sıkça görülen bu lekeler, doğru tedaviyle belirgin biçimde azaltılabilir.'
+      },
+      {
+        type: 'subtitle',
+        content: 'Profesyonel Leke Tedavisi Seçenekleri'
+      },
+      {
+        type: 'paragraph',
+        content: 'Kimyasal peeling, leke giderici serumlar ve cihazlı tedaviler güneş lekelerine karşı en etkili profesyonel yöntemler arasında yer alır. Tedavi planı, leke tipi ve cildin hassasiyetine göre uzman tarafından belirlenir.'
+      },
+      {
+        type: 'subtitle',
+        content: 'Evde Bakım Önerileri'
+      },
+      {
+        type: 'paragraph',
+        content: 'C vitamini serumu, niasinamid ve azelaik asit içeren ürünler günlük bakımda leke aydınlatmaya yardımcı olur. Ancak en önemli adım, SPF 50 güneş koruyucu kullanmaktır; aksi takdirde lekeler koyu renk almaya devam eder.'
+      },
+      {
+        type: 'tips',
+        content: [
+          'Her mevsim SPF 50 güneş koruyucu kullanın',
+          'Güneş yoğunluğu yüksekken dışarı çıkmaktan kaçının',
+          'Şapka ve güneş gözlüğüyle fiziksel koruma sağlayın',
+          'Tedavi sürecinde güneşe çıkmayın'
+        ]
+      },
+      {
+        type: 'conclusion',
+        content: "Güneş lekeleri, kararlı bir tedavi programı ve güneşten korunma alışkanlığıyla önemli ölçüde azaltılabilir. Adana\'da leke tedavisi için Göksum Güzellik Merkezi\'nde ücretsiz cilt analizi yaptırabilirsiniz."
+      }
+    ],
+    related: ['kis-aylarinda-cilt-bakimi', 'cilt-sagligi-beslenme', 'adana-lazer-epilasyon-rehberi']
+  },
+  {
+    slug: '2024-cilt-bakimi-trendleri',
+    title: "2024'ün En Popüler Cilt Bakımı Trendleri",
+    category: 'Güzellik Trendleri',
+    date: '15 Ağustos 2024',
+    image: '/images/hero1.jpg',
+    author: 'Elif Dartar',
+    authorTitle: 'Güzellik Uzmanı',
+    authorImage: '/images/testimonial-5.jpg',
+    content: [
+      {
+        type: 'paragraph',
+        content: "2024 yılında cilt bakımı dünyası, kişiselleştirme, doğal bileşenler ve teknolojik yeniliklerin bir araya geldiği trendlerle şekilleniyor. Hem içten hem de dıştan cildi besleyen yaklaşımlar bu yılın öne çıkan konseptleri arasında."
+      },
+      {
+        type: 'subtitle',
+        content: 'Skin Cycling (Cilt Döngüsü)'
+      },
+      {
+        type: 'paragraph',
+        content: 'Belirli aktif bileşenleri döngüsel olarak kullanma prensibine dayanan skin cycling, cildin aşırı tahriş olmadan maksimum fayda sağlamasını hedefler. Retinol, peeling asitleri ve dinlenme günlerini sistematik biçimde kullanan bu yaklaşım çok konuşuluyor.'
+      },
+      {
+        type: 'subtitle',
+        content: 'Barrier Bakımı (Cilt Bariyeri Güçlendirme)'
+      },
+      {
+        type: 'paragraph',
+        content: 'Ceramide, niasinamid ve peptit içeren ürünlerle cildin koruyucu bariyer fonksiyonunu güçlendirme 2024 trendlerinin zirvesinde. Sağlıklı bir bariyer; nem kaybını önler, dış tahriş edenlere karşı koruma sağlar.'
+      },
+      {
+        type: 'tips',
+        content: [
+          'Aktif bileşenleri (retinol, AHA/BHA) aynı anda kullanmaktan kaçının',
+          'Nemlendiriciyi ve güneş koruyucuyu atlamayın',
+          'Cilt tipinize uygun ürünler için uzman görüşü alın',
+          'Adana gibi sıcak iklimlerde hafif dokulu formülleri tercih edin'
+        ]
+      },
+      {
+        type: 'conclusion',
+        content: "2024 cilt bakımı trendleri, cildinizi içten dışa beslemeyi ve uzun vadeli sağlığını korumayı ön planda tutuyor. Adana\'da bu trendleri profesyonel destekle uygulamak için Göksum Güzellik Merkezi'ne danışabilirsiniz."
+      }
+    ],
+    related: ['kis-aylarinda-cilt-bakimi', 'cilt-sagligi-beslenme', 'gunes-lekesi-tedavisi']
   }
 ];
 
@@ -505,7 +827,7 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
                   </div>
                 </div>
                 <p className="text-beauty-700 text-sm">
-                  Göksum Güzellik Merkezi'nde {post.authorTitle.toLowerCase()} olarak görev yapmaktadır. 
+                  Göksum Güzellik Merkezi\'nde {post.authorTitle.toLowerCase()} olarak görev yapmaktadır. 
                   Alanında uzmanlaşmış ve deneyimli ekibimizin değerli bir üyesidir.
                 </p>
                 <div className="mt-4 flex space-x-2">

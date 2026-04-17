@@ -22,6 +22,7 @@ export interface Service {
   recommendedFor?: string;
   process?: ServiceProcess[];
   additionalContent?: string;
+  seoContent?: string;
   relatedServices?: string[];
   ctaText?: string;
   slug: string;
@@ -73,6 +74,7 @@ const services: Service[] = [
         description: 'Size özel bakım ve ürün önerileri sunulur'
       }
     ],
+    seoContent: 'Adana cilt analizi hizmetini profesyonel bir ortamda deneyimlemek istiyorsanız, Göksum Güzellik Merkezi tam size göre. Cemalpaşa Mahallesi, Gazipaşa Bulvarı No:30 Kat:1 adresinde sunulan Adana ücretsiz cilt analizi hizmetiyle, modern cihazlar aracılığıyla cildinizin nem seviyesi, yağlanma oranı, gözenek yapısı ve elastikiyet gibi temel parametreleri ayrıntılı biçimde değerlendirilmektedir. Bu analiz, herhangi bir bakım programına başlamadan önce doğru ürünleri ve tedavi yöntemlerini belirlemenin en güvenilir yoludur.\n\nAdana cilt bakımı danışmanlığı kapsamında gerçekleştirilen bu ön değerlendirme, cildinizin gerçek ihtiyaçlarına uygun kişiselleştirilmiş bir yol haritası ortaya koymaktadır. Adana Seyhan cilt analizi randevusu almak oldukça kolaydır; +90 541 190 13 90 numarasını arayarak veya merkezimizi ziyaret ederek ilk adımı atabilirsiniz. Adana cilt tipi analizi sonucunda uzman ekibimiz, cildinizin özelliklerine en uygun bakım ve ürün önerilerini sizi dinleyerek aktaracaktır.\n\nGöksum Güzellik Merkezi\'nde cilt analizi yaptıranlar, çoğunlukla daha önce farkında olmadıkları cilt sorunlarını bu sayede erken evrede tespit ettiklerini belirtmektedir. Düzenli cilt analizi, uzun vadede cilt sağlığını korumak ve olası problemleri zamanında önlemek adına önemli bir alışkanlıktır. Cemalpaşa\'da yer alan merkezimizin uzman ve sıcak ekibi, sizi karşılamaya her zaman hazırdır.',
     relatedServices: ['cilt-bakimi', 'leke-tedavi'],
     ctaText: 'Cildinizin gerçek ihtiyaçlarını öğrenmek ve profesyonel bakım planlamak için cilt analizi randevusu alın.',
     slug: 'cilt-analizi'
@@ -129,6 +131,7 @@ const services: Service[] = [
         description: 'Bakım sonrası cilt uygun ürünlerle nemlendirilir'
       }
     ],
+    seoContent: 'Adana cilt bakımı arayanlar için Göksum Güzellik Merkezi, Cemalpaşa Mahallesi, Gazipaşa Bulvarı No:30 Kat:1 adresinde kapsamlı ve profesyonel bir hizmet anlayışı sunmaktadır. Adana cilt bakımı fiyatları konusunda şeffaf ve müşteri odaklı bir yaklaşım benimseyen merkezimiz, her bütçeye hitap eden bakım paketleri oluşturmaktadır. Adana cilt bakım merkezi olarak öne çıkan Göksum Güzellik\'te, yüzlerce müşteri tarafından tercih edilen deneyimli uzmanlar cilt sağlığınıza gerçek anlamda katkı sağlamaktadır.\n\nAdana en iyi cilt bakımı deneyimi için merkezimizde uygulanan Adana hydrafacial protokolü, cildi derinlemesine temizlerken nem dengesini de yeniden kurmaktadır. Adana anti-aging bakım uygulamalarımız ise cilt elastikiyetini artıran aktif serumlar ve cihaz destekli tekniklerle yaşlanma belirtilerini görünür biçimde azaltmaktadır. Adana Seyhan cilt bakımı hizmetlerimiz arasında akne bakımı, leke aydınlatma, gözenek bakımı ve hassas cilt protokolleri de yer almakta; her müşteriye özel tedavi planı oluşturulmaktadır.\n\nSeyhan cilt bakımı arayışında olan bölge sakinleri, Göksum Güzellik Merkezi\'nin rahat ortamı ve uzman ekibiyle kendilerini iyi ellerde hissedeceklerini bildirmektedir. Düzenli cilt bakımı seansları sayesinde cilt tonunuzu eşitleyebilir, gözenek görünümünü azaltabilir ve gençleşmiş bir cilt dokusuna kavuşabilirsiniz. Randevu almak veya daha fazla bilgi edinmek için +90 541 190 13 90 numaralı hattımızı arayabilirsiniz.',
     relatedServices: ['cilt-analizi', 'leke-tedavi'],
     ctaText: 'Cildinize ihtiyacı olan bakımı vermek ve daha sağlıklı bir görünüm kazanmak için hemen randevu alın.',
     slug: 'cilt-bakimi'
@@ -138,7 +141,7 @@ const services: Service[] = [
     title: 'Lazer Epilasyon',
     subtitle: 'Adana\'nın En İyi Lazer Epilasyon Merkezi',
     description: 'Adana Seyhan\'da en iyi lazer epilasyon hizmeti. Alexandrite ve Diode lazer teknolojisi ile kalıcı tüy azaltma. Uygun fiyatlar ve profesyonel ekip.',
-    longDescription: 'Adana Seyhan\'da bulunan Göksum Güzellik Merkezi\'nde kullandığımız son teknoloji Alexandrite ve Diode lazer epilasyon cihazları, istenmeyen tüylerden kalıcı olarak kurtulmanızı sağlar. Adana\'nın en iyi lazer epilasyon merkezi olarak, farklı cilt ve tüy tiplerine uygun lazer sistemlerimiz ile güvenli ve etkili sonuçlar elde ederiz. Uzman ekibimiz, minimum acı ve maksimum konfor ile işleminizi gerçekleştirir.',
+    longDescription: 'Adana Seyhan\'da bulunan Göksum Güzellik Merkezi\'nde kullandığımız son teknoloji Alexandrite ve Diode lazer epilasyon cihazları, istenmeyen tüylerden kalıcı olarak kurtulmanızı sağlar. Adana\'nın en iyi lazer epilasyon merkezi olarak, farklı cilt ve tüy tiplerine uygun lazer sistemlerimiz ile güvenli ve etkili sonuçlar elde ederiz. Uzman ekibimiz, minimum acı ve maksimum konfor ile işleminizi gerçekleştirir.\n\nLazer epilasyon seansları öncesinde kişiye özel konsültasyon yapılır; cilt tonu, tüy rengi ve yoğunluğu değerlendirilerek en uygun lazer parametreleri belirlenir. Alexandrite lazer açık tenli bireyler için yüksek etkinlik sunarken, Diode lazer daha geniş cilt tonları aralığında başarıyla uygulanabilmektedir. Göksum Güzellik\'te her seans, kliniğimizin sertifikalı ve deneyimli uzmanları tarafından titizlikle yürütülür.\n\nLazer epilasyon tedavisi, düzenli seanslarla tüy büyümesini yavaşlatır ve kalıcı azalma sağlar. Tüylenme döngüsüne bağlı olarak genellikle 6-8 seans yeterli olmaktadır. Seyhan\'da bulunan merkezimizde uygulanan seanslar arası bakım tavsiyeleri ve takip programıyla, uzun vadeli pürüzsüz bir cilt elde etmeniz hedeflenir.',
     image: '/images/lazerr.png',
     bannerImage: '/images/lazerr.png',
     features: [
@@ -179,6 +182,7 @@ const services: Service[] = [
         description: 'Bir sonraki seans için uygun zaman belirlenir'
       }
     ],
+    seoContent: 'Adana lazer epilasyon arayanlar için Cemalpaşa Mahallesi, Gazipaşa Bulvarı No:30 Kat:1 adresinde hizmet veren Göksum Güzellik Merkezi, Adana Seyhan lazer epilasyon alanında öne çıkan isimlerden biridir. Adana lazer epilasyon fiyatları konusunda şeffaf ve rekabetçi bir yaklaşım benimseyen merkezimizde, her bütçeye uygun kampanya seçenekleri düzenli olarak güncellenmektedir. Adana lazer epilasyon kampanya fırsatlarını kaçırmamak için sosyal medya kanallarımızı takip edebilir ya da +90 541 190 13 90 numaralı hattımızı arayabilirsiniz.\n\nLazer epilasyon Adana genelinde birçok adreste sunulsa da Seyhan lazer epilasyon merkezi olarak Göksum Güzellik, teknoloji, hijyen ve uzman kadrosu ile fark yaratmaktadır. Adana en iyi lazer epilasyon deneyimi arayanlar merkezimizi tercih ettiğinde, kişiye özel lazer parametreleriyle hem güvenli hem de etkili bir uygulama deneyimi yaşamaktadır. Adana en yakın lazer epilasyon noktalarından biri olarak, şehir merkezine yakın konumumuz sayesinde kolayca ulaşabilirsiniz.\n\nCemalpaşa lazer epilasyon hizmetleri söz konusu olduğunda, bölge sakinleri Göksum Güzellik Merkezi\'ni ilk tercihleri arasında göstermektedir. Adana Seyhan lazer epilasyon uygulamalarında kullanılan son nesil cihazlarımız, hem kadın hem erkek müşterilere yönelik kapsamlı vücut ve yüz bölgesi seçenekleri sunmaktadır. Kalıcı tüysüzlüğe giden yolda güvenilir bir partner arıyorsanız, randevunuzu hemen alarak birinci seansta farkı kendiniz keşfedebilirsiniz.',
     relatedServices: ['bolgesel-zayiflama'],
     ctaText: 'İstenmeyen tüylerden kalıcı olarak kurtulmak için hemen lazer epilasyon programımıza başlayın.',
     slug: 'lazer-epilasyon'
@@ -229,6 +233,7 @@ const services: Service[] = [
         description: 'Her birkaç seansta bir ölçüm alınarak ilerleme değerlendirilir'
       }
     ],
+    seoContent: 'Adana bölgesel zayıflama arayanlar için Göksum Güzellik Merkezi, Cemalpaşa Mahallesi, Gazipaşa Bulvarı No:30 Kat:1 adresinde kişiye özel protokollerle hizmet vermektedir. Adana kavitasyon uygulamalarımız, ultrasonik dalgalar aracılığıyla yağ hücrelerini parçalayarak bölgesel incelme sağlayan ve tamamen ağrısız gerçekleştirilen bir tedavi yöntemidir. Adana selülit tedavisi konusunda da etkili çözümler sunan merkezimizde, RF lipoliz ile kavitasyonun kombinasyonu sayesinde hem yağ azaltımı hem de deri sıkılaşması aynı anda hedeflenmektedir.\n\nAdana Seyhan bölgesel zayıflama programlarında önce kapsamlı bir vücut analizi yapılmakta, ardından kişinin hedef bölgelerine ve fiziğine uygun protokol tasarlanmaktadır. Adana zayıflama merkezi olarak Göksum Güzellik, seans başına ölçülen sonuçlarla ilerlemenizi somut biçimde takip etmenize olanak tanımaktadır. Adana RF lipoliz uygulamalarımız, özellikle karın, basen, uyluk ve kol bölgelerinde inatçı yağlara karşı yüksek başarı oranlarıyla öne çıkmaktadır.\n\nAdana bölgesel incelme hedefine ulaşmak için doğru teknoloji ve uzman rehberliğiyle desteklenen bir program şarttır. Göksum Güzellik Merkezi\'nde uygulanan lenfatik masaj seansları, yağ asitlerinin vücuttan atılımını hızlandırarak sonuçların daha erken görülmesine katkıda bulunmaktadır. Randevu ve fiyat bilgisi için +90 541 190 13 90 numaralı hattımızı arayabilir, merkezimizi ziyaret ederek ücretsiz danışmanlık görüşmesi talep edebilirsiniz.',
     relatedServices: ['lazer-epilasyon'],
     ctaText: 'Bölgesel incelme ve daha fit bir vücut için teknolojik zayıflama çözümlerimizden faydalanın.',
     slug: 'bolgesel-zayiflama'
@@ -279,6 +284,7 @@ const services: Service[] = [
         description: 'İyileşme sürecindeki bakım ve korunma önerileri anlatılır'
       }
     ],
+    seoContent: 'Adana kalıcı makyaj konusunda profesyonel ve güvenilir bir merkez arıyorsanız, Göksum Güzellik Merkezi\'ni tercih edebilirsiniz. Cemalpaşa Mahallesi, Gazipaşa Bulvarı No:30 Kat:1 adresindeki merkezimizde gerçekleştirilen Adana microblading uygulamaları, kaşlara doğal, tüy tüye görünüm kazandıran ileri teknikler kullanılarak yapılmaktadır. Adana kaş kontür hizmetlerimizde yüz anatomisine uygun şekil ve renk seçimiyle herkes için özel bir sonuç elde edilmektedir.\n\nAdana kalıcı makyaj fiyatları hakkında net bilgi almak için +90 541 190 13 90 numaralı hattımızı arayabilir ya da merkezimizi ziyaret ederek ücretsiz ön konsültasyondan yararlanabilirsiniz. Adana dudak kontür uygulamalarımız, dudak sınırlarını belirginleştirerek doğal ya da dolgun bir görünüm tercihine göre kişiselleştirilen bir yöntemle hayata geçirilmektedir. Adana kalıcı eyeliner ise günlük makyaj rutininden kurtulmak isteyenler için zamanı ve enerjiyi birlikte yönetmenin akıllıca bir yoludur.\n\nAdana Seyhan kalıcı makyaj merkezimizde uzman ekibimiz, son teknoloji pigmentler ve steril tek kullanımlık malzemeler kullanarak en güvenli uygulamayı gerçekleştirir. Her işlem öncesinde yüz anatomisi analiz edilir, kişiye özel şekil ve renk belirlenerek onay alınır. Adana kalıcı makyaj rötuş hizmetlerimizle uygulamanızın ömrünü uzatabilir, her zaman tazelenmiş bir görünüme sahip olabilirsiniz.',
     relatedServices: ['cilt-bakimi'],
     ctaText: 'Her sabah mükemmel makyajlı uyanmak ve zamandan tasarruf etmek için kalıcı makyaj uygulamalarımızdan yararlanın.',
     slug: 'kalici-makyaj'
@@ -330,6 +336,7 @@ const services: Service[] = [
         description: 'Yüksek faktörlü güneş koruması uygulanır'
       }
     ],
+    seoContent: 'Adana leke tedavisi arayanlar için Göksum Güzellik Merkezi, Cemalpaşa Mahallesi, Gazipaşa Bulvarı No:30 Kat:1 adresinde kapsamlı çözümler sunmaktadır. Adana güneş lekesi tedavisi kapsamında uygulanan kimyasal peeling ve aydınlatıcı serumlar, yüzeydeki pigment birikintilerini nazikçe parçalayarak eşit bir cilt tonu elde etmeyi sağlar. Adana melazma tedavisi konusunda deneyimli uzmanlarımız, hormonal kaynaklı pigmentasyonlar için özel protokoller geliştirerek kalıcı ve güvenli sonuçlar elde etmektedir.\n\nAdana akne lekesi tedavisi hizmetlerimiz, sivilce iyileştikten sonra kalan iz ve renk değişikliklerini hedefleyen yoğun aktif içerikli seanslardan oluşmaktadır. Adana cilt lekesi giderme sürecinde her müşteriye özel tedavi planı hazırlanmakta, leke tipi ve cilt hassasiyetine göre en uygun yöntemler seçilmektedir. Adana Seyhan leke tedavisi için merkezimizi tercih edenler, ilk konsültasyonda uzmanlarımızla birebir görüşerek tedavi sürecini ayrıntılı biçimde öğrenebilmektedir.\n\nAdana cilt tonu eşitleme arayışında olanlar, Göksum Güzellik Merkezi\'nde uygulanan seansların ardından görünür iyileşme yaşadıklarını bildirmektedir. Güneş koruyucu kullanımı ve kişiselleştirilmiş bakım tavsiyeleriyle desteklenen tedavi süreci, lekelerin geri dönüşünü de engellemeye yardımcı olmaktadır. Randevu ve detaylı bilgi için +90 541 190 13 90 numaralı hattımızı arayabilirsiniz.',
     relatedServices: ['cilt-bakimi', 'cilt-analizi'],
     ctaText: 'Cildinizde ton eşitsizliği ve lekelerden kurtulmak, daha aydınlık bir görünüme kavuşmak için leke tedavi programlarımızdan faydalanın.',
     slug: 'leke-tedavi'
@@ -380,6 +387,7 @@ const services: Service[] = [
         description: 'Absorbsiyonu artırmak için hafif masaj yapılır'
       }
     ],
+    seoContent: 'Adana saç mezoterapisi arayanlar için Göksum Güzellik Merkezi, Cemalpaşa Mahallesi, Gazipaşa Bulvarı No:30 Kat:1 adresinde uzman kadrosuyla hizmet vermektedir. Adana saç dökülmesi tedavisi kapsamında uygulanan mezoterapi seansları, saç foliküllerini besleyerek hem mevcut saçların güçlenmesine hem de yeni saç çıkışının teşvik edilmesine katkıda bulunmaktadır. Adana saç güçlendirme programlarımız, saç dökülmesinin ardındaki nedenleri değerlendiren kapsamlı bir ön analizle başlamakta; kişiye özel vitamin ve mineral kokteylleri hazırlanmaktadır.\n\nAdana Seyhan saç mezoterapisi hizmetlerimizde kullanılan kokteyller, saç derisindeki kan dolaşımını canlandıran büyüme faktörleri, biyotin, çinko ve amino asitler içermektedir. Adana saç dökülmesi çözümü arayanlar, merkezimizde saç analizi yaptırarak tedaviye başlamadan önce kendi durumlarına uygun bir plan oluşturabilmektedir. Seyhan saç mezoterapisi merkezimizde ortalama 8-10 seanslık program süresince düzenli takip yapılmakta ve her birkaç seansta bir ilerleme değerlendirilmektedir.\n\nAdana saç bakımı konusunda güvenilir ve etkili bir merkez arıyorsanız, Göksum Güzellik Merkezi\'ni ziyaret edebilirsiniz. Saç dökülmesinin nedeni stres, hormonal değişimler veya besin eksikliği olsun, mezoterapi saç köklerini güçlendirerek bu sorunların üstesinden gelmede destekleyici bir rol üstlenir. Randevu almak için +90 541 190 13 90 numarasını arayabilirsiniz.',
     relatedServices: [],
     ctaText: 'Saç dökülmesi sorunlarınıza son vermek ve daha güçlü, canlı saçlara kavuşmak için saç mezoterapisi programımıza başlayın.',
     slug: 'sac-mezoterapi'
@@ -435,6 +443,7 @@ const services: Service[] = [
         description: 'Tırnak bakımı ve koruma önerileri anlatılır'
       }
     ],
+    seoContent: 'Adana protez tırnak hizmeti almak isteyenler için Göksum Güzellik Merkezi, Cemalpaşa Mahallesi, Gazipaşa Bulvarı No:30 Kat:1 adresinde titizlikle uygulanan profesyonel çözümler sunmaktadır. Adana en iyi protez tırnak merkezi arayışındaki müşterilerimiz, uzman teknisyenlerimizin el işçiliği ve yüksek kaliteli jel ürünleri kullanımıyla uzun ömürlü sonuçlar elde etmektedir. Adana jel tırnak uygulamalarımız, tırnak plakasına özel hazırlık protokolü uygulandıktan sonra UV lambayla sertleştirilen katmanlarla gerçekleştirilmekte; kırılgan yapıya karşı güçlü bir koruma sağlanmaktadır.\n\nAdana kalıcı oje seçeneklerimiz, renk skalasının genişliği ve 3-4 hafta dayanıklılığıyla tırnak bakımında sık yapılan masrafları azaltmaktadır. Adana Seyhan protez tırnak merkezi olarak Göksum Güzellik, nail art ve özel tasarım konusunda da aranan bir adres haline gelmiştir. Adana tırnak uzatma hizmetimizde kısa ve kırılgan yapıdaki tırnaklar, kişinin yüz ve el anatomisine uygun uzunluk ve şekilde estetik bir görünüme kavuşturulmaktadır.\n\nAdana protez tırnak fiyatları hakkında bilgi almak, fotoğraflı portföyümüzü incelemek veya randevu oluşturmak için +90 541 190 13 90 numaralı hattımızı arayabilirsiniz. Şık ve dayanıklı tırnaklara giden yolda Göksum Güzellik Merkezi her zaman yanınızda; ilk görüşmede ihtiyaçlarınız dinlenerek en uygun uygulama ve renk seçimi birlikte belirlenir.',
     relatedServices: ['kalici-makyaj'],
     ctaText: 'Şık ve bakımlı tırnaklara sahip olmak için protez tırnak uygulamalarımızdan yararlanın.',
     slug: 'protez-tirnak'
@@ -474,4 +483,4 @@ export function getAllServices(): Service[] {
  */
 export function getFeaturedServices(): Service[] {
   return services.slice(0, 4);
-} 
+}

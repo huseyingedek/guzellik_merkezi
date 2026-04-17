@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles */
+/* ─── Temel ─────────────────────────────────────────────────────────────────── */
 html, body {
   scroll-behavior: smooth;
 }
@@ -11,12 +11,130 @@ html, body {
   max-width: 1200px;
 }
 
+/* ─── Gold shimmer text ──────────────────────────────────────────────────────── */
+.text-gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    #C9A84C 0%,
+    #E2C68D 30%,
+    #C9A84C 60%,
+    #D8B266 80%,
+    #C9A84C 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* ─── Gold gradient border ───────────────────────────────────────────────────── */
+.border-gold-gradient {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(135deg, #C9A84C, #E2C68D, #C9A84C) border-box;
+}
+
+.border-gold-gradient-dark {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#16140F, #16140F) padding-box,
+    linear-gradient(135deg, #C9A84C, #E2C68D, #C9A84C) border-box;
+}
+
+/* ─── Lüks koyu bölüm (üst/alt gold çizgi otomatik) ─────────────────────────── */
+.luxury-section {
+  position: relative;
+  background: #0C0B08;
+}
+.luxury-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(201,168,76,0.6), transparent);
+}
+.luxury-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(201,168,76,0.6), transparent);
+}
+
+/* ─── Premium kart hover ─────────────────────────────────────────────────────── */
+.premium-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.premium-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(201,168,76,0.15);
+}
+
+/* ─── Bölüm alt başlığı ──────────────────────────────────────────────────────── */
+.section-eyebrow {
+  display: inline-block;
+  color: #C9A84C;
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* ─── Keyframes ──────────────────────────────────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+@keyframes fadeUp {
+  0%   { opacity: 0; transform: translateY(24px); }
+  100% { opacity: 1; transform: translateY(0);    }
+}
+
+/* ─── Component katmanı ──────────────────────────────────────────────────────── */
 @layer components {
+  /* Birincil buton */
   .btn-primary {
-    @apply bg-gold-500 hover:bg-gold-600 text-white py-3 px-8 rounded-full transition-colors duration-300 font-semibold;
+    @apply bg-gold-500 hover:bg-gold-600 text-white py-3 px-8 rounded-full
+           transition-all duration-300 font-semibold shadow-gold
+           hover:shadow-gold-lg hover:-translate-y-0.5;
   }
-  
-  .btn-outline {
-    @apply bg-white/10 border border-white/30 hover:bg-white/20 text-white py-3 px-8 rounded-full transition-colors duration-300 font-semibold;
+
+  /* Beyaz üzerinde outline */
+  .btn-outline-white {
+    @apply bg-transparent border border-white/40 hover:border-gold-400
+           text-white hover:text-gold-300 py-3 px-8 rounded-full
+           transition-all duration-300 font-semibold;
   }
-} 
+
+  /* Gold outline */
+  .btn-outline-gold {
+    @apply bg-transparent border border-gold-500 hover:bg-gold-500
+           text-gold-600 hover:text-white py-3 px-8 rounded-full
+           transition-all duration-300 font-semibold;
+  }
+
+  /* Nav link */
+  .nav-link {
+    @apply font-medium text-sm transition-colors duration-200
+           text-beauty-700 hover:text-gold-500;
+  }
+
+  /* Bölüm başlığı */
+  .section-heading {
+    @apply text-3xl md:text-4xl font-display font-bold;
+  }
+
+  /* Gold süsleyici çizgi */
+  .gold-divider {
+    @apply flex items-center gap-4;
+  }
+  .gold-divider::before,
+  .gold-divider::after {
+    content: '';
+    @apply flex-1 h-px;
+    background: linear-gradient(to right, transparent, rgba(201,168,76,0.6), transparent);
+  }
+}
