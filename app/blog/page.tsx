@@ -1,6 +1,21 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Güzellik & Bakım Blogu | Göksum Güzellik Salonu",
+  description:
+    "Göksum Güzellik Salonu blogu: lazer epilasyon, cilt bakımı, protez tırnak, kalıcı makyaj ve bölgesel zayıflama hakkında uzman ipuçları ve güncel içerikler.",
+  openGraph: {
+    title: "Güzellik & Bakım Blogu | Göksum Güzellik Salonu",
+    description: "Adana Seyhan'da güzellik ve bakım hakkında uzman içerikler.",
+    url: "https://www.goksumguzellik.com/blog",
+    type: "website",
+  },
+  alternates: { canonical: "https://www.goksumguzellik.com/blog" },
+};
+
 const posts = [
   {
     image: "/images/kis.png",
@@ -122,7 +137,7 @@ export default function BlogPage() {
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px w-8" style={{ background: "#C9A84C" }} />
             <span className="text-xs tracking-widest uppercase font-medium" style={{ color: "#C9A84C" }}>
-              Göksum Güzellik Merkezi
+              Göksum Güzellik Salonu
             </span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-3">Blog</h1>

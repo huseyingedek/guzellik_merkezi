@@ -7,8 +7,8 @@ import Footer from '@/components/Footer';
 
 // Define the metadata for this page
 export const metadata: Metadata = {
-  title: 'Müşteri Yorumları - Göksum Güzellik Merkezi',
-  description: 'Göksum Güzellik Merkezi\'nde hizmet alan müşterilerimizin deneyimleri ve memnuniyet yorumları. Güzellik ve bakım hizmetlerimiz hakkında gerçek müşteri değerlendirmeleri.',
+  title: 'Müşteri Yorumları - Göksum Güzellik Salonu',
+  description: 'Göksum Güzellik Salonu\'nde hizmet alan müşterilerimizin deneyimleri ve memnuniyet yorumları. Güzellik ve bakım hizmetlerimiz hakkında gerçek müşteri değerlendirmeleri.',
 };
 
 const testimonials = [
@@ -17,7 +17,7 @@ const testimonials = [
     name: 'Ayşe Yılmaz',
     position: 'Müşteri',
     image: '/images/testimonial-1.jpg',
-    quote: 'Göksum Güzellik Merkezi\'nde aldığım hizmetlerden çok memnun kaldım. Profesyonel ekip ve kaliteli ürünlerle harika sonuçlar elde ettim.',
+    quote: 'Göksum Güzellik Salonu\'nde aldığım hizmetlerden çok memnun kaldım. Profesyonel ekip ve kaliteli ürünlerle harika sonuçlar elde ettim.',
     rating: 5,
     service: 'Cilt Bakımı',
     date: '15 Mart 2025',
@@ -155,7 +155,7 @@ export default function TestimonialsPage() {
               <div className="w-14 h-0.5 bg-gold-300"></div>
             </div>
             <p className="text-beauty-600 max-w-2xl mx-auto">
-              Göksum Güzellik Merkezi'nde deneyim yaşayan değerli müşterilerimizin yorumları. 
+              Göksum Güzellik Salonu'nde deneyim yaşayan değerli müşterilerimizin yorumları. 
               Sizin memnuniyetiniz bizim için en büyük motivasyon kaynağı.
             </p>
           </div>
@@ -206,7 +206,7 @@ export default function TestimonialsPage() {
             <div className="inline-block bg-white rounded-lg p-5 shadow-md border border-beauty-100">
               <h2 className="text-xl font-semibold text-beauty-800 mb-3">Sizin Yorumunuz</h2>
               <p className="text-beauty-600 mb-4">
-                Siz de Göksum Güzellik Merkezi hakkında deneyimlerinizi paylaşmak ister misiniz?
+                Siz de Göksum Güzellik Salonu hakkında deneyimlerinizi paylaşmak ister misiniz?
               </p>
               <Link 
                 href="/iletisim"

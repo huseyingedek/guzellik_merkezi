@@ -5,9 +5,9 @@ import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hakkımızda | Göksum Güzellik Merkezi - Adana Seyhan",
+  title: "Hakkımızda | Göksum Güzellik Salonu - Adana Seyhan",
   description:
-    "Göksum Güzellik Merkezi, Adana Seyhan'da profesyonel güzellik hizmetleri sunan güvenilir adresiniz. Deneyimli ekibimiz, son teknoloji cihazlarımız ve müşteri memnuniyeti odaklı yaklaşımımızla hizmetinizdeyiz.",
+    "Göksum Güzellik Salonu, Adana Seyhan'da profesyonel güzellik hizmetleri sunan güvenilir adresiniz. Deneyimli ekibimiz, son teknoloji cihazlarımız ve müşteri memnuniyeti odaklı yaklaşımımızla hizmetinizdeyiz.",
   alternates: { canonical: "https://www.goksumguzellik.com/hakkimizda" },
 };
 
@@ -58,7 +58,7 @@ export default function AboutPage() {
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px w-8" style={{ background: "#C9A84C" }} />
             <span className="text-xs tracking-widest uppercase font-medium" style={{ color: "#C9A84C" }}>
-              Göksum Güzellik Merkezi
+              Göksum Güzellik Salonu
             </span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-3">Hakkımızda</h1>
@@ -78,7 +78,7 @@ export default function AboutPage() {
                 Hikayemiz
               </span>
               <h2 className="text-2xl md:text-3xl font-display font-bold text-beauty-900 mb-2">
-                Adana'nın Güzellik Merkezi
+                Adana'nın Güzellik Salonu
               </h2>
               <div className="flex items-center gap-4 mb-6">
                 <div className="h-px w-12" style={{ background: "#C9A84C" }} />
@@ -86,7 +86,7 @@ export default function AboutPage() {
               </div>
               <div className="space-y-4 text-beauty-700 leading-relaxed">
                 <p>
-                  Göksum Güzellik Merkezi, Adana'nın Seyhan ilçesinde, Gazipaşa Bulvarı üzerinde kurulmuştur.
+                  Göksum Güzellik Salonu, Adana'nın Seyhan ilçesinde, Gazipaşa Bulvarı üzerinde kurulmuştur.
                   Kurucumuz Elif Dartar, güzellik sektöründeki uzun yıllara dayanan deneyimini merkezi açarak
                   müşterilerine sunmak istedi.
                 </p>
@@ -96,7 +96,7 @@ export default function AboutPage() {
                   merkezimizi her zaman güncel tuttuk.
                 </p>
                 <p>
-                  Bugün, Göksum Güzellik Merkezi olarak müşterilerimize unutulmaz bir deneyim sunmaktan
+                  Bugün, Göksum Güzellik Salonu olarak müşterilerimize unutulmaz bir deneyim sunmaktan
                   ve onların kendilerini daha güzel, daha özgüvenli hissetmelerine katkıda bulunmaktan
                   gurur duyuyoruz.
                 </p>
@@ -113,7 +113,7 @@ export default function AboutPage() {
               </Link>
             </div>
             <div className="relative h-[420px] md:h-[520px] rounded-2xl overflow-hidden shadow-xl">
-              <Image src="/images/goksum.jpg" alt="Göksum Güzellik Merkezi" fill className="object-cover" />
+              <Image src="/images/goksum.jpg" alt="Göksum Güzellik Salonu" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl"
                    style={{ background: "rgba(12,11,8,0.7)", backdropFilter: "blur(8px)", border: "1px solid rgba(201,168,76,0.3)" }}>

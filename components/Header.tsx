@@ -40,7 +40,7 @@ export default function Header() {
             </a>
             <a
               href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
-                "Göksum Güzellik Merkezi, Cemalpaşa, Gazipaşa Blv. No:30 Kat:1, 01120 Seyhan/Adana"
+                "Göksum Güzellik Salonu, Cemalpaşa, Gazipaşa Blv. No:30 Kat:1, 01120 Seyhan/Adana"
               )}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -69,7 +69,7 @@ export default function Header() {
         <div className="container mx-auto flex justify-between items-center px-4">
           <Link href="/" className="flex items-center">
             <div className="h-24 sm:h-28 md:h-32 w-48 sm:w-60 md:w-72 flex items-center justify-start -ml-4 sm:-ml-8 md:-ml-24">
-              <img src="/images/logo.png" alt="Göksum Güzellik Merkezi" />
+              <img src="/images/logo.png" alt="Göksum Güzellik Salonu" />
             </div>
           </Link>
 
@@ -141,7 +141,7 @@ export default function Header() {
                 <FaWhatsapp size={20} />
               </Link>
             </div>
-            <p className="text-white/25 text-xs text-center">© 2025 Göksum Güzellik Merkezi</p>
+            <p className="text-white/25 text-xs text-center">© 2025 Göksum Güzellik Salonu</p>
           </div>
         </div>
       )}

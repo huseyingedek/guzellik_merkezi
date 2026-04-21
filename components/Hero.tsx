@@ -5,7 +5,7 @@ import HeroShowcase from "./HeroShowcase";
 
 const stats = [
   { value: "500+", label: "Mutlu Müşteri" },
-  { value: "5 Yıldız", label: "Google Puanı"  },
+  { value: "4.9 Yıldız", label: "Google Puanı"  },
   { value: "12+",      label: "Hizmet Çeşidi" },
   { value: "3+",   label: "Yıllık Deneyim" },
 ];
@@ -18,7 +18,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/h1.jpg"
-          alt="Göksum Güzellik Merkezi"
+          alt="Göksum Güzellik Salonu"
           fill
           sizes="100vw"
           priority
@@ -45,7 +45,7 @@ export default function Hero() {
             <div className="flex items-center justify-center lg:justify-start gap-3 mb-6">
               <div className="h-px w-10 bg-gold-400/70" />
               <span className="text-gold-400 text-xs tracking-[0.3em] uppercase font-medium">
-                Adana Seyhan · Güzellik Merkezi
+                Adana Seyhan · Güzellik Salonu
               </span>
               <div className="h-px w-10 bg-gold-400/70" />
             </div>
@@ -61,7 +61,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-white/70 text-base md:text-lg leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
-              Adana Seyhan'ın en prestijli güzellik merkezinde, uzman ekibimiz ve son teknoloji
+              Adana Seyhan'ın en prestijli güzellik salonlarından Göksum'da, uzman ekibimiz ve son teknoloji
               cihazlarımızla size özel lüks bir deneyim sunuyoruz.
             </p>
 

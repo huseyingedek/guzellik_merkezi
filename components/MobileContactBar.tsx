@@ -14,7 +14,7 @@ export default function MobileContactBar() {
   };
 
   const handleDirections = () => {
-    const address = 'Göksum Güzellik Merkezi, Cemalpaşa, Gazipaşa Blv. Apartmanı No:30 Kat:1, 01120 Seyhan/Adana';
+    const address = 'Göksum Güzellik Salonu, Cemalpaşa, Gazipaşa Blv. Apartmanı No:30 Kat:1, 01120 Seyhan/Adana';
     window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`, '_blank');
   };
 

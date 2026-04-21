@@ -11,7 +11,7 @@ const JsonLd = () => {
     '@context': 'https://schema.org',
     '@type': 'BeautySalon',
     '@id': 'https://www.goksumguzellik.com/#organization',
-    name: 'Göksum Güzellik Merkezi',
+    name: 'Göksum Güzellik Salonu',
     alternateName: ['Göksum Güzellik', 'Göksum Güzellik Salonu', 'Adana Göksum Güzellik'],
     image: [
       'https://www.goksumguzellik.com/images/logo.png',
@@ -23,7 +23,7 @@ const JsonLd = () => {
     email: 'goksumguzellik796@gmail.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Cemalpaşa, Gazipaşa Blv. Apartmanı No:30 Kat:1',
+      streetAddress: 'Cemalpaşa Mahallesi, Gazipaşa Bulvarı No:30 Kat:1 D:2',
       addressLocality: 'Seyhan',
       addressRegion: 'Adana',
       postalCode: '01120',
@@ -57,13 +57,13 @@ const JsonLd = () => {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
         opens: '09:00',
-        closes: '19:00'
+        closes: '20:00'
       },
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: 'Sunday',
         opens: '10:00',
-        closes: '18:00'
+        closes: '19:00'
       }
     ],
     sameAs: [
@@ -73,7 +73,14 @@ const JsonLd = () => {
     priceRange: '₺₺',
     currenciesAccepted: 'TRY',
     paymentAccepted: 'Cash, Credit Card',
-    description: 'Adana Seyhan\'da profesyonel güzellik hizmetleri sunan Göksum Güzellik Merkezi. Protez tırnak, lazer epilasyon, cilt bakımı, kalıcı makyaj ve bölgesel zayıflama hizmetleri. Adana\'nın en iyi güzellik merkezi.',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '27',
+      bestRating: '5',
+      worstRating: '1'
+    },
+    description: 'Adana Seyhan\'da profesyonel güzellik hizmetleri sunan Göksum Güzellik Salonu. Protez tırnak, lazer epilasyon, cilt bakımı, kalıcı makyaj ve bölgesel zayıflama hizmetleri. Adana\'nın en iyi güzellik merkezi.',
     slogan: 'Güzelliğinize Profesyonel Dokunuş',
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
@@ -127,7 +134,7 @@ const JsonLd = () => {
   const servicesPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Göksum Güzellik Merkezi Hizmetleri',
+    name: 'Göksum Güzellik Salonu Hizmetleri',
     description: 'Adana Seyhan\'da profesyonel güzellik hizmetleri',
     numberOfItems: 8,
     itemListElement: [
@@ -142,7 +149,7 @@ const JsonLd = () => {
           description: 'Adana Seyhan\'da profesyonel protez tırnak, jel tırnak ve kalıcı oje uygulamaları. Kırılgan tırnaklarınızı güçlendirin.',
           provider: {
             '@type': 'BeautySalon',
-            name: 'Göksum Güzellik Merkezi',
+            name: 'Göksum Güzellik Salonu',
             url: 'https://www.goksumguzellik.com'
           },
           areaServed: 'Adana, Seyhan',
@@ -157,10 +164,10 @@ const JsonLd = () => {
           name: 'Lazer Epilasyon',
           alternateName: 'Adana En İyi Lazer Epilasyon',
           url: 'https://www.goksumguzellik.com/hizmetlerimiz/lazer-epilasyon',
-          description: 'Adana Seyhan\'da son teknoloji lazer epilasyon. Alexandrite ve Diode lazer ile kalıcı tüy azaltma.',
+          description: 'Adana Seyhan\'da son teknoloji Diode lazer epilasyon ile kalıcı tüy azaltma.',
           provider: {
             '@type': 'BeautySalon',
-            name: 'Göksum Güzellik Merkezi',
+            name: 'Göksum Güzellik Salonu',
             url: 'https://www.goksumguzellik.com'
           },
           areaServed: 'Adana, Seyhan',
@@ -178,7 +185,7 @@ const JsonLd = () => {
           description: 'Adana Seyhan\'da profesyonel cilt bakımı. Hydrafacial, akne bakımı, anti-aging ve leke giderici bakımlar.',
           provider: {
             '@type': 'BeautySalon',
-            name: 'Göksum Güzellik Merkezi',
+            name: 'Göksum Güzellik Salonu',
             url: 'https://www.goksumguzellik.com'
           },
           areaServed: 'Adana, Seyhan',
@@ -196,7 +203,7 @@ const JsonLd = () => {
           description: 'Adana Seyhan\'da profesyonel kalıcı makyaj. Microblading, kaş kontür, dudak kontür ve eyeliner.',
           provider: {
             '@type': 'BeautySalon',
-            name: 'Göksum Güzellik Merkezi',
+            name: 'Göksum Güzellik Salonu',
             url: 'https://www.goksumguzellik.com'
           },
           areaServed: 'Adana, Seyhan',
@@ -213,7 +220,7 @@ const JsonLd = () => {
           description: 'Adana Seyhan\'da bölgesel zayıflama. Kavitasyon, RF lipoliz ve selülit giderme uygulamaları.',
           provider: {
             '@type': 'BeautySalon',
-            name: 'Göksum Güzellik Merkezi',
+            name: 'Göksum Güzellik Salonu',
             url: 'https://www.goksumguzellik.com'
           },
           areaServed: 'Adana, Seyhan',
@@ -230,7 +237,7 @@ const JsonLd = () => {
           description: 'Adana Seyhan\'da leke tedavisi. Güneş lekesi, akne lekesi ve melazma tedavisi.',
           provider: {
             '@type': 'BeautySalon',
-            name: 'Göksum Güzellik Merkezi',
+            name: 'Göksum Güzellik Salonu',
             url: 'https://www.goksumguzellik.com'
           },
           areaServed: 'Adana, Seyhan',
@@ -247,7 +254,7 @@ const JsonLd = () => {
           description: 'Adana Seyhan\'da saç mezoterapisi. Saç dökülmesi tedavisi ve saç güçlendirme.',
           provider: {
             '@type': 'BeautySalon',
-            name: 'Göksum Güzellik Merkezi',
+            name: 'Göksum Güzellik Salonu',
             url: 'https://www.goksumguzellik.com'
           },
           areaServed: 'Adana, Seyhan',
@@ -264,7 +271,7 @@ const JsonLd = () => {
           description: 'Adana Seyhan\'da ücretsiz cilt analizi. Modern cihazlarla cilt tipinizi belirleyin.',
           provider: {
             '@type': 'BeautySalon',
-            name: 'Göksum Güzellik Merkezi',
+            name: 'Göksum Güzellik Salonu',
             url: 'https://www.goksumguzellik.com'
           },
           areaServed: 'Adana, Seyhan',
@@ -278,7 +285,7 @@ const JsonLd = () => {
   const aboutPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'BeautySalon',
-    name: 'Göksum Güzellik Merkezi',
+    name: 'Göksum Güzellik Salonu',
     url: 'https://www.goksumguzellik.com',
     logo: 'https://www.goksumguzellik.com/images/logo.png',
     image: 'https://www.goksumguzellik.com/images/goksum.jpg',
@@ -290,7 +297,7 @@ const JsonLd = () => {
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Cemalpaşa, Gazipaşa Blv. Apartmanı No:30 Kat:1',
+      streetAddress: 'Cemalpaşa Mahallesi, Gazipaşa Bulvarı No:30 Kat:1 D:2',
       addressLocality: 'Seyhan',
       addressRegion: 'Adana',
       postalCode: '01120',
@@ -328,15 +335,15 @@ const JsonLd = () => {
   const appointmentPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Göksum Güzellik Merkezi - Online Randevu',
+    name: 'Göksum Güzellik Salonu - Online Randevu',
     url: 'https://www.goksumguzellik.com/randevu',
-    description: 'Adana Seyhan\'da Göksum Güzellik Merkezi\'nden online randevu alın. Protez tırnak, lazer epilasyon, cilt bakımı için hemen randevu oluşturun.',
+    description: 'Adana Seyhan\'da Göksum Güzellik Salonu\'ndan online randevu alın. Protez tırnak, lazer epilasyon, cilt bakımı için hemen randevu oluşturun.',
     provider: {
       '@type': 'BeautySalon',
-      name: 'Göksum Güzellik Merkezi',
+      name: 'Göksum Güzellik Salonu',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Cemalpaşa, Gazipaşa Blv. Apartmanı No:30 Kat:1',
+        streetAddress: 'Cemalpaşa Mahallesi, Gazipaşa Bulvarı No:30 Kat:1 D:2',
         addressLocality: 'Seyhan',
         addressRegion: 'Adana',
         postalCode: '01120',
@@ -363,17 +370,17 @@ const JsonLd = () => {
   const contactPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
-    name: 'İletişim - Göksum Güzellik Merkezi',
+    name: 'İletişim - Göksum Güzellik Salonu',
     url: 'https://www.goksumguzellik.com/iletisim',
-    description: 'Göksum Güzellik Merkezi iletişim bilgileri. Adana Seyhan\'da Gazipaşa Bulvarı üzerinde bulunuyoruz.',
+    description: 'Göksum Güzellik Salonu iletişim bilgileri. Adana Seyhan\'da Gazipaşa Bulvarı üzerinde bulunuyoruz.',
     mainEntity: {
       '@type': 'BeautySalon',
-      name: 'Göksum Güzellik Merkezi',
+      name: 'Göksum Güzellik Salonu',
       telephone: '+90 541 190 13 90',
       email: 'goksumguzellik796@gmail.com',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Cemalpaşa, Gazipaşa Blv. Apartmanı No:30 Kat:1',
+        streetAddress: 'Cemalpaşa Mahallesi, Gazipaşa Bulvarı No:30 Kat:1 D:2',
         addressLocality: 'Seyhan',
         addressRegion: 'Adana',
         postalCode: '01120',
@@ -394,7 +401,7 @@ const JsonLd = () => {
       image: 'https://www.goksumguzellik.com/images/protez-tirnak.jpg',
       provider: {
         '@type': 'BeautySalon',
-        name: 'Göksum Güzellik Merkezi',
+        name: 'Göksum Güzellik Salonu',
         url: 'https://www.goksumguzellik.com',
         telephone: '+90 541 190 13 90',
         address: {
@@ -418,13 +425,13 @@ const JsonLd = () => {
       '@context': 'https://schema.org',
       '@type': 'Service',
       name: 'Lazer Epilasyon - Adana En İyi Lazer Epilasyon',
-      alternateName: ['Adana Lazer Epilasyon', 'Seyhan Lazer Epilasyon', 'Adana Alexandrite Lazer'],
-      description: 'Adana Seyhan\'da son teknoloji lazer epilasyon hizmeti. Alexandrite ve Diode lazer teknolojisi ile kalıcı tüy azaltma. Tüm vücut, yüz, bikini bölgesi.',
+      alternateName: ['Adana Lazer Epilasyon', 'Seyhan Lazer Epilasyon', 'Adana Diode Lazer'],
+      description: 'Adana Seyhan\'da son teknoloji Diode lazer epilasyon hizmeti. 808nm dalga boyuyla tüm cilt tiplerine uygun kalıcı tüy azaltma. Tüm vücut, yüz, bikini bölgesi.',
       url: 'https://www.goksumguzellik.com/hizmetlerimiz/lazer-epilasyon',
       image: 'https://www.goksumguzellik.com/images/lazerr.png',
       provider: {
         '@type': 'BeautySalon',
-        name: 'Göksum Güzellik Merkezi',
+        name: 'Göksum Güzellik Salonu',
         url: 'https://www.goksumguzellik.com',
         telephone: '+90 541 190 13 90',
         address: {
@@ -454,7 +461,7 @@ const JsonLd = () => {
       image: 'https://www.goksumguzellik.com/images/hero1.jpg',
       provider: {
         '@type': 'BeautySalon',
-        name: 'Göksum Güzellik Merkezi',
+        name: 'Göksum Güzellik Salonu',
         url: 'https://www.goksumguzellik.com',
         telephone: '+90 541 190 13 90',
         address: {
@@ -484,7 +491,7 @@ const JsonLd = () => {
       image: 'https://www.goksumguzellik.com/images/makyaj.png',
       provider: {
         '@type': 'BeautySalon',
-        name: 'Göksum Güzellik Merkezi',
+        name: 'Göksum Güzellik Salonu',
         url: 'https://www.goksumguzellik.com',
         telephone: '+90 541 190 13 90',
         address: {
@@ -516,7 +523,7 @@ const JsonLd = () => {
         name: 'Adana\'da en iyi protez tırnak nerede yaptırılır?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Adana Seyhan\'da Göksum Güzellik Merkezi, profesyonel protez tırnak uygulamaları ile en iyi adreslerden biridir. Jel tırnak, kalıcı oje ve nail art hizmetleri sunulmaktadır.'
+          text: 'Adana Seyhan\'da Göksum Güzellik Salonu, profesyonel protez tırnak uygulamaları ile en iyi adreslerden biridir. Jel tırnak, kalıcı oje ve nail art hizmetleri sunulmaktadır.'
         }
       },
       {
@@ -524,15 +531,15 @@ const JsonLd = () => {
         name: 'Adana\'da lazer epilasyon fiyatları ne kadar?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Göksum Güzellik Merkezi\'nde lazer epilasyon fiyatları bölgeye göre ₺300 ile ₺2000 arasında değişmektedir. Tüm vücut paketleri için özel fiyatlar sunulmaktadır.'
+          text: 'Göksum Güzellik Salonu\'nda lazer epilasyon fiyatları bölgeye göre ₺300 ile ₺2000 arasında değişmektedir. Tüm vücut paketleri için özel fiyatlar sunulmaktadır.'
         }
       },
       {
         '@type': 'Question',
-        name: 'Göksum Güzellik Merkezi nerede?',
+        name: 'Göksum Güzellik Salonu nerede?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Göksum Güzellik Merkezi, Adana Seyhan\'da Cemalpaşa Mahallesi, Gazipaşa Bulvarı No:30 Kat:1 adresinde bulunmaktadır.'
+          text: 'Göksum Güzellik Salonu, Adana Seyhan\'da Cemalpaşa Mahallesi, Gazipaşa Bulvarı No:30 Kat:1 adresinde bulunmaktadır.'
         }
       },
       {
@@ -540,7 +547,7 @@ const JsonLd = () => {
         name: 'Adana\'da cilt bakımı nerede yaptırılır?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Adana Seyhan\'da Göksum Güzellik Merkezi, hydrafacial, akne bakımı ve anti-aging cilt bakımı hizmetleri sunmaktadır. Profesyonel cilt analizi ile size özel bakım programları hazırlanır.'
+          text: 'Adana Seyhan\'da Göksum Güzellik Salonu, hydrafacial, akne bakımı ve anti-aging cilt bakımı hizmetleri sunmaktadır. Profesyonel cilt analizi ile size özel bakım programları hazırlanır.'
         }
       }
     ]

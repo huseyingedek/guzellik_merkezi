@@ -7,6 +7,7 @@ import Link from "next/link";
 const services = [
   {
     name: "Protez Tırnak",
+    alt: "Adana Protez Tırnak Uygulaması",
     desc: "Jel, kalıcı oje ve nail art ile şık, uzun ömürlü tırnaklar.",
     image: "/images/protez-tirnak.jpg",
     href: "/hizmetlerimiz/protez-tirnak",
@@ -14,6 +15,7 @@ const services = [
   },
   {
     name: "Lazer Epilasyon",
+    alt: "Adana Diode Lazer Epilasyon",
     desc: "Son teknoloji cihazlarla kalıcı tüy azaltma, pürüzsüz cilt.",
     image: "/images/lazerr.png",
     href: "/hizmetlerimiz/lazer-epilasyon",
@@ -21,6 +23,7 @@ const services = [
   },
   {
     name: "Cilt Bakımı",
+    alt: "Adana Hydrafacial Cilt Bakımı",
     desc: "Hydrafacial ve anti-aging bakımlarla genç, parlak cilt.",
     image: "/images/hero1.jpg",
     href: "/hizmetlerimiz/cilt-bakimi",
@@ -28,6 +31,7 @@ const services = [
   },
   {
     name: "Kalıcı Makyaj",
+    alt: "Adana Kalıcı Makyaj Microblading",
     desc: "Microblading, kaş kontür ve dudak kontürü uygulamaları.",
     image: "/images/makyaj.png",
     href: "/hizmetlerimiz/kalici-makyaj",
@@ -35,6 +39,7 @@ const services = [
   },
   {
     name: "Bölgesel Zayıflama",
+    alt: "Adana Kavitasyon Bölgesel Zayıflama",
     desc: "Kavitasyon ve RF lipoliz ile inatçı yağlara çözüm.",
     image: "/images/zayıflama.png",
     href: "/hizmetlerimiz/bolgesel-zayiflama",
@@ -42,6 +47,7 @@ const services = [
   },
   {
     name: "Leke Tedavi",
+    alt: "Adana Leke Tedavisi Melazma",
     desc: "Güneş lekesi, melazma ve akne izleri için özel tedavi.",
     image: "/images/leketedavi.png",
     href: "/hizmetlerimiz/leke-tedavi",
@@ -113,7 +119,7 @@ export default function HeroShowcase() {
           >
             <Image
               src={s.image}
-              alt={s.name}
+              alt={s.alt || s.name}
               fill
               sizes="420px"
               className="object-cover"

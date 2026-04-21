@@ -13,10 +13,10 @@ export default function Footer() {
 
           <div>
             <div className="relative h-32 w-72 mb-5 -ml-1">
-              <Image src="/images/logo.png" alt="Goksum Guzellik" fill className="object-contain object-left brightness-90" />
+              <Image src="/images/logo.png" alt="Göksum Güzellik Salonu" fill className="object-contain object-left brightness-90" />
             </div>
             <p className="text-sm leading-relaxed mb-5" style={{ color: 'rgba(255,255,255,0.45)' }}>
-              Adana Seyhan'da profesyonel guzellik ve bakim hizmetleri. Modern teknoloji, uzman ekip ve luks deneyim.
+              Göksum Güzellik Salonu: Adana Seyhan Cemalpaşa'da profesyonel güzellik ve bakım hizmetleri. Modern teknoloji, uzman ekip ve lüks deneyim.
             </p>
             <div className="flex gap-3">
               <SocialLink href="https://www.facebook.com/profile.php?id=61574776514786" icon={<FaFacebook size={15} />} />
@@ -31,13 +31,13 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2.5">
               {[
-                ['Cilt Bakimi', '/hizmetlerimiz/cilt-bakimi'],
-                ['Protez Tirnak', '/hizmetlerimiz/protez-tirnak'],
+                ['Cilt Bakımı', '/hizmetlerimiz/cilt-bakimi'],
+                ['Protez Tırnak', '/hizmetlerimiz/protez-tirnak'],
                 ['Lazer Epilasyon', '/hizmetlerimiz/lazer-epilasyon'],
-                ['Bolgesel Zayiflama', '/hizmetlerimiz/bolgesel-zayiflama'],
-                ['Kalici Makyaj', '/hizmetlerimiz/kalici-makyaj'],
+                ['Bölgesel Zayıflama', '/hizmetlerimiz/bolgesel-zayiflama'],
+                ['Kalıcı Makyaj', '/hizmetlerimiz/kalici-makyaj'],
                 ['Leke Tedavi', '/hizmetlerimiz/leke-tedavi'],
-                ['Sac Mezoterapi', '/hizmetlerimiz/sac-mezoterapi'],
+                ['Saç Mezoterapisi', '/hizmetlerimiz/sac-mezoterapi'],
                 ['Cilt Analizi', '/hizmetlerimiz/cilt-analizi'],
               ].map(([text, href]) => (
                 <li key={href}>
@@ -50,15 +50,15 @@ export default function Footer() {
 
           <div>
             <h3 className="text-sm font-semibold tracking-widest uppercase mb-5" style={{ color: '#C9A84C' }}>
-              Hizli Baglantilar
+              Hızlı Bağlantılar
             </h3>
             <ul className="space-y-2.5">
               {[
-                ['Hakkimizda', '/hakkimizda'],
+                ['Hakkımızda', '/hakkimizda'],
                 ['Hizmetlerimiz', '/hizmetlerimiz'],
                 ['Randevu Al', '/randevu'],
                 ['Blog', '/blog'],
-                ['Iletisim', '/iletisim'],
+                ['İletişim', '/iletisim'],
               ].map(([text, href]) => (
                 <li key={href}>
                   <Link href={href} className="text-sm transition-colors duration-200 hover:text-gold-400"
@@ -70,13 +70,13 @@ export default function Footer() {
 
           <div>
             <h3 className="text-sm font-semibold tracking-widest uppercase mb-5" style={{ color: '#C9A84C' }}>
-              Iletisim
+              İletişim
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <FaMapMarkerAlt className="mt-0.5 flex-shrink-0" style={{ color: '#C9A84C' }} size={14} />
                 <span className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.45)' }}>
-                  Cemalpasa, Gazipasa Blv. No:30 Kat:1, 01120 Seyhan / Adana
+                  Cemalpaşa, Gazipaşa Blv. No:30 Kat:1 D:2, 01120 Seyhan / Adana
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -106,7 +106,7 @@ export default function Footer() {
 
         <div className="pt-6 text-center text-xs"
              style={{ borderTop: '1px solid rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.25)' }}>
-          <p>&copy; {new Date().getFullYear()} Goksum Guzellik Merkezi. Tum haklari saklidir.</p>
+          <p>&copy; {new Date().getFullYear()} Göksum Güzellik Salonu. Tüm hakları saklıdır.</p>
         </div>
       </div>
     </footer>

@@ -15,91 +15,34 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.goksumguzellik.com'),
   title: {
-    default: 'Göksum Güzellik Merkezi | Adana Seyhan En İyi Güzellik Salonu',
-    template: '%s | Göksum Güzellik - Adana Seyhan',
+    default: 'Göksum Güzellik Salonu | Adana Seyhan',
+    template: '%s | Göksum Güzellik Salonu',
   },
-  description: 'Adana Seyhan\'da en iyi güzellik merkezi Göksum Güzellik. Protez tırnak, lazer epilasyon, cilt bakımı, kalıcı makyaj ve bölgesel zayıflama hizmetleri. Profesyonel ekip, uygun fiyatlar. Hemen randevu alın!',
-  keywords: [
-    // Ana anahtar kelimeler
-    'göksum güzellik merkezi',
-    'göksum güzellik salonu adana',
-    'adana en iyi güzellik merkezi',
-    'adana en iyi güzellik salonu',
-    // Protez Tırnak
-    'adana protez tırnak',
-    'adana en iyi protez tırnak',
-    'adana seyhan protez tırnak',
-    'seyhan protez tırnak',
-    'adana jel tırnak',
-    'adana kalıcı oje',
-    'adana tırnak salonu',
-    // Lazer Epilasyon
-    'adana lazer epilasyon',
-    'adana en iyi lazer epilasyon',
-    'adana seyhan lazer epilasyon',
-    'seyhan lazer epilasyon',
-    'adana lazer epilasyon fiyatları',
-    'adana alexandrite lazer',
-    // Cilt Bakımı
-    'adana cilt bakımı',
-    'adana en iyi cilt bakımı',
-    'adana seyhan cilt bakımı',
-    'seyhan cilt bakımı',
-    'adana hydrafacial',
-    'adana profesyonel cilt bakımı',
-    // Kalıcı Makyaj
-    'adana kalıcı makyaj',
-    'adana en iyi kalıcı makyaj',
-    'adana microblading',
-    'adana kaş kontür',
-    // Bölgesel Zayıflama
-    'adana bölgesel zayıflama',
-    'adana kavitasyon',
-    'adana selülit tedavisi',
-    // Lokasyon
-    'adana seyhan güzellik merkezi',
-    'seyhan güzellik merkezi',
-    'seyhan güzellik salonu',
-    'adana merkez güzellik salonu',
-    'cemalpaşa güzellik merkezi',
-    'gazipaşa bulvarı güzellik salonu'
-  ],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  alternates: {
-    canonical: 'https://www.goksumguzellik.com',
-  },
+  description: "Adana Seyhan Cemalpaşa'da Göksum Güzellik Salonu: Diode lazer epilasyon, Hydrafacial cilt bakımı, protez tırnak, kalıcı makyaj. Uzman ekip ile güvenli bakım.",
+  keywords: 'adana güzellik salonu, adana güzellik merkezi, seyhan güzellik salonu, cemalpaşa güzellik salonu, adana lazer epilasyon, adana diode lazer, adana cilt bakımı, adana hydrafacial, adana protez tırnak, adana kalıcı makyaj, adana microblading, adana leke tedavisi, adana bölgesel zayıflama',
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
     url: 'https://www.goksumguzellik.com',
-    title: 'Göksum Güzellik Merkezi | Adana Seyhan En İyi Güzellik Salonu',
-    description: 'Adana Seyhan\'da profesyonel güzellik hizmetleri. Protez tırnak, lazer epilasyon, cilt bakımı, kalıcı makyaj. En iyi fiyat garantisi!',
-    siteName: 'Göksum Güzellik Merkezi',
-    images: [
-      {
-        url: 'https://www.goksumguzellik.com/images/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Göksum Güzellik Merkezi - Adana Seyhan',
-      },
-    ],
+    siteName: 'Göksum Güzellik Salonu',
+    title: 'Göksum Güzellik Salonu | Adana Seyhan',
+    description: "Adana Seyhan Cemalpaşa'da Göksum Güzellik Salonu: Diode lazer epilasyon, Hydrafacial cilt bakımı, protez tırnak, kalıcı makyaj. Uzman ekip ile güvenli bakım.",
+    images: [{ url: '/images/logo.png', width: 1200, height: 630, alt: 'Göksum Güzellik Salonu' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Göksum Güzellik | Adana Seyhan En İyi Güzellik Merkezi',
-    description: 'Protez tırnak, lazer epilasyon, cilt bakımı için Adana\'nın en iyi adresi. Profesyonel hizmet, uygun fiyat!',
+    title: 'Göksum Güzellik Salonu | Adana Seyhan',
+    description: "Adana Seyhan Cemalpaşa'da Göksum Güzellik Salonu: Diode lazer epilasyon, Hydrafacial cilt bakımı, protez tırnak, kalıcı makyaj.",
+    images: ['/images/logo.png'],
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  },
+  alternates: { canonical: 'https://www.goksumguzellik.com' },
   viewport: 'width=device-width, initial-scale=1',
   themeColor: '#ffffff',
   icons: {
@@ -108,7 +51,6 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   manifest: '/site.webmanifest',
-  metadataBase: new URL('https://www.goksumguzellik.com'),
 }
 
 export default function RootLayout({

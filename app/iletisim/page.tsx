@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState, FormEvent } from "react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaInstagram, FaWhatsapp, FaFacebook, FaCheck, FaTimes } from "react-icons/fa";
 
 export default function ContactPage() {
@@ -47,7 +49,9 @@ export default function ContactPage() {
   const inputStyle = { borderColor: "rgba(201,168,76,0.25)", color: "#1F212F" };
 
   return (
-    <main>
+    <>
+      <Header />
+      <main>
       {/* ── Banner ──────────────────────────────────────────────── */}
       <div className="relative h-[260px] sm:h-[320px] overflow-hidden" style={{ background: "#0C0B08" }}>
         <div className="absolute inset-0 opacity-20"
@@ -57,7 +61,7 @@ export default function ContactPage() {
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px w-8" style={{ background: "#C9A84C" }} />
             <span className="text-xs tracking-widest uppercase font-medium" style={{ color: "#C9A84C" }}>
-              Göksum Güzellik Merkezi
+              Göksum Güzellik Salonu
             </span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-3">İletişim</h1>
@@ -219,14 +223,14 @@ export default function ContactPage() {
       <section className="h-96 relative">
         <div className="absolute top-4 left-4 z-10 px-4 py-3 rounded-xl shadow-lg max-w-xs"
              style={{ background: "rgba(12,11,8,0.88)", border: "1px solid rgba(201,168,76,0.3)" }}>
-          <p className="font-bold text-sm" style={{ color: "#C9A84C" }}>Göksum Güzellik Merkezi</p>
+          <p className="font-bold text-sm" style={{ color: "#C9A84C" }}>Göksum Güzellik Salonu</p>
           <p className="text-white/70 text-xs mt-1">Cemalpaşa, Gazipaşa Blv. No:30 Kat:1, 01120 Seyhan/Adana</p>
         </div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2679.152343662692!2d35.36052014790516!3d37.00819724398693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15288fb46443d347%3A0xccab37c71d3076d8!2sG%C3%B6ksum%20G%C3%BCzellik%20Merkezi!5e0!3m2!1str!2str!4v1750144023700!5m2!1str!2str"
           className="absolute inset-0 w-full h-full"
           loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade"
-          title="Göksum Güzellik Merkezi Konum"
+          title="Göksum Güzellik Salonu Konum"
         />
       </section>
 
@@ -256,5 +260,7 @@ export default function ContactPage() {
         </div>
       )}
     </main>
+      <Footer />
+    </>
   );
 }

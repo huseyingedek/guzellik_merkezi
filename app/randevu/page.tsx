@@ -83,7 +83,7 @@ export default function AppointmentPage() {
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px w-8" style={{ background: "#C9A84C" }} />
             <span className="text-xs tracking-widest uppercase font-medium" style={{ color: "#C9A84C" }}>
-              Göksum Güzellik Merkezi
+              Göksum Güzellik Salonu
             </span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-3">Randevu Al</h1>

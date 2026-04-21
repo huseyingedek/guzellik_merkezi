@@ -58,7 +58,7 @@ export default function Navbar() {
               </a>
             </div>
             <div>
-              <p className="text-sm">Göksum Güzellik Merkezi, Adana'da profesyonel güzellik hizmetleri</p>
+              <p className="text-sm">Göksum Güzellik Salonu, Adana'da profesyonel güzellik hizmetleri</p>
             </div>
           </div>
           <div className="flex space-x-4">

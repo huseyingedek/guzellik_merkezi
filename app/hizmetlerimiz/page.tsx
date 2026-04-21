@@ -5,9 +5,9 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Adana Seyhan Güzellik Hizmetleri | Protez Tırnak, Lazer, Cilt Bakımı',
   description:
-    "Adana Seyhan'da en iyi protez tırnak, lazer epilasyon, cilt bakımı, kalıcı makyaj ve bölgesel zayıflama hizmetleri. Göksum Güzellik Merkezi'nde profesyonel ekip ve uygun fiyatlarla güzelliğinize güzellik katın.",
+    "Adana Seyhan'da en iyi protez tırnak, lazer epilasyon, cilt bakımı, kalıcı makyaj ve bölgesel zayıflama hizmetleri. Göksum Güzellik Salonu'nda profesyonel ekip ve uygun fiyatlarla güzelliğinize güzellik katın.",
   openGraph: {
-    title: 'Göksum Güzellik Merkezi Hizmetleri | Adana Seyhan',
+    title: 'Göksum Güzellik Salonu Hizmetleri | Adana Seyhan',
     description: "Adana Seyhan'da profesyonel güzellik hizmetleri. Protez tırnak, lazer epilasyon, cilt bakımı.",
     url: 'https://www.goksumguzellik.com/hizmetlerimiz',
     type: 'website',
@@ -104,7 +104,7 @@ export default function ServicesPage() {
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px w-8" style={{ background: '#C9A84C' }} />
             <span className="text-xs tracking-widest uppercase font-medium" style={{ color: '#C9A84C' }}>
-              Göksum Güzellik Merkezi
+              Göksum Güzellik Salonu
             </span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-3">

@@ -122,7 +122,7 @@ const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: 'Göksum Güzellik Merkezi\'nde, cildinizin kış aylarındaki özel ihtiyaçlarına yönelik kişiselleştirilmiş bakım programları sunuyoruz. Uzmanlarımız, cildinizin durumunu analiz ederek en uygun bakım planını oluşturacaktır.'
+        content: 'Göksum Güzellik Salonu\'nde, cildinizin kış aylarındaki özel ihtiyaçlarına yönelik kişiselleştirilmiş bakım programları sunuyoruz. Uzmanlarımız, cildinizin durumunu analiz ederek en uygun bakım planını oluşturacaktır.'
       },
       {
         type: 'conclusion',
@@ -275,7 +275,7 @@ const blogPosts: BlogPost[] = [
       },
       {
         type: 'conclusion',
-        content: 'Kalıcı makyaj, doğru uzman tarafından uygulandığında, günlük makyaj rutininizi basitleştiren ve özgüveninizi artıran harika bir seçenektir. Göksum Güzellik Merkezi\'nde, deneyimli uzmanlarımız ile doğal ve kişiye özel kalıcı makyaj uygulamaları sunuyoruz.'
+        content: 'Kalıcı makyaj, doğru uzman tarafından uygulandığında, günlük makyaj rutininizi basitleştiren ve özgüveninizi artıran harika bir seçenektir. Göksum Güzellik Salonu\'nde, deneyimli uzmanlarımız ile doğal ve kişiye özel kalıcı makyaj uygulamaları sunuyoruz.'
       }
     ],
     related: ['bahar-makyaj-trendleri', 'kis-aylarinda-cilt-bakimi', 'cilt-sagligi-beslenme']
@@ -321,7 +321,7 @@ const blogPosts: BlogPost[] = [
       },
       {
         type: 'conclusion',
-        content: 'Her iki yöntem de doğru uygulandığında tırnak sağlığına zarar vermez. Göksum Güzellik Merkezi\'nde uzman ekibimiz, tırnak yapınızı değerlendirerek size en uygun seçeneği önerir.'
+        content: 'Her iki yöntem de doğru uygulandığında tırnak sağlığına zarar vermez. Göksum Güzellik Salonu\'nde uzman ekibimiz, tırnak yapınızı değerlendirerek size en uygun seçeneği önerir.'
       }
     ],
     related: ['kalici-makyaj-uygulamalari', 'lazer-epilasyon-bilgiler', 'adana-lazer-epilasyon-rehberi']
@@ -354,7 +354,7 @@ const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: "Adana lazer epilasyon fiyatları, uygulama bölgesine ve seans sayısına göre değişir. Genellikle 6-8 seans yeterli olmakla birlikte, kişisel farklılıklar gözetilerek bireysel programlar oluşturulur. Göksum Güzellik Merkezi\'nde şeffaf fiyatlandırma politikası uygulanmaktadır."
+        content: "Adana lazer epilasyon fiyatları, uygulama bölgesine ve seans sayısına göre değişir. Genellikle 6-8 seans yeterli olmakla birlikte, kişisel farklılıklar gözetilerek bireysel programlar oluşturulur. Göksum Güzellik Salonu\'nde şeffaf fiyatlandırma politikası uygulanmaktadır."
       },
       {
         type: 'tips',
@@ -367,7 +367,7 @@ const blogPosts: BlogPost[] = [
       },
       {
         type: 'conclusion',
-        content: "Adana Seyhan'da güvenilir lazer epilasyon için Göksum Güzellik Merkezi\'ni tercih edebilirsiniz. Ücretsiz konsültasyon ile başlayın ve kişisel programınızı oluşturun."
+        content: "Adana Seyhan'da güvenilir lazer epilasyon için Göksum Güzellik Salonu\'ni tercih edebilirsiniz. Ücretsiz konsültasyon ile başlayın ve kişisel programınızı oluşturun."
       }
     ],
     related: ['lazer-epilasyon-bilgiler', 'cilt-sagligi-beslenme', 'jel-tirnak-vs-kalici-oje']
@@ -413,7 +413,7 @@ const blogPosts: BlogPost[] = [
       },
       {
         type: 'conclusion',
-        content: "Microblading ve kaş kontür, doğru uzman eliyle uygulandığında yüz çizgilerini belirginleştiren, doğal ve uzun ömürlü bir güzellik çözümüdür. Adana\'da bu uygulamayı Göksum Güzellik Merkezi\'nde yaptırabilirsiniz."
+        content: "Microblading ve kaş kontür, doğru uzman eliyle uygulandığında yüz çizgilerini belirginleştiren, doğal ve uzun ömürlü bir güzellik çözümüdür. Adana\'da bu uygulamayı Göksum Güzellik Salonu\'nde yaptırabilirsiniz."
       }
     ],
     related: ['kalici-makyaj-uygulamalari', 'bahar-makyaj-trendleri', 'jel-tirnak-vs-kalici-oje']
@@ -459,7 +459,7 @@ const blogPosts: BlogPost[] = [
       },
       {
         type: 'conclusion',
-        content: "Kavitasyon, doğru beklentilerle yaklaşıldığında bölgesel incelme için güvenli ve etkili bir seçenektir. Göksum Güzellik Merkezi\'nde kişiye özel bölgesel zayıflama programları oluşturuyoruz."
+        content: "Kavitasyon, doğru beklentilerle yaklaşıldığında bölgesel incelme için güvenli ve etkili bir seçenektir. Göksum Güzellik Salonu\'nde kişiye özel bölgesel zayıflama programları oluşturuyoruz."
       }
     ],
     related: ['lazer-epilasyon-bilgiler', 'cilt-sagligi-beslenme', 'adana-lazer-epilasyon-rehberi']
@@ -505,7 +505,7 @@ const blogPosts: BlogPost[] = [
       },
       {
         type: 'conclusion',
-        content: "Saç dökülmesiyle mücadelede en etkili adım, nedenini tespit etmek ve kişiselleştirilmiş bir tedavi planı oluşturmaktır. Adana\'da saç mezoterapisi için Göksum Güzellik Merkezi\'ni ziyaret edebilirsiniz."
+        content: "Saç dökülmesiyle mücadelede en etkili adım, nedenini tespit etmek ve kişiselleştirilmiş bir tedavi planı oluşturmaktır. Adana\'da saç mezoterapisi için Göksum Güzellik Salonu\'ni ziyaret edebilirsiniz."
       }
     ],
     related: ['dogal-sac-bakimi', 'cilt-sagligi-beslenme', 'kisaylarinda-cilt-bakimi']
@@ -551,7 +551,7 @@ const blogPosts: BlogPost[] = [
       },
       {
         type: 'conclusion',
-        content: "Güneş lekeleri, kararlı bir tedavi programı ve güneşten korunma alışkanlığıyla önemli ölçüde azaltılabilir. Adana\'da leke tedavisi için Göksum Güzellik Merkezi\'nde ücretsiz cilt analizi yaptırabilirsiniz."
+        content: "Güneş lekeleri, kararlı bir tedavi programı ve güneşten korunma alışkanlığıyla önemli ölçüde azaltılabilir. Adana\'da leke tedavisi için Göksum Güzellik Salonu\'nde ücretsiz cilt analizi yaptırabilirsiniz."
       }
     ],
     related: ['kis-aylarinda-cilt-bakimi', 'cilt-sagligi-beslenme', 'adana-lazer-epilasyon-rehberi']
@@ -597,7 +597,7 @@ const blogPosts: BlogPost[] = [
       },
       {
         type: 'conclusion',
-        content: "2024 cilt bakımı trendleri, cildinizi içten dışa beslemeyi ve uzun vadeli sağlığını korumayı ön planda tutuyor. Adana\'da bu trendleri profesyonel destekle uygulamak için Göksum Güzellik Merkezi'ne danışabilirsiniz."
+        content: "2024 cilt bakımı trendleri, cildinizi içten dışa beslemeyi ve uzun vadeli sağlığını korumayı ön planda tutuyor. Adana\'da bu trendleri profesyonel destekle uygulamak için Göksum Güzellik Salonu'ne danışabilirsiniz."
       }
     ],
     related: ['kis-aylarinda-cilt-bakimi', 'cilt-sagligi-beslenme', 'gunes-lekesi-tedavisi']
@@ -827,7 +827,7 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
                   </div>
                 </div>
                 <p className="text-beauty-700 text-sm">
-                  Göksum Güzellik Merkezi\'nde {post.authorTitle.toLowerCase()} olarak görev yapmaktadır. 
+                  Göksum Güzellik Salonu\'nde {post.authorTitle.toLowerCase()} olarak görev yapmaktadır. 
                   Alanında uzmanlaşmış ve deneyimli ekibimizin değerli bir üyesidir.
                 </p>
                 <div className="mt-4 flex space-x-2">
@@ -897,7 +897,7 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
               <div className="bg-beauty-900 rounded-xl shadow-md p-6 text-white">
                 <h3 className="text-xl font-display font-bold mb-3">Profesyonel Destek Alın</h3>
                 <p className="text-beauty-300 mb-4">
-                  Cilt bakımı, saç bakımı ve güzellik konularında profesyonel destek için Göksum Güzellik Merkezi uzmanları yanınızda.
+                  Cilt bakımı, saç bakımı ve güzellik konularında profesyonel destek için Göksum Güzellik Salonu uzmanları yanınızda.
                 </p>
                 <Link 
                   href="/randevu" 

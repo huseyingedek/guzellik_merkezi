@@ -3,7 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: 'Blog | Göksum Güzellik Merkezi',
+  title: 'Blog | Göksum Güzellik Salonu',
   description: 'Güzellik ve bakım ile ilgili en güncel bilgileri, ipuçlarını ve trendleri keşfedin.',
 };
 

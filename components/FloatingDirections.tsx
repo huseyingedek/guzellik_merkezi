@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function FloatingDirections() {
   // Google Maps yol tarifi linki
   // Tam adres ile yol tarifi - Google Maps otomatik olarak bulacak
-  const placeName = 'Göksum Güzellik Merkezi';
+  const placeName = 'Göksum Güzellik Salonu';
   const fullAddress = 'Cemalpaşa, Gazipaşa Blv. Apartmanı No:30 Kat:1, 01120 Seyhan/Adana';
   const destination = `${placeName}, ${fullAddress}`;
   const encodedDestination = encodeURIComponent(destination);
