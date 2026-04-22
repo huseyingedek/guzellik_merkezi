@@ -346,7 +346,7 @@ const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        content: "Adana\'da lazer epilasyon, sertifikalı cihazlar ve uzman kadro eşliğinde gerçekleştirilmelidir. Alexandrite ve Diode lazer cihazları, farklı cilt ve kıl tiplerine göre kişiselleştirilen parametrelerle güvenli ve etkili sonuçlar verir."
+        content: "Adana\'da lazer epilasyon, sertifikalı cihazlar ve uzman kadro eşliğinde gerçekleştirilmelidir. Diode lazer, farklı cilt ve kıl tiplerine göre kişiselleştirilen parametrelerle güvenli ve etkili sonuçlar verir."
       },
       {
         type: 'subtitle',

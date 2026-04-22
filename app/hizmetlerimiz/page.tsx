@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const services = [
   {
     id: 8,
-    title: 'Protez Tırnak',
+    title: 'Adana Protez Tırnak',
     description: 'Kalıcı ve estetik protez tırnak uygulamaları ile hem şık hem de bakımlı tırnaklara sahip olun.',
     image: '/images/protez-tirnak.jpg',
     features: ['Kalıcı oje', 'Jel tırnak', 'Tırnak uzatma', 'Nail art & tasarım', 'Protez tırnak bakımı'],
@@ -27,7 +27,7 @@ const services = [
   },
   {
     id: 2,
-    title: 'Cilt Bakımı',
+    title: 'Adana Cilt Bakımı',
     description: 'Cildinizin ihtiyaçlarına göre hazırlanan özel bakım programları ile daha canlı, sağlıklı bir cilde kavuşun.',
     image: '/images/hero1.jpg',
     features: ['Klasik cilt bakımı', 'Akne bakımı', 'Anti-aging bakım', 'Hydrafacial', 'Leke giderici bakım'],
@@ -36,7 +36,7 @@ const services = [
   },
   {
     id: 3,
-    title: 'Lazer Epilasyon',
+    title: 'Adana Lazer Epilasyon',
     description: 'Son teknoloji lazer cihazlarımız ile istenmeyen tüylerden kalıcı olarak kurtulun.',
     image: '/images/lazerr.png',
     features: ['Tüm vücut', 'Yüz bölgesi', 'Bikini bölgesi', 'Erkekler için'],
@@ -45,7 +45,7 @@ const services = [
   },
   {
     id: 4,
-    title: 'Bölgesel Zayıflama',
+    title: 'Adana Bölgesel Zayıflama',
     description: 'Modern zayıflama teknolojileri ile vücudunuzda bölgesel incelme sağlayın.',
     image: '/images/zayıflama.png',
     features: ['Kavitasyon', 'RF lipoliz', 'Selülit giderme', 'Kişiye özel protokol'],
@@ -54,7 +54,7 @@ const services = [
   },
   {
     id: 5,
-    title: 'Kalıcı Makyaj',
+    title: 'Adana Kalıcı Makyaj',
     description: 'Her gün makyaj yapma derdinden kurtulun, zamandan tasarruf edin.',
     image: '/images/makyaj.png',
     features: ['Dudak kontür', 'Eyeliner', 'Kaş kontür', 'Microblading'],
@@ -63,7 +63,7 @@ const services = [
   },
   {
     id: 6,
-    title: 'Leke Tedavi',
+    title: 'Adana Leke Tedavi',
     description: 'Güneş lekesi, akne izi ve pigmentasyon sorunlarını etkili tedavi yöntemlerimizle giderin.',
     image: '/images/leketedavi.png',
     features: ['Kimyasal peeling', 'Akne lekesi', 'Güneş lekesi', 'Melazma tedavisi'],
@@ -72,7 +72,7 @@ const services = [
   },
   {
     id: 7,
-    title: 'Saç Mezoterapi',
+    title: 'Adana Saç Mezoterapisi',
     description: 'Saç dökülmesi sorunlarına mezoterapi yöntemiyle etkili çözüm.',
     image: '/images/sac.png',
     features: ['Vitamin kokteylleri', 'Kök hücre takviyeleri', 'Saç kökü besleme', 'Dökülme önleme'],
@@ -81,7 +81,7 @@ const services = [
   },
   {
     id: 1,
-    title: 'Cilt Analizi',
+    title: 'Adana Cilt Analizi',
     description: 'Modern cihazlarla ücretsiz profesyonel cilt analizi. Cildinizin ihtiyaçlarını keşfedin.',
     image: '/images/analiz_cilt.png',
     features: ['Cilt tipi analizi', 'Problem tespiti', 'Kişiye özel öneriler', 'Ürün tavsiyeleri'],

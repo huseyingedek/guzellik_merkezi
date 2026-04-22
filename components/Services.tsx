@@ -5,7 +5,7 @@ import Image from "next/image";
 const services = [
   {
     id: 1,
-    name: "Protez Tırnak",
+    name: "Adana Protez Tırnak",
     description: "Jel tırnak, kalıcı oje ve nail art ile şık, bakımlı ve uzun ömürlü tırnaklar.",
     image: "/images/protez-tirnak.jpg",
     link: "/hizmetlerimiz/protez-tirnak",
@@ -13,15 +13,15 @@ const services = [
   },
   {
     id: 2,
-    name: "Lazer Epilasyon",
-    description: "Alexandrite & Diode teknolojisiyle kalıcı tüy azaltma, pürüzsüz cilt.",
+    name: "Adana Lazer Epilasyon",
+    description: "Son teknoloji Diode lazer ile kalıcı tüy azaltma, pürüzsüz cilt.",
     image: "/images/lazerr.png",
     link: "/hizmetlerimiz/lazer-epilasyon",
     tag: "Öne Çıkan",
   },
   {
     id: 3,
-    name: "Cilt Bakımı",
+    name: "Adana Cilt Bakımı",
     description: "Hydrafacial, anti-aging ve akne bakımıyla sağlıklı, parlak, genç cilt.",
     image: "/images/hero1.jpg",
     link: "/hizmetlerimiz/cilt-bakimi",
@@ -29,7 +29,7 @@ const services = [
   },
   {
     id: 4,
-    name: "Bölgesel Zayıflama",
+    name: "Adana Bölgesel Zayıflama",
     description: "Kavitasyon ve RF lipoliz ile inatçı yağlara karşı etkili teknolojik çözüm.",
     image: "/images/zayıflama.png",
     link: "/hizmetlerimiz/bolgesel-zayiflama",
@@ -37,7 +37,7 @@ const services = [
   },
   {
     id: 5,
-    name: "Kalıcı Makyaj",
+    name: "Adana Kalıcı Makyaj",
     description: "Microblading, kaş kontür, eyeliner ve dudak kontürü uygulamaları.",
     image: "/images/makyaj.png",
     link: "/hizmetlerimiz/kalici-makyaj",
@@ -45,7 +45,7 @@ const services = [
   },
   {
     id: 6,
-    name: "Leke Tedavi",
+    name: "Adana Leke Tedavi",
     description: "Güneş lekesi, melazma ve akne izi için özel kişiselleştirilmiş tedaviler.",
     image: "/images/leketedavi.png",
     link: "/hizmetlerimiz/leke-tedavi",
@@ -53,7 +53,7 @@ const services = [
   },
   {
     id: 7,
-    name: "Saç Mezoterapi",
+    name: "Adana Saç Mezoterapisi",
     description: "Vitamin kokteylleriyle saç dökülmesini durdurun, yeni saç çıkışını güçlendirin.",
     image: "/images/sac.png",
     link: "/hizmetlerimiz/sac-mezoterapi",
@@ -61,7 +61,7 @@ const services = [
   },
   {
     id: 8,
-    name: "Cilt Analizi",
+    name: "Adana Cilt Analizi",
     description: "Modern cihazlarla ücretsiz profesyonel cilt analizi ve kişiye özel program.",
     image: "/images/analiz_cilt.png",
     link: "/hizmetlerimiz/cilt-analizi",
