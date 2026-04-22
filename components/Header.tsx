@@ -69,7 +69,7 @@ export default function Header() {
         <div className="container mx-auto flex justify-between items-center px-4">
           <Link href="/" className="flex items-center">
             <div className="h-24 sm:h-28 md:h-32 w-48 sm:w-60 md:w-72 flex items-center justify-start -ml-4 sm:-ml-8 md:-ml-24">
-              <img src="/images/logo.png" alt="Göksum Güzellik Salonu" />
+              <Image src="/images/logo.webp" alt="Göksum Güzellik Salonu" fill className="object-contain object-left" />
             </div>
           </Link>
 
@@ -108,7 +108,7 @@ export default function Header() {
         <div className="fixed inset-0 bg-luxury-900 z-[9999] flex flex-col">
           <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
             <div className="relative h-16 w-36">
-              <Image src="/images/logo.png" alt="Göksum Güzellik" fill className="object-contain object-left" />
+              <Image src="/images/logo.webp" alt="Göksum Güzellik" fill className="object-contain object-left" />
             </div>
             <button className="text-white/60 hover:text-white focus:outline-none p-1" onClick={() => setIsMenuOpen(false)} aria-label="Menüyü kapat">
               <svg className="w-6 h-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">

@@ -29,13 +29,13 @@ export const metadata: Metadata = {
     siteName: 'Göksum Güzellik Salonu',
     title: 'Göksum Güzellik Salonu | Adana Seyhan',
     description: "Adana Seyhan Cemalpaşa'da Göksum Güzellik Salonu: Diode lazer epilasyon, Hydrafacial cilt bakımı, protez tırnak, kalıcı makyaj. Uzman ekip ile güvenli bakım.",
-    images: [{ url: '/images/logo.png', width: 1200, height: 630, alt: 'Göksum Güzellik Salonu' }],
+    images: [{ url: '/images/logo.webp', width: 1200, height: 630, alt: 'Göksum Güzellik Salonu' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Göksum Güzellik Salonu | Adana Seyhan',
     description: "Adana Seyhan Cemalpaşa'da Göksum Güzellik Salonu: Diode lazer epilasyon, Hydrafacial cilt bakımı, protez tırnak, kalıcı makyaj.",
-    images: ['/images/logo.png'],
+    images: ['/images/logo.webp'],
   },
   robots: {
     index: true,

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 const posts = [
   {
-    image: "/images/kis.png",
+    image: "/images/kis.webp",
     category: "Cilt Bakımı",
     title: "Kış Aylarında Cilt Bakımı Nasıl Yapılmalı?",
     date: "15 Aralık 2023",
@@ -26,7 +26,7 @@ const posts = [
     slug: "kis-aylarinda-cilt-bakimi",
   },
   {
-    image: "/images/sac-maske.png",
+    image: "/images/sac-maske.webp",
     category: "Saç Bakımı",
     title: "Doğal Saç Bakım Maskeleri",
     date: "8 Ocak 2024",
@@ -34,7 +34,7 @@ const posts = [
     slug: "dogal-sac-bakimi",
   },
   {
-    image: "/images/bahar-trend.png",
+    image: "/images/bahar-trend.webp",
     category: "Makyaj",
     title: "2024 Bahar Makyaj Trendleri",
     date: "22 Şubat 2024",
@@ -42,7 +42,7 @@ const posts = [
     slug: "bahar-makyaj-trendleri",
   },
   {
-    image: "/images/sac-besleme.png",
+    image: "/images/sac-besleme.webp",
     category: "Beslenme",
     title: "Cilt Sağlığı İçin Beslenme Önerileri",
     date: "10 Mart 2024",
@@ -50,7 +50,7 @@ const posts = [
     slug: "cilt-sagligi-beslenme",
   },
   {
-    image: "/images/lazer-merak-edilenler.png",
+    image: "/images/lazer-merak-edilenler.webp",
     category: "Lazer Epilasyon",
     title: "Lazer Epilasyon Hakkında Merak Edilenler",
     date: "5 Nisan 2024",
@@ -58,7 +58,7 @@ const posts = [
     slug: "lazer-epilasyon-bilgiler",
   },
   {
-    image: "/images/kalici-makyaj.png",
+    image: "/images/kalici-makyaj.webp",
     category: "Güzellik Trendleri",
     title: "Kalıcı Makyaj Uygulamaları",
     date: "17 Nisan 2025",
@@ -74,7 +74,7 @@ const posts = [
     slug: "jel-tirnak-vs-kalici-oje",
   },
   {
-    image: "/images/lazerr.png",
+    image: "/images/lazerr.webp",
     category: "Lazer Epilasyon",
     title: "Adana'da Lazer Epilasyon: Merak Edilenlerin Tamamı",
     date: "20 Mayıs 2024",
@@ -82,7 +82,7 @@ const posts = [
     slug: "adana-lazer-epilasyon-rehberi",
   },
   {
-    image: "/images/makyaj.png",
+    image: "/images/makyaj.webp",
     category: "Kalıcı Makyaj",
     title: "Microblading Nedir? Kaş Kontür Uygulaması Hakkında Her Şey",
     date: "8 Haziran 2024",
@@ -90,7 +90,7 @@ const posts = [
     slug: "microblading-kas-kontur",
   },
   {
-    image: "/images/zayıflama.png",
+    image: "/images/zayıflama.webp",
     category: "Bölgesel Zayıflama",
     title: "Kavitasyon ile Bölgesel İncelme: Gerçekten İşe Yarıyor mu?",
     date: "25 Haziran 2024",
@@ -98,7 +98,7 @@ const posts = [
     slug: "kavitasyon-bolgesel-incelme",
   },
   {
-    image: "/images/sac.png",
+    image: "/images/sac.webp",
     category: "Saç Bakımı",
     title: "Saç Dökülmesini Durdurmak İçin Etkili Yöntemler",
     date: "10 Temmuz 2024",
@@ -106,7 +106,7 @@ const posts = [
     slug: "sac-dokulmesi-tedavisi",
   },
   {
-    image: "/images/leketedavi.png",
+    image: "/images/leketedavi.webp",
     category: "Cilt Bakımı",
     title: "Güneş Lekesinden Kurtulmanın Yolları",
     date: "1 Ağustos 2024",

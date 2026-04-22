@@ -13,7 +13,7 @@ export default function Footer() {
 
           <div>
             <div className="relative h-32 w-72 mb-5 -ml-1">
-              <Image src="/images/logo.png" alt="Göksum Güzellik Salonu" fill className="object-contain object-left brightness-90" />
+              <Image src="/images/logo.webp" alt="Göksum Güzellik Salonu" fill className="object-contain object-left brightness-90" />
             </div>
             <p className="text-sm leading-relaxed mb-5" style={{ color: 'rgba(255,255,255,0.45)' }}>
               Göksum Güzellik Salonu: Adana Seyhan Cemalpaşa'da profesyonel güzellik ve bakım hizmetleri. Modern teknoloji, uzman ekip ve lüks deneyim.

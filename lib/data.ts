@@ -35,7 +35,7 @@ const services: Service[] = [
     subtitle: 'Adana\'da Ücretsiz Cilt Analizi',
     description: 'Adana Seyhan\'da ücretsiz profesyonel cilt analizi. Modern cihazlarla cildinizin ihtiyaçlarını belirleyin. Kişiye özel bakım programı.',
     longDescription: 'Adana Seyhan\'da bulunan Göksum Güzellik Salonu\'nde yapılan detaylı cilt analizi, cilt sağlığınızın mevcut durumunu değerlendirmek ve size özel bakım planları oluşturmak için önemli bir adımdır. Modern cilt analiz cihazlarımız ve uzman ekibimiz ile cildinizin tipini, nem seviyesini, elastikiyetini, gözenek yapısını ve olası sorunları tespit ederek en uygun bakım ve tedavi yöntemlerini belirleriz.',
-    image: '/images/analiz_cilt.png',
+    image: '/images/analiz_cilt.webp',
     bannerImage: '/images/hero1.jpg',
     features: [
       'Detaylı cilt tipi analizi',
@@ -142,8 +142,8 @@ const services: Service[] = [
     subtitle: 'Adana\'nın En İyi Lazer Epilasyon Merkezi',
     description: 'Adana Seyhan\'da en iyi lazer epilasyon hizmeti. Son teknoloji Diode lazer ile kalıcı tüy azaltma. Uygun fiyatlar ve profesyonel ekip.',
     longDescription: 'Adana Seyhan\'da bulunan Göksum Güzellik Salonu\'nde kullandığımız son teknoloji Diode lazer epilasyon cihazı, 808nm dalga boyunda çalışarak her cilt tipi ve tüy yoğunluğuna özel parametrelerle güvenli ve etkili sonuçlar sunar. Bacak, koltuk altı, bikini, yüz, bıyık üstü, sırt ve tüm vücut bölgelerine yönelik uygulamalar sunulmakta; hem kadın hem erkek müşterilere özel protokollerle hizmet verilmektedir. Uzman kadromuzla hijyenik bir ortamda kişiye özel parametreler belirlenerek kalıcı tüy azaltmada yüksek başarı oranları elde ediyoruz.\n\nLazer epilasyon seansları öncesinde kişiye özel konsültasyon yapılır; cilt tonu, tüy rengi ve yoğunluğu değerlendirilerek en uygun lazer parametreleri belirlenir. Diode lazer; hem açık tenli hem de orta-koyu ten rengine sahip bireylerde güvenle uygulanabilen modern bir teknolojidir. Entegre soğutma sistemi sayesinde seans sırasındaki konforu artırır. Göksum Güzellik\'te her seans, sertifikalı ve deneyimli uzmanlarımız tarafından titizlikle yürütülür.\n\nLazer epilasyon tedavisi, düzenli seanslarla tüy büyümesini yavaşlatır ve kalıcı azalma sağlar. Tüylenme döngüsüne bağlı olarak genellikle 6-8 seans yeterli olmaktadır. Seyhan\'da bulunan merkezimizde uygulanan seanslar arası bakım tavsiyeleri ve takip programıyla, uzun vadeli pürüzsüz bir cilt elde etmeniz hedeflenir.',
-    image: '/images/lazerr.png',
-    bannerImage: '/images/lazerr.png',
+    image: '/images/lazerr.webp',
+    bannerImage: '/images/lazerr.webp',
     features: [
       'Tüm vücut uygulamaları',
       'Yüz bölgesi uygulamaları',
@@ -193,8 +193,8 @@ const services: Service[] = [
     subtitle: 'Adana\'da Profesyonel Bölgesel Zayıflama',
     description: 'Adana Seyhan\'da profesyonel bölgesel zayıflama. Kavitasyon, RF lipoliz ve selülit giderme uygulamaları ile inatçı yağlara son verin.',
     longDescription: 'Adana Seyhan\'da bulunan Göksum Güzellik Salonu\'nde sunduğumuz bölgesel zayıflama ve incelme tedavileri, diyet ve egzersizle çözülemeyen inatçı yağ bölgelerini hedefler. Kavitasyon, RF lipoliz, soğuk lipoliz gibi teknolojiler kullanarak hücre düzeyinde yağ yakımını tetikler, selülit görünümünü azaltır ve vücut hatlarınızı şekillendiririz.',
-    image: '/images/zayıflama.png',
-    bannerImage: '/images/zayıflama.png',
+    image: '/images/zayıflama.webp',
+    bannerImage: '/images/zayıflama.webp',
     features: [
       'Kavitasyon uygulaması',
       'RF lipoliz tedavisi',
@@ -244,8 +244,8 @@ const services: Service[] = [
     subtitle: 'Adana\'nın En İyi Kalıcı Makyaj Merkezi',
     description: 'Adana Seyhan\'da en iyi kalıcı makyaj uygulaması. Microblading, kaş kontür, dudak kontür ve eyeliner. Doğal görünümlü kalıcı makyaj.',
     longDescription: 'Adana Seyhan\'da bulunan Göksum Güzellik Salonu\'nde uygulanan kalıcı makyaj hizmetleri, profesyonel ekibimiz tarafından hijyenik ortamda gerçekleştirilir. Adana\'nın en iyi kalıcı makyaj merkezi olarak, microblading, kaş kontür, eyeliner, dipliner ve dudak kontürü gibi uygulamalarla doğal görünümlü, uzun süreli güzellik çözümleri sunuyoruz. Özel pigmentler ve modern teknikler kullanarak sizin için en uygun şekil ve rengi belirliyor, her sabah makyaj yapma ihtiyacınızı ortadan kaldırıyoruz.',
-    image: '/images/makyaj.png',
-    bannerImage: '/images/makyaj.png',
+    image: '/images/makyaj.webp',
+    bannerImage: '/images/makyaj.webp',
     features: [
       'Dudak kontür ve renklendirme',
       'Eyeliner uygulaması',
@@ -295,8 +295,8 @@ const services: Service[] = [
     subtitle: 'Adana\'da Profesyonel Leke Tedavisi',
     description: 'Adana Seyhan\'da profesyonel leke tedavisi. Güneş lekesi, akne lekesi ve melazma tedavisi. Kimyasal peeling ve aydınlatıcı bakımlar.',
     longDescription: 'Adana Seyhan\'da bulunan Göksum Güzellik Salonu\'nde leke tedavisi için kullandığımız ileri teknolojiler ve aktif içerikli ürünler, farklı tiplerdeki cilt lekelerini hedefler. Akne izleri, güneş lekeleri, melazma veya hormonal pigmentasyonlar için özel protokoller uygulayarak cildinizin ton eşitliğini sağlıyoruz. Kişiselleştirilmiş tedavi planlarımız, cildinizin ihtiyaçlarına göre cihaz ve kimyasal peeling kombinasyonlarından oluşur.',
-    image: '/images/leketedavi.png',
-    bannerImage: '/images/leketedavi.png',
+    image: '/images/leketedavi.webp',
+    bannerImage: '/images/leketedavi.webp',
     features: [
       'Özel leke giderici serumlar',
       'Kimyasal peeling uygulamaları',
@@ -347,8 +347,8 @@ const services: Service[] = [
     subtitle: 'Adana\'da Saç Dökülmesi Tedavisi',
     description: 'Adana Seyhan\'da profesyonel saç mezoterapisi. Saç dökülmesi tedavisi, saç güçlendirme ve yeni saç çıkışını teşvik. Vitamin kokteylleri ile sağlıklı saçlar.',
     longDescription: 'Adana Seyhan\'da bulunan Göksum Güzellik Salonu\'nde uygulanan saç mezoterapisi, saç dökülmesini durdurma ve saç büyümesini teşvik etme amacı taşır. Saç derisine vitamin, mineral, amino asit ve büyüme faktörleri içeren özel kokteyller mikroenjeksiyon yöntemiyle uygulanır. Bu yöntem saç köklerini besler, kan dolaşımını artırır ve saç foliküllerini yeniden aktif hale getirir.',
-    image: '/images/sac.png',
-    bannerImage: '/images/sac.png',
+    image: '/images/sac.webp',
+    bannerImage: '/images/sac.webp',
     features: [
       'Vitamin ve mineral kokteylleri',
       'Kök hücre takviyeleri',

@@ -18,7 +18,7 @@ export default function SeoHead() {
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       
       {/* Preload critical assets */}
-      <link rel="preload" href="/images/logo.png" as="image" />
+      <link rel="preload" href="/images/logo.webp" as="image" />
       
       {/* Favicon */}
       <link rel="icon" href="/favicon.ico" />

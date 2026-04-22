@@ -14,7 +14,7 @@ const JsonLd = () => {
     name: 'Göksum Güzellik Salonu',
     alternateName: ['Göksum Güzellik', 'Göksum Güzellik Salonu', 'Adana Göksum Güzellik'],
     image: [
-      'https://www.goksumguzellik.com/images/logo.png',
+      'https://www.goksumguzellik.com/images/logo.webp',
       'https://www.goksumguzellik.com/images/hero1.jpg',
       'https://www.goksumguzellik.com/images/goksum.jpg'
     ],
@@ -287,7 +287,7 @@ const JsonLd = () => {
     '@type': 'BeautySalon',
     name: 'Göksum Güzellik Salonu',
     url: 'https://www.goksumguzellik.com',
-    logo: 'https://www.goksumguzellik.com/images/logo.png',
+    logo: 'https://www.goksumguzellik.com/images/logo.webp',
     image: 'https://www.goksumguzellik.com/images/goksum.jpg',
     description: 'Adana Seyhan\'da profesyonel güzellik ve bakım hizmetleri sunan güzellik merkezi. Protez tırnak, lazer epilasyon, cilt bakımı, kalıcı makyaj ve bölgesel zayıflama hizmetleri.',
     founder: {
