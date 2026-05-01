@@ -68,7 +68,7 @@ export default function Header() {
       }`}>
         <div className="container mx-auto flex justify-between items-center px-4">
           <Link href="/" className="flex items-center">
-            <div className="h-24 sm:h-28 md:h-32 w-48 sm:w-60 md:w-72 flex items-center justify-start -ml-4 sm:-ml-8 md:-ml-24">
+            <div className="relative h-24 sm:h-28 md:h-32 w-48 sm:w-60 md:w-72 flex items-center justify-start -ml-4 sm:-ml-8 md:-ml-24">
               <Image src="/images/logo.webp" alt="Göksum Güzellik Salonu" fill className="object-contain object-left" />
             </div>
           </Link>
@@ -83,7 +83,7 @@ export default function Header() {
               href="/randevu"
               className="ml-4 bg-gold-500 hover:bg-gold-600 text-white text-sm font-semibold
                          py-2.5 px-6 rounded-full transition-all duration-300
-                         shadow-sm hover:shadow-gold hover:-translate-y-0.5"
+                         shadow-sm hover:shadow-gold hover:-translate-y-0.5 block"
             >
               Randevu Al
             </Link>

@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export',
+  // output: 'export',  // Disable for dev mode testing
   images: {
     domains: ['localhost', 'www.goksumguzellik.com'],
     formats: ['image/avif', 'image/webp'],
