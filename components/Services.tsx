@@ -8,7 +8,7 @@ const services = [
     name: "Adana Protez Tırnak",
     description: "Jel tırnak, kalıcı oje ve nail art ile şık, bakımlı ve uzun ömürlü tırnaklar.",
     image: "/images/protez-tirnak.jpg",
-    link: "/hizmetlerimiz/protez-tirnak",
+    link: "/hizmetlerimiz/adana-protez-tirnak",
     tag: "En Popüler",
   },
   {
@@ -16,7 +16,7 @@ const services = [
     name: "Adana Lazer Epilasyon",
     description: "Son teknoloji Diode lazer ile kalıcı tüy azaltma, pürüzsüz cilt.",
     image: "/images/lazerr.webp",
-    link: "/hizmetlerimiz/lazer-epilasyon",
+    link: "/hizmetlerimiz/adana-lazer-epilasyon",
     tag: "Öne Çıkan",
   },
   {
@@ -24,15 +24,15 @@ const services = [
     name: "Adana Cilt Bakımı",
     description: "Hydrafacial, anti-aging ve akne bakımıyla sağlıklı, parlak, genç cilt.",
     image: "/images/hero1.jpg",
-    link: "/hizmetlerimiz/cilt-bakimi",
+    link: "/hizmetlerimiz/adana-cilt-bakimi",
     tag: null,
   },
   {
     id: 4,
-    name: "Adana Bölgesel Zayıflama",
+    name: "Adana Bölgesel İncelme",
     description: "Kavitasyon ve RF lipoliz ile inatçı yağlara karşı etkili teknolojik çözüm.",
     image: "/images/zayıflama.webp",
-    link: "/hizmetlerimiz/bolgesel-zayiflama",
+    link: "/hizmetlerimiz/adana-bolgesel-incelme",
     tag: null,
   },
   {
@@ -40,7 +40,7 @@ const services = [
     name: "Adana Kalıcı Makyaj",
     description: "Microblading, kaş kontür, eyeliner ve dudak kontürü uygulamaları.",
     image: "/images/makyaj.webp",
-    link: "/hizmetlerimiz/kalici-makyaj",
+    link: "/hizmetlerimiz/adana-kalici-makyaj",
     tag: null,
   },
   {
@@ -48,7 +48,7 @@ const services = [
     name: "Adana Leke Tedavi",
     description: "Güneş lekesi, melazma ve akne izi için özel kişiselleştirilmiş tedaviler.",
     image: "/images/leketedavi.webp",
-    link: "/hizmetlerimiz/leke-tedavi",
+    link: "/hizmetlerimiz/adana-leke-tedavi",
     tag: null,
   },
   {
@@ -56,7 +56,7 @@ const services = [
     name: "Adana Saç Mezoterapisi",
     description: "Vitamin kokteylleriyle saç dökülmesini durdurun, yeni saç çıkışını güçlendirin.",
     image: "/images/sac.webp",
-    link: "/hizmetlerimiz/sac-mezoterapi",
+    link: "/hizmetlerimiz/adana-sac-mezoterapi",
     tag: null,
   },
   {
@@ -64,7 +64,7 @@ const services = [
     name: "Adana Cilt Analizi",
     description: "Modern cihazlarla ücretsiz profesyonel cilt analizi ve kişiye özel program.",
     image: "/images/analiz_cilt.webp",
-    link: "/hizmetlerimiz/cilt-analizi",
+    link: "/hizmetlerimiz/adana-cilt-analizi",
     tag: "Ücretsiz",
   },
 ];

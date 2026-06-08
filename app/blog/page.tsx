@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Güzellik & Bakım Blogu | Göksum Güzellik Salonu",
   description:
-    "Göksum Güzellik Salonu blogu: lazer epilasyon, cilt bakımı, protez tırnak, kalıcı makyaj ve bölgesel zayıflama hakkında uzman ipuçları ve güncel içerikler.",
+    "Göksum Güzellik Salonu blogu: lazer epilasyon, cilt bakımı, protez tırnak, kalıcı makyaj ve bölgesel incelme hakkında uzman ipuçları ve güncel içerikler.",
   openGraph: {
     title: "Güzellik & Bakım Blogu | Göksum Güzellik Salonu",
     description: "Adana Seyhan'da güzellik ve bakım hakkında uzman içerikler.",
@@ -91,7 +91,7 @@ const posts = [
   },
   {
     image: "/images/zayıflama.webp",
-    category: "Bölgesel Zayıflama",
+    category: "Bölgesel İncelme",
     title: "Kavitasyon ile Bölgesel İncelme: Gerçekten İşe Yarıyor mu?",
     date: "25 Haziran 2024",
     excerpt: "Kavitasyon uygulamasının bilimsel temelleri ve gerçekçi beklentiler hakkında bilgi veren rehber.",

@@ -421,7 +421,7 @@ const blogPosts: BlogPost[] = [
   {
     slug: 'kavitasyon-bolgesel-incelme',
     title: 'Kavitasyon ile Bölgesel İncelme: Gerçekten İşe Yarıyor mu?',
-    category: 'Bölgesel Zayıflama',
+    category: 'Bölgesel İncelme',
     date: '25 Haziran 2024',
     image: '/images/zayıflama.webp',
     author: 'Ayşe Yılmaz',
@@ -459,7 +459,7 @@ const blogPosts: BlogPost[] = [
       },
       {
         type: 'conclusion',
-        content: "Kavitasyon, doğru beklentilerle yaklaşıldığında bölgesel incelme için güvenli ve etkili bir seçenektir. Göksum Güzellik Salonu\'nde kişiye özel bölgesel zayıflama programları oluşturuyoruz."
+        content: "Kavitasyon, doğru beklentilerle yaklaşıldığında bölgesel incelme için güvenli ve etkili bir seçenektir. Göksum Güzellik Salonu\'nde kişiye özel bölgesel incelme programları oluşturuyoruz."
       }
     ],
     related: ['lazer-epilasyon-bilgiler', 'cilt-sagligi-beslenme', 'adana-lazer-epilasyon-rehberi']

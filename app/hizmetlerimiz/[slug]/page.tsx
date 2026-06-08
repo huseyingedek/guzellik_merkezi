@@ -10,42 +10,42 @@ import { Metadata } from 'next';
 
 /* ─── FAQ veri haritası ────────────────────────────────────────────────────── */
 const faqMap: Record<string, { question: string; answer: string }[]> = {
-  'protez-tirnak': [
+  'adana-protez-tirnak': [
     { question: 'Protez tırnak ne kadar süre dayanır?', answer: 'Bakım ve kullanıma bağlı olarak jel tırnak 3–4 hafta, kalıcı oje ise 2–3 hafta dayanır. Düzenli dolgu ile süre uzatılabilir.' },
     { question: 'Doğal tırnağa zarar verir mi?', answer: 'Profesyonel uygulama ve doğru bakım ile doğal tırnağınıza zarar vermez; aksine kırılgan tırnakları korur ve güçlendirir.' },
     { question: 'Bakım nasıl yapılmalı?', answer: 'Tırnaklarınızı aşırı kimyasal maddelerden koruyun, eldiven kullanın, düzenli olarak tırnak bakım kremlerinizi uygulayın.' },
   ],
-  'lazer-epilasyon': [
+  'adana-lazer-epilasyon': [
     { question: 'Lazer epilasyon acı verir mi?', answer: 'Modern soğutma sistemleri sayesinde acı minimuma indirilmiştir. Genellikle hafif bir ısı ve lastik çekme hissi şeklinde tanımlanır.' },
     { question: 'Kaç seans gereklidir?', answer: 'Kişinin kıl yapısı ve hormonlarına bağlı olarak 6–8 seans yeterli olmaktadır; bazı durumlarda ek seanslar gerekebilir.' },
     { question: 'Seanslar arası kaç hafta beklenmeli?', answer: 'Yüz için 4 hafta, vücut için 6–8 hafta aralık önerilir.' },
   ],
-  'cilt-bakimi': [
+  'adana-cilt-bakimi': [
     { question: 'Cilt bakımı ne sıklıkta yapılmalı?', answer: 'Cilt tipinize göre genellikle 3–4 haftada bir bakım yaptırmanızı öneririz.' },
     { question: 'Bakım sonrası nelere dikkat etmeli?', answer: 'İlk 24 saat makyaj yapmayın, güneşten korunun ve cildinizi düzenli nemlendirin.' },
     { question: 'Akne bakımı klasikten farklı mı?', answer: 'Evet, antibakteriyel ürünler ve akneye özel teknikler kullanılır; daha yoğun bir protokol uygulanır.' },
   ],
-  'kalici-makyaj': [
+  'adana-kalici-makyaj': [
     { question: 'Kalıcı makyaj acı verir mi?', answer: 'Uygulama öncesi anestezik krem uygulanır. Genellikle hafif bir rahatsızlık hissi olup acı minimuma indirilir.' },
     { question: 'Ne kadar süre kalıcıdır?', answer: 'Cilt tipine ve bakıma bağlı olarak 1–3 yıl kalıcıdır. Solmaya başladığında rötuş yapılabilir.' },
     { question: 'İyileşme süreci nasıl geçer?', answer: 'İlk hafta kabuklama ve soyulma görülebilir. Tam iyileşme 2–4 hafta sürer; güneşten korunma ve nemlendirme önemlidir.' },
   ],
-  'bolgesel-zayiflama': [
+  'adana-bolgesel-incelme': [
     { question: 'Uygulamalar acı verir mi?', answer: 'Hayır, genellikle ağrısız gerçekleştirilir. Hafif bir sıcaklık veya titreşim hissi olabilir.' },
     { question: 'Kaç seans sonra sonuç görülür?', answer: 'Genellikle 4–6 seans sonra gözle görülür sonuçlar elde edilir.' },
     { question: 'Kaç cm incelme sağlanabilir?', answer: 'Düzenli seanslar ve doğru uygulama ile 4–8 cm arasında incelme mümkündür.' },
   ],
-  'leke-tedavi': [
+  'adana-leke-tedavi': [
     { question: 'Tedavi ne kadar sürer?', answer: 'Leke tipine bağlı olarak 6–10 seans gerekebilir. Seanslar 2–3 hafta arayla planlanır.' },
     { question: 'Güneşe çıkabilir miyim?', answer: 'Tedavi süresince minimum SPF 50 güneş koruyucu kullanmalı ve direkt güneş ışığından kaçınmalısınız.' },
     { question: 'Lekelerim tamamen geçer mi?', answer: 'Çoğu lekede belirgin açılma görülür; leke tipine ve cilt tepkisine bağlı olarak sonuçlar değişebilir.' },
   ],
-  'sac-mezoterapi': [
+  'adana-sac-mezoterapi': [
     { question: 'Saç mezoterapisi acılı mıdır?', answer: 'Anestezik krem kullanıldığından acı minimum düzeydedir. Genellikle hafif bir batma hissi şeklinde tanımlanır.' },
     { question: 'Kaç seans gerekir?', answer: 'İlk ay haftada bir, sonraki iki ay 15 günde bir, ardından aylık; toplam 8–10 seans önerilir.' },
     { question: 'Sonuçlar ne zaman görülür?', answer: 'İlk sonuçlar genellikle 3–4 seans sonra görülmeye başlar. Tam sonuç için 8–10 seans tamamlanmalıdır.' },
   ],
-  'cilt-analizi': [
+  'adana-cilt-analizi': [
     { question: 'Cilt analizi ne kadar sürer?', answer: 'Ortalama 30 dakika sürmektedir.' },
     { question: 'Önceden hazırlık gerekli mi?', answer: 'Daha doğru sonuç için makyajsız gelmenizi ve analiz öncesinde yüz temizliği yapılmasını öneririz.' },
     { question: 'Ne sıklıkta yaptırmalıyım?', answer: 'Genel olarak her mevsim değişiminde ya da yılda 2 kez cilt analizi yaptırmanızı tavsiye ederiz.' },
@@ -54,42 +54,42 @@ const faqMap: Record<string, { question: string; answer: string }[]> = {
 
 /* ─── SEO metadata ─────────────────────────────────────────────────────────── */
 const serviceSeoData: Record<string, { title: string; description: string; keywords: string }> = {
-  'protez-tirnak': {
+  'adana-protez-tirnak': {
     title: 'Adana En İyi Protez Tırnak | Jel Tırnak, Kalıcı Oje - Göksum Güzellik',
     description: "Adana Seyhan'da en iyi protez tırnak uygulaması. Jel tırnak, kalıcı oje, nail art ve tırnak uzatma hizmetleri. Göksum Güzellik Salonu.",
     keywords: 'adana nail art, adana protez tırnak, adana kadın protez tırnak, adana en iyi protez tırnak, adana protez tırnak yapan yerler, adana tırnak yaptırma fiyatları, adana jel tırnak yapan yerler, adana nail studio, adana tırnak tasarım, adana üst form tırnak, adana taşlı protez tırnak, adana jel tırnak, adana jel tırnak modelleri, adana kalıcı oje, adana kalıcı oje fiyatları, adana manikür, adana tırnak uzatma, adana akrilik tırnak, seyhan protez tırnak, cemalpaşa protez tırnak, gazipaşa bulvarı protez tırnak, adana protez tırnak fiyatları, yüreğir protez tırnak, göksum güzellik protez tırnak',
   },
-  'lazer-epilasyon': {
+  'adana-lazer-epilasyon': {
     title: 'Adana En İyi Lazer Epilasyon | Kalıcı Tüy Azaltma - Göksum Güzellik',
     description: "Adana Seyhan'da en iyi lazer epilasyon. Diode lazer teknolojisi ile kalıcı tüy azaltma. Göksum Güzellik Salonu.",
     keywords: 'adana lazer epilasyon fiyatları, adana lazer epilasyon, adana kadın lazer epilasyon, adana en iyi lazer epilasyon, adana lazer epilasyon yapan yerler, adana lazer epilasyon kaç seans, adana bacak lazer epilasyon, adana koltuk altı lazer epilasyon, adana bikini lazer epilasyon, adana tam vücut lazer epilasyon, adana yüz lazer epilasyon, adana bıyık lazer epilasyon, adana erkek lazer epilasyon, adana diode lazer, adana kalıcı tüy azaltma, adana lazer epilasyon kampanya, seyhan lazer epilasyon, cemalpaşa lazer epilasyon, gazipaşa bulvarı lazer epilasyon, adana lazer epilasyon merkezi, yüreğir lazer epilasyon, çukurova lazer epilasyon, göksum güzellik lazer epilasyon',
   },
-  'cilt-bakimi': {
+  'adana-cilt-bakimi': {
     title: 'Adana En İyi Cilt Bakımı | Profesyonel Cilt Bakımı - Göksum Güzellik',
     description: "Adana Seyhan'da en iyi cilt bakımı. Hydrafacial, akne bakımı, anti-aging. Göksum Güzellik Salonu.",
     keywords: 'adana kadın cilt bakımı, adana cilt bakımı, adana en iyi cilt bakımı, seyhan cilt bakımı, cemalpaşa cilt bakımı, gazipaşa bulvarı cilt bakımı, adana hydrafacial, adana akne bakımı, adana anti-aging bakım, adana leke giderici bakım, adana cilt bakımı fiyatları, adana yüz bakımı, adana derin temizlik, adana cilt nemlendirme, yüreğir cilt bakımı, çukurova cilt bakımı, göksum güzellik cilt bakımı',
   },
-  'kalici-makyaj': {
+  'adana-kalici-makyaj': {
     title: 'Adana En İyi Kalıcı Makyaj | Microblading, Kaş Kontür - Göksum Güzellik',
     description: "Adana Seyhan'da en iyi kalıcı makyaj. Microblading, kaş kontür, dudak kontür. Göksum Güzellik Salonu.",
     keywords: 'adana kadın kalıcı makyaj, adana kalıcı makyaj, adana microblading, adana kaş kontür, adana kaş microblading, cemalpaşa kalıcı makyaj, gazipaşa bulvarı kalıcı makyaj, adana dudak kontür, adana kalıcı eyeliner, adana kaş dolgusu, adana kalıcı makyaj fiyatları, adana microblading fiyatları, adana kaş kontür fiyatları, adana ombre kaş, seyhan kalıcı makyaj, yüreğir kalıcı makyaj, göksum güzellik kalıcı makyaj',
   },
-  'bolgesel-zayiflama': {
-    title: 'Adana Bölgesel Zayıflama | Kavitasyon, Selülit Tedavisi - Göksum Güzellik',
-    description: "Adana Seyhan'da bölgesel zayıflama. Kavitasyon, RF lipoliz, selülit giderme. Göksum Güzellik Salonu.",
-    keywords: 'adana kadın bölgesel zayıflama, adana bölgesel zayıflama, adana kavitasyon, adana selülit tedavisi, adana rf lipoliz, cemalpaşa bölgesel zayıflama, gazipaşa bulvarı zayıflama, adana bölgesel incelme, seyhan bölgesel zayıflama, adana karın bölgesi zayıflama, adana basen incelme, adana kalça sıkılaştırma, adana vücut şekillendirme, adana bölgesel zayıflama fiyatları, adana kavitasyon fiyatları, yüreğir kavitasyon, çukurova bölgesel zayıflama, göksum güzellik zayıflama',
+  'adana-bolgesel-incelme': {
+    title: 'Adana Bölgesel İncelme | Kavitasyon, Selülit Tedavisi - Göksum Güzellik',
+    description: "Adana Seyhan'da bölgesel incelme. Kavitasyon, RF lipoliz, selülit giderme. Göksum Güzellik Salonu.",
+    keywords: 'adana kadın bölgesel incelme, adana bölgesel incelme, adana kavitasyon, adana selülit tedavisi, adana rf lipoliz, cemalpaşa bölgesel incelme, gazipaşa bulvarı zayıflama, adana bölgesel incelme, seyhan bölgesel incelme, adana karın bölgesi zayıflama, adana basen incelme, adana kalça sıkılaştırma, adana vücut şekillendirme, adana bölgesel incelme fiyatları, adana kavitasyon fiyatları, yüreğir kavitasyon, çukurova bölgesel incelme, göksum güzellik zayıflama',
   },
-  'leke-tedavi': {
+  'adana-leke-tedavi': {
     title: 'Adana Leke Tedavisi | Cilt Lekesi Giderme - Göksum Güzellik',
     description: "Adana Seyhan'da profesyonel leke tedavisi. Güneş lekesi, melazma, akne izi tedavisi. Göksum Güzellik Salonu.",
     keywords: 'adana kadın leke tedavisi, adana leke tedavisi, adana cilt lekesi, seyhan leke tedavisi, cemalpaşa leke tedavisi, gazipaşa bulvarı leke tedavisi, adana güneş lekesi tedavisi, adana melazma tedavisi, adana akne lekesi, adana cilt tonu eşitleme, adana leke giderme, adana kimyasal peeling, adana cilt aydınlatma, adana leke tedavisi fiyatları, adana hiperpigmentasyon tedavisi, yüreğir leke tedavisi, çukurova leke tedavisi, adana kadın cilt leke bakımı, göksum güzellik leke tedavisi',
   },
-  'sac-mezoterapi': {
+  'adana-sac-mezoterapi': {
     title: 'Adana Saç Mezoterapisi | Saç Dökülmesi Tedavisi - Göksum Güzellik',
     description: "Adana Seyhan'da saç mezoterapisi. Saç dökülmesi tedavisi ve saç güçlendirme. Göksum Güzellik Salonu.",
     keywords: 'adana kadın saç mezoterapisi, adana saç mezoterapisi, adana saç dökülmesi tedavisi, seyhan saç mezoterapisi, cemalpaşa saç mezoterapisi, gazipaşa bulvarı saç mezoterapisi, adana saç güçlendirme, adana saç dökülmesi çözümü, adana saç bakımı, adana saç mezoterapisi fiyatları, adana prp saç, adana saç seyrelme tedavisi, adana saç kökü bakımı, adana hormonal saç dökülmesi, adana mevsimsel saç dökülmesi, yüreğir saç mezoterapisi, çukurova saç mezoterapisi, göksum güzellik saç mezoterapisi',
   },
-  'cilt-analizi': {
+  'adana-cilt-analizi': {
     title: 'Adana Cilt Analizi | Ücretsiz Cilt Değerlendirmesi - Göksum Güzellik',
     description: "Adana Seyhan'da ücretsiz cilt analizi. Modern cihazlarla cilt tipinizi belirleyin. Göksum Güzellik Salonu.",
     keywords: 'adana kadın cilt analizi, adana ücretsiz cilt analizi, adana cilt analizi, seyhan cilt analizi, cemalpaşa cilt analizi, gazipaşa bulvarı cilt analizi, adana cilt tipi testi, adana cilt değerlendirmesi, adana cilt bakım danışmanlığı, adana cilt nem analizi, adana yağlı cilt analizi, adana hassas cilt analizi, adana kuru cilt analizi, adana karma cilt analizi, adana kişisel cilt bakım programı, yüreğir cilt analizi, çukurova ücretsiz cilt analizi, göksum güzellik cilt analizi',
@@ -98,7 +98,7 @@ const serviceSeoData: Record<string, { title: string; description: string; keywo
 
 
 const infoSectionsData: Record<string, { heading: string; content: string }[]> = {
-  'lazer-epilasyon': [
+  'adana-lazer-epilasyon': [
     {
       heading: 'Adana Lazer Epilasyon Fiyatları ve Kampanyalar',
       content: 'Adana lazer epilasyon fiyatları; bacak, koltuk altı, bikini, yüz ve tam vücut paketi seçeneklerine göre farklılık gösterir. Adana lazer epilasyon yapan yerler arasında Göksum Güzellik Salonu, Seyhan Cemalpaşa\'da şeffaf ve rekabetçi fiyat politikasıyla öne çıkmaktadır. Adana lazer epilasyon kampanya seçenekleri ve paket fiyatları için +90 541 190 13 90 numaralı hattı arayabilir ya da salonumuza uğrayabilirsiniz. İlk konsültasyon ücretsiz olup kişiye özel fiyat teklifi hazırlanmaktadır.',
@@ -112,7 +112,7 @@ const infoSectionsData: Record<string, { heading: string; content: string }[]> =
       content: 'Göksum Güzellik Salonu\'nda adana bacak lazer epilasyon (yarım/tam), adana koltuk altı lazer epilasyon, adana bikini lazer epilasyon (yarım/brezilya/full), adana yüz lazer epilasyon, adana bıyık lazer epilasyon, sırt ve omuz ile adana tam vücut lazer epilasyon paketleri sunulmaktadır. Adana erkek lazer epilasyon hizmetimizde sırt, omuz, göğüs ve yüz bölgelerinde Diode lazer uygulanmaktadır. Her bölge için cilt tipine ve tüy yoğunluğuna göre parametreler bireysel olarak ayarlanır.',
     },
   ],
-  'cilt-bakimi': [
+  'adana-cilt-bakimi': [
     {
       heading: 'Adana Cilt Bakımı Fiyatları',
       content: 'Adana cilt bakımı fiyatları, seçilen protokole ve seans sayısına göre belirlenir. Göksum Güzellik Salonu\'nda Gazipaşa Bulvarı\'ndaki merkezimizde kişiye özel cilt analizi sonucunda en uygun protokol ve fiyat planı oluşturulur. Paket seçenekleri için +90 541 190 13 90 numaralı hattı arayabilirsiniz.',
@@ -126,7 +126,7 @@ const infoSectionsData: Record<string, { heading: string; content: string }[]> =
       content: 'Adana anti-aging cilt bakımı kapsamında; C vitamini uygulamaları, hyalüronik asit serumları ve RF destekli sıkılaştırma protokolleri yer almaktadır. Adana leke giderici cilt bakımı için ise AHA/BHA içerikli peeling ve aydınlatıcı mask kombinasyonları uygulanmaktadır. Uzman kadın estetisyenlerimiz cildinizi değerlendirerek en doğru protokolü belirler.',
     },
   ],
-  'protez-tirnak': [
+  'adana-protez-tirnak': [
     {
       heading: 'Adana Protez Tırnak ve Nail Art Fiyatları',
       content: 'Adana protez tırnak fiyatları; jel tırnak, üst form tırnak, akrilik tırnak, bebek manikürü, nail art tasarım ve tırnak uzatma seçeneğine göre değişmektedir. Adana tırnak yaptırma fiyatları ve adana kalıcı oje fiyatları için güncel bilgi almak, adana protez tırnak yapan yerler arasında Göksum Güzellik Salonu\'nu tercih etmek için +90 541 190 13 90 numaralı hattı arayabilirsiniz.',
@@ -140,7 +140,7 @@ const infoSectionsData: Record<string, { heading: string; content: string }[]> =
       content: 'Adana nail art hizmetimizde gradient, çiçek motifleri, taşlı tasarımlar, fransız ve özel tırnak tasarımı seçenekleri mevcuttur. Adana nail studio kalitesinde hizmet sunan Göksum Güzellik Salonu\'nda adana kalıcı oje uygulaması 3–4 hafta boyunca kırılmaz ve solmaz şekilde kalır. Adana tırnak tasarım danışmanlığı kapsamında yüz hatlarınıza ve el tipinize uygun şekil, renk ve süsleme önerileri sunulmaktadır. Adana manikür hizmetimiz de tırnak bakımıyla birlikte sunulmaktadır.',
     },
   ],
-  'kalici-makyaj': [
+  'adana-kalici-makyaj': [
     {
       heading: 'Adana Kalıcı Makyaj Fiyatları',
       content: 'Adana kalıcı makyaj fiyatları; microblading, kaş kontür, eyeliner ve dudak kontürü gibi uygulanan tekniğe göre farklılık gösterir. Göksum Güzellik Salonu\'nda Gazipaşa Bulvarı\'ndaki merkezimizde şeffaf fiyatlandırma politikası uyguluyoruz. Güncel fiyat bilgisi için +90 541 190 13 90 numaralı hattı arayabilirsiniz.',
@@ -154,21 +154,21 @@ const infoSectionsData: Record<string, { heading: string; content: string }[]> =
       content: 'Adana kaş kontür uygulamasında şekil, renk ve yoğunluk kişinin yüz hatlarına göre özelleştirilir. Adana kalıcı eyeliner ile göz kalemi çizme zahmetinden kurtulabilirsiniz. Adana dudak kontürü ile sınır belirsizliği ve asimetri giderilirken dudak hacmi görsel olarak artırılır.',
     },
   ],
-  'bolgesel-zayiflama': [
+  'adana-bolgesel-incelme': [
     {
-      heading: 'Adana Bölgesel Zayıflama Fiyatları',
-      content: 'Adana bölgesel zayıflama fiyatları; uygulanan teknoloji, hedef bölge ve seans sayısına göre değişmektedir. Göksum Güzellik Salonu\'nda Seyhan Cemalpaşa\'da kişiye özel protokol ve paket seçenekleri sunulmaktadır. Detaylı Adana kavitasyon fiyatları için +90 541 190 13 90 numaralı hattı arayabilirsiniz.',
+      heading: 'Adana Bölgesel İncelme Fiyatları',
+      content: 'Adana bölgesel incelme fiyatları; uygulanan teknoloji, hedef bölge ve seans sayısına göre değişmektedir. Göksum Güzellik Salonu\'nda Seyhan Cemalpaşa\'da kişiye özel protokol ve paket seçenekleri sunulmaktadır. Detaylı Adana kavitasyon fiyatları için +90 541 190 13 90 numaralı hattı arayabilirsiniz.',
     },
     {
       heading: 'Adana Kavitasyon ve RF Lipoliz Kaç Seans Gerekir?',
-      content: 'Adana kavitasyon uygulamasında belirgin sonuçlar için ortalama 6–10 seans önerilmektedir. Seanslar genellikle haftada bir ya da 10 günde bir planlanır. Adana bölgesel zayıflama kaç seans sorusu için önce ücretsiz ölçüm ve konsültasyon yapılarak kişisel program oluşturulur.',
+      content: 'Adana kavitasyon uygulamasında belirgin sonuçlar için ortalama 6–10 seans önerilmektedir. Seanslar genellikle haftada bir ya da 10 günde bir planlanır. Adana bölgesel incelme kaç seans sorusu için önce ücretsiz ölçüm ve konsültasyon yapılarak kişisel program oluşturulur.',
     },
     {
       heading: 'Adana Selülit Tedavisi ve Vücut Sıkılaştırma',
       content: 'Adana selülit tedavisi kapsamında vakum masaj, kavitasyon ve RF kombinasyonları uygulanmaktadır. Adana vücut sıkılaştırma protokolümüzde RF dalgaları kollajen liflerini yeniler; portakal kabuğu görünümü azalır ve cilt sıkılığı artar. Göksum Güzellik Salonu\'nda ölçüm bazlı değerlendirme yapılarak sonuçlar takip edilmektedir.',
     },
   ],
-  'leke-tedavi': [
+  'adana-leke-tedavi': [
     {
       heading: 'Adana Leke Tedavisi Fiyatları',
       content: 'Adana leke tedavisi fiyatları; leke tipine, uygulanan yöntemlere ve gereken seans sayısına göre belirlenmektedir. Göksum Güzellik Salonu\'nda Seyhan Cemalpaşa\'da cilt analizi sonucunda kişiye özel fiyatlandırma yapılmaktadır. Güncel bilgi için +90 541 190 13 90 numaralı hattı arayabilirsiniz.',
@@ -182,7 +182,7 @@ const infoSectionsData: Record<string, { heading: string; content: string }[]> =
       content: 'Adana melazma tedavisi için Göksum Güzellik Salonu\'nda hormonal pigmentasyona özgü protokoller uygulanmaktadır. Adana akne izi giderme uygulamalarında mikroneedling, peeling ve leke açıcı aktifler birlikte kullanılarak iz derinliği ve tonu düzeltilmektedir. Tedavi süresince SPF 50 güneş koruyucu kullanımı zorunludur.',
     },
   ],
-  'sac-mezoterapi': [
+  'adana-sac-mezoterapi': [
     {
       heading: 'Adana Saç Mezoterapisi Fiyatları',
       content: 'Adana saç mezoterapisi fiyatları; uygulanan kokteylin içeriği, seans sayısı ve saç dökülmesi düzeyine göre değişmektedir. Göksum Güzellik Salonu\'nda Seyhan Cemalpaşa\'da kadınlara yönelik saç mezoterapisi programlarımızda rekabetçi fiyatlar sunuyoruz. Bilgi için +90 541 190 13 90 numaralı hattı arayabilirsiniz.',
@@ -196,7 +196,7 @@ const infoSectionsData: Record<string, { heading: string; content: string }[]> =
       content: 'Adana kadın saç dökülmesi tedavisinde Göksum Güzellik Salonu, hormonal değişimler ve mevsimsel dökülmeler için özelleştirilmiş vitamin ve büyüme faktörü kokteylleri hazırlamaktadır. Adana saç kökü güçlendirme protokollerimizde biotin, çinko ve B vitamini kompleksi mikroenjeksiyonla uygulanmakta; saç derisine doğrudan beslenme sağlanmaktadır.',
     },
   ],
-  'cilt-analizi': [
+  'adana-cilt-analizi': [
     {
       heading: 'Adana Ücretsiz Cilt Analizi Nasıl Yapılır?',
       content: 'Adana ücretsiz cilt analizi için Göksum Güzellik Salonu\'na randevu alarak gelebilirsiniz. Modern cilt analiz cihazlarımız sayesinde yüzünüzün farklı bölgelerindeki nem, yağ dengesi, gözenek yapısı ve olası leke alanları 30 dakika içinde değerlendirilir. Analiz sonucunda kişiye özel yazılı bakım raporu hazırlanır.',

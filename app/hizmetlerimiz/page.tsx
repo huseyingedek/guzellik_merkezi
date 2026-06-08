@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Adana Seyhan Güzellik Hizmetleri | Protez Tırnak, Lazer, Cilt Bakımı',
   description:
-    "Adana Seyhan'da en iyi protez tırnak, lazer epilasyon, cilt bakımı, kalıcı makyaj ve bölgesel zayıflama hizmetleri. Göksum Güzellik Salonu'nda profesyonel ekip ve uygun fiyatlarla güzelliğinize güzellik katın.",
+    "Adana Seyhan'da en iyi protez tırnak, lazer epilasyon, cilt bakımı, kalıcı makyaj ve bölgesel incelme hizmetleri. Göksum Güzellik Salonu'nda profesyonel ekip ve uygun fiyatlarla güzelliğinize güzellik katın.",
   openGraph: {
     title: 'Göksum Güzellik Salonu Hizmetleri | Adana Seyhan',
     description: "Adana Seyhan'da profesyonel güzellik hizmetleri. Protez tırnak, lazer epilasyon, cilt bakımı.",
@@ -22,7 +22,7 @@ const services = [
     description: 'Kalıcı ve estetik protez tırnak uygulamaları ile hem şık hem de bakımlı tırnaklara sahip olun.',
     image: '/images/protez-tirnak.jpg',
     features: ['Kalıcı oje', 'Jel tırnak', 'Tırnak uzatma', 'Nail art & tasarım', 'Protez tırnak bakımı'],
-    slug: 'protez-tirnak',
+    slug: 'adana-protez-tirnak',
     tag: 'En Popüler',
   },
   {
@@ -31,7 +31,7 @@ const services = [
     description: 'Cildinizin ihtiyaçlarına göre hazırlanan özel bakım programları ile daha canlı, sağlıklı bir cilde kavuşun.',
     image: '/images/hero1.jpg',
     features: ['Klasik cilt bakımı', 'Akne bakımı', 'Anti-aging bakım', 'Hydrafacial', 'Leke giderici bakım'],
-    slug: 'cilt-bakimi',
+    slug: 'adana-cilt-bakimi',
     tag: null,
   },
   {
@@ -40,16 +40,16 @@ const services = [
     description: 'Son teknoloji lazer cihazlarımız ile istenmeyen tüylerden kalıcı olarak kurtulun.',
     image: '/images/lazerr.webp',
     features: ['Tüm vücut', 'Yüz bölgesi', 'Bikini bölgesi', 'Erkekler için'],
-    slug: 'lazer-epilasyon',
+    slug: 'adana-lazer-epilasyon',
     tag: 'Öne Çıkan',
   },
   {
     id: 4,
-    title: 'Adana Bölgesel Zayıflama',
+    title: 'Adana Bölgesel İncelme',
     description: 'Modern zayıflama teknolojileri ile vücudunuzda bölgesel incelme sağlayın.',
     image: '/images/zayıflama.webp',
     features: ['Kavitasyon', 'RF lipoliz', 'Selülit giderme', 'Kişiye özel protokol'],
-    slug: 'bolgesel-zayiflama',
+    slug: 'adana-bolgesel-incelme',
     tag: null,
   },
   {
@@ -58,7 +58,7 @@ const services = [
     description: 'Her gün makyaj yapma derdinden kurtulun, zamandan tasarruf edin.',
     image: '/images/makyaj.webp',
     features: ['Dudak kontür', 'Eyeliner', 'Kaş kontür', 'Microblading'],
-    slug: 'kalici-makyaj',
+    slug: 'adana-kalici-makyaj',
     tag: null,
   },
   {
@@ -67,7 +67,7 @@ const services = [
     description: 'Güneş lekesi, akne izi ve pigmentasyon sorunlarını etkili tedavi yöntemlerimizle giderin.',
     image: '/images/leketedavi.webp',
     features: ['Kimyasal peeling', 'Akne lekesi', 'Güneş lekesi', 'Melazma tedavisi'],
-    slug: 'leke-tedavi',
+    slug: 'adana-leke-tedavi',
     tag: null,
   },
   {
@@ -76,7 +76,7 @@ const services = [
     description: 'Saç dökülmesi sorunlarına mezoterapi yöntemiyle etkili çözüm.',
     image: '/images/sac.webp',
     features: ['Vitamin kokteylleri', 'Kök hücre takviyeleri', 'Saç kökü besleme', 'Dökülme önleme'],
-    slug: 'sac-mezoterapi',
+    slug: 'adana-sac-mezoterapi',
     tag: null,
   },
   {
@@ -85,7 +85,7 @@ const services = [
     description: 'Modern cihazlarla ücretsiz profesyonel cilt analizi. Cildinizin ihtiyaçlarını keşfedin.',
     image: '/images/analiz_cilt.webp',
     features: ['Cilt tipi analizi', 'Problem tespiti', 'Kişiye özel öneriler', 'Ürün tavsiyeleri'],
-    slug: 'cilt-analizi',
+    slug: 'adana-cilt-analizi',
     tag: 'Ücretsiz',
   },
 ];

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: '%s | Göksum Güzellik Salonu',
   },
   description: "Adana Seyhan Cemalpaşa'da Göksum Güzellik Salonu: Diode lazer epilasyon, Hydrafacial cilt bakımı, protez tırnak, kalıcı makyaj. Uzman ekip ile güvenli bakım.",
-  keywords: 'adana güzellik salonu, adana güzellik merkezi, seyhan güzellik salonu, cemalpaşa güzellik salonu, adana lazer epilasyon, adana diode lazer, adana cilt bakımı, adana hydrafacial, adana protez tırnak, adana kalıcı makyaj, adana microblading, adana leke tedavisi, adana bölgesel zayıflama',
+  keywords: 'adana güzellik salonu, adana güzellik merkezi, seyhan güzellik salonu, cemalpaşa güzellik salonu, adana lazer epilasyon, adana diode lazer, adana cilt bakımı, adana hydrafacial, adana protez tırnak, adana kalıcı makyaj, adana microblading, adana leke tedavisi, adana bölgesel incelme',
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
