@@ -19,7 +19,7 @@ const JsonLd = () => {
       'https://www.goksumguzellik.com/images/goksum.jpg'
     ],
     url: 'https://www.goksumguzellik.com',
-    telephone: '+90 541 190 13 90',
+    telephone: '+90 544 859 72 80',
     email: 'goksumguzellik796@gmail.com',
     address: {
       '@type': 'PostalAddress',
@@ -320,7 +320,7 @@ const JsonLd = () => {
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+90 541 190 13 90',
+      telephone: '+90 544 859 72 80',
       contactType: 'customer service',
       availableLanguage: 'Turkish'
     },
@@ -349,7 +349,7 @@ const JsonLd = () => {
         postalCode: '01120',
         addressCountry: 'TR'
       },
-      telephone: '+90 541 190 13 90'
+      telephone: '+90 544 859 72 80'
     },
     areaServed: {
       '@type': 'City',
@@ -376,7 +376,7 @@ const JsonLd = () => {
     mainEntity: {
       '@type': 'BeautySalon',
       name: 'Göksum Güzellik Salonu',
-      telephone: '+90 541 190 13 90',
+      telephone: '+90 544 859 72 80',
       email: 'goksumguzellik796@gmail.com',
       address: {
         '@type': 'PostalAddress',
@@ -403,7 +403,7 @@ const JsonLd = () => {
         '@type': 'BeautySalon',
         name: 'Göksum Güzellik Salonu',
         url: 'https://www.goksumguzellik.com',
-        telephone: '+90 541 190 13 90',
+        telephone: '+90 544 859 72 80',
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Seyhan',
@@ -433,7 +433,7 @@ const JsonLd = () => {
         '@type': 'BeautySalon',
         name: 'Göksum Güzellik Salonu',
         url: 'https://www.goksumguzellik.com',
-        telephone: '+90 541 190 13 90',
+        telephone: '+90 544 859 72 80',
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Seyhan',
@@ -463,7 +463,7 @@ const JsonLd = () => {
         '@type': 'BeautySalon',
         name: 'Göksum Güzellik Salonu',
         url: 'https://www.goksumguzellik.com',
-        telephone: '+90 541 190 13 90',
+        telephone: '+90 544 859 72 80',
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Seyhan',
@@ -493,7 +493,7 @@ const JsonLd = () => {
         '@type': 'BeautySalon',
         name: 'Göksum Güzellik Salonu',
         url: 'https://www.goksumguzellik.com',
-        telephone: '+90 541 190 13 90',
+        telephone: '+90 544 859 72 80',
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Seyhan',

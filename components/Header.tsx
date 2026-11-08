@@ -32,11 +32,11 @@ export default function Header() {
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center gap-5">
             <a
-              href="tel:+905411901390"
+              href="tel:+905448597280"
               className="flex items-center gap-1.5 hover:text-gold-400 transition-colors"
             >
               <FaPhone className="text-gold-500/80" size={11} />
-              <span>+90 541 190 13 90</span>
+              <span>+90 544 859 72 80</span>
             </a>
             <a
               href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
@@ -55,7 +55,7 @@ export default function Header() {
             <Link href="https://www.instagram.com/goksum_guzellik01" target="_blank" className="hover:text-gold-400 transition-colors">
               <FaInstagram size={13} />
             </Link>
-            <Link href="https://wa.me/905411901390" target="_blank" className="hover:text-gold-400 transition-colors">
+            <Link href="https://wa.me/905448597280" target="_blank" className="hover:text-gold-400 transition-colors">
               <FaWhatsapp size={13} />
             </Link>
           </div>
@@ -137,7 +137,7 @@ export default function Header() {
               <Link href="https://www.instagram.com/goksum_guzellik01" target="_blank" onClick={() => setIsMenuOpen(false)} className="text-white/40 hover:text-gold-400 transition-colors">
                 <FaInstagram size={20} />
               </Link>
-              <Link href="https://wa.me/905411901390" target="_blank" onClick={() => setIsMenuOpen(false)} className="text-white/40 hover:text-gold-400 transition-colors">
+              <Link href="https://wa.me/905448597280" target="_blank" onClick={() => setIsMenuOpen(false)} className="text-white/40 hover:text-gold-400 transition-colors">
                 <FaWhatsapp size={20} />
               </Link>
             </div>

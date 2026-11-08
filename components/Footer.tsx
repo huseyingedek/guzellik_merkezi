@@ -21,7 +21,7 @@ export default function Footer() {
             <div className="flex gap-3">
               <SocialLink href="https://www.facebook.com/profile.php?id=61574776514786" icon={<FaFacebook size={15} />} />
               <SocialLink href="https://www.instagram.com/goksum_guzellik01" icon={<FaInstagram size={15} />} />
-              <SocialLink href="https://wa.me/905411901390" icon={<FaWhatsapp size={15} />} />
+              <SocialLink href="https://wa.me/905448597280" icon={<FaWhatsapp size={15} />} />
             </div>
           </div>
 
@@ -81,8 +81,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <FaPhone style={{ color: '#C9A84C' }} size={13} />
-                <a href="tel:+905411901390" className="text-sm transition-colors duration-200 hover:text-gold-400"
-                   style={{ color: 'rgba(255,255,255,0.45)' }}>+90 541 190 13 90</a>
+                <a href="tel:+905448597280" className="text-sm transition-colors duration-200 hover:text-gold-400"
+                   style={{ color: 'rgba(255,255,255,0.45)' }}>+90 544 859 72 80</a>
               </li>
               <li className="flex items-center gap-3">
                 <FaEnvelope style={{ color: '#C9A84C' }} size={13} />

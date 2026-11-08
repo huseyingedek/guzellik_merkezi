@@ -6,11 +6,11 @@ import { MdDirections } from 'react-icons/md';
 
 export default function MobileContactBar() {
   const handleCall = () => {
-    window.location.href = 'tel:+905411901390';
+    window.location.href = 'tel:+905448597280';
   };
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/905411901390', '_blank');
+    window.open('https://wa.me/905448597280', '_blank');
   };
 
   const handleDirections = () => {

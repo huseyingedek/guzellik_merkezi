@@ -165,8 +165,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-xs font-semibold text-beauty-800 uppercase tracking-wider mb-1">Telefon</p>
-                      <a href="tel:+905411901390" className="text-beauty-600 text-sm hover:text-gold-600 transition-colors">
-                        +90 541 190 13 90
+                      <a href="tel:+905448597280" className="text-beauty-600 text-sm hover:text-gold-600 transition-colors">
+                        +90 544 859 72 80
                       </a>
                     </div>
                   </li>
@@ -188,7 +188,7 @@ export default function ContactPage() {
                   <div className="flex gap-3">
                     {[
                       { href: "https://www.instagram.com/goksum_guzellik01", icon: <FaInstagram size={16} /> },
-                      { href: "https://wa.me/905411901390", icon: <FaWhatsapp size={16} /> },
+                      { href: "https://wa.me/905448597280", icon: <FaWhatsapp size={16} /> },
                       { href: "https://www.facebook.com/profile.php?id=61574776514786", icon: <FaFacebook size={16} /> },
                     ].map((s, i) => (
                       <a key={i} href={s.href} target="_blank" rel="noopener noreferrer"

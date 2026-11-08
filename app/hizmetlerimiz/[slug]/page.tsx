@@ -101,7 +101,7 @@ const infoSectionsData: Record<string, { heading: string; content: string }[]> =
   'adana-lazer-epilasyon': [
     {
       heading: 'Adana Lazer Epilasyon Fiyatları ve Kampanyalar',
-      content: 'Adana lazer epilasyon fiyatları; bacak, koltuk altı, bikini, yüz ve tam vücut paketi seçeneklerine göre farklılık gösterir. Adana lazer epilasyon yapan yerler arasında Göksum Güzellik Salonu, Seyhan Cemalpaşa\'da şeffaf ve rekabetçi fiyat politikasıyla öne çıkmaktadır. Adana lazer epilasyon kampanya seçenekleri ve paket fiyatları için +90 541 190 13 90 numaralı hattı arayabilir ya da salonumuza uğrayabilirsiniz. İlk konsültasyon ücretsiz olup kişiye özel fiyat teklifi hazırlanmaktadır.',
+      content: 'Adana lazer epilasyon fiyatları; bacak, koltuk altı, bikini, yüz ve tam vücut paketi seçeneklerine göre farklılık gösterir. Adana lazer epilasyon yapan yerler arasında Göksum Güzellik Salonu, Seyhan Cemalpaşa\'da şeffaf ve rekabetçi fiyat politikasıyla öne çıkmaktadır. Adana lazer epilasyon kampanya seçenekleri ve paket fiyatları için +90 544 859 72 80 numaralı hattı arayabilir ya da salonumuza uğrayabilirsiniz. İlk konsültasyon ücretsiz olup kişiye özel fiyat teklifi hazırlanmaktadır.',
     },
     {
       heading: 'Adana Lazer Epilasyon Kaç Seans Sürer, Ne Zaman Sonuç Alınır?',
@@ -115,7 +115,7 @@ const infoSectionsData: Record<string, { heading: string; content: string }[]> =
   'adana-cilt-bakimi': [
     {
       heading: 'Adana Cilt Bakımı Fiyatları',
-      content: 'Adana cilt bakımı fiyatları, seçilen protokole ve seans sayısına göre belirlenir. Göksum Güzellik Salonu\'nda Gazipaşa Bulvarı\'ndaki merkezimizde kişiye özel cilt analizi sonucunda en uygun protokol ve fiyat planı oluşturulur. Paket seçenekleri için +90 541 190 13 90 numaralı hattı arayabilirsiniz.',
+      content: 'Adana cilt bakımı fiyatları, seçilen protokole ve seans sayısına göre belirlenir. Göksum Güzellik Salonu\'nda Gazipaşa Bulvarı\'ndaki merkezimizde kişiye özel cilt analizi sonucunda en uygun protokol ve fiyat planı oluşturulur. Paket seçenekleri için +90 544 859 72 80 numaralı hattı arayabilirsiniz.',
     },
     {
       heading: 'Adana Hydrafacial Uygulaması Nedir?',
@@ -129,7 +129,7 @@ const infoSectionsData: Record<string, { heading: string; content: string }[]> =
   'adana-protez-tirnak': [
     {
       heading: 'Adana Protez Tırnak ve Nail Art Fiyatları',
-      content: 'Adana protez tırnak fiyatları; jel tırnak, üst form tırnak, akrilik tırnak, bebek manikürü, nail art tasarım ve tırnak uzatma seçeneğine göre değişmektedir. Adana tırnak yaptırma fiyatları ve adana kalıcı oje fiyatları için güncel bilgi almak, adana protez tırnak yapan yerler arasında Göksum Güzellik Salonu\'nu tercih etmek için +90 541 190 13 90 numaralı hattı arayabilirsiniz.',
+      content: 'Adana protez tırnak fiyatları; jel tırnak, üst form tırnak, akrilik tırnak, bebek manikürü, nail art tasarım ve tırnak uzatma seçeneğine göre değişmektedir. Adana tırnak yaptırma fiyatları ve adana kalıcı oje fiyatları için güncel bilgi almak, adana protez tırnak yapan yerler arasında Göksum Güzellik Salonu\'nu tercih etmek için +90 544 859 72 80 numaralı hattı arayabilirsiniz.',
     },
     {
       heading: 'Adana Jel Tırnak, Üst Form ve Akrilik Tırnak Farkları',
@@ -143,7 +143,7 @@ const infoSectionsData: Record<string, { heading: string; content: string }[]> =
   'adana-kalici-makyaj': [
     {
       heading: 'Adana Kalıcı Makyaj Fiyatları',
-      content: 'Adana kalıcı makyaj fiyatları; microblading, kaş kontür, eyeliner ve dudak kontürü gibi uygulanan tekniğe göre farklılık gösterir. Göksum Güzellik Salonu\'nda Gazipaşa Bulvarı\'ndaki merkezimizde şeffaf fiyatlandırma politikası uyguluyoruz. Güncel fiyat bilgisi için +90 541 190 13 90 numaralı hattı arayabilirsiniz.',
+      content: 'Adana kalıcı makyaj fiyatları; microblading, kaş kontür, eyeliner ve dudak kontürü gibi uygulanan tekniğe göre farklılık gösterir. Göksum Güzellik Salonu\'nda Gazipaşa Bulvarı\'ndaki merkezimizde şeffaf fiyatlandırma politikası uyguluyoruz. Güncel fiyat bilgisi için +90 544 859 72 80 numaralı hattı arayabilirsiniz.',
     },
     {
       heading: 'Adana Microblading Nedir, Kaç Yıl Dayanır?',
@@ -157,7 +157,7 @@ const infoSectionsData: Record<string, { heading: string; content: string }[]> =
   'adana-bolgesel-incelme': [
     {
       heading: 'Adana Bölgesel İncelme Fiyatları',
-      content: 'Adana bölgesel incelme fiyatları; uygulanan teknoloji, hedef bölge ve seans sayısına göre değişmektedir. Göksum Güzellik Salonu\'nda Seyhan Cemalpaşa\'da kişiye özel protokol ve paket seçenekleri sunulmaktadır. Detaylı Adana kavitasyon fiyatları için +90 541 190 13 90 numaralı hattı arayabilirsiniz.',
+      content: 'Adana bölgesel incelme fiyatları; uygulanan teknoloji, hedef bölge ve seans sayısına göre değişmektedir. Göksum Güzellik Salonu\'nda Seyhan Cemalpaşa\'da kişiye özel protokol ve paket seçenekleri sunulmaktadır. Detaylı Adana kavitasyon fiyatları için +90 544 859 72 80 numaralı hattı arayabilirsiniz.',
     },
     {
       heading: 'Adana Kavitasyon ve RF Lipoliz Kaç Seans Gerekir?',
@@ -171,7 +171,7 @@ const infoSectionsData: Record<string, { heading: string; content: string }[]> =
   'adana-leke-tedavi': [
     {
       heading: 'Adana Leke Tedavisi Fiyatları',
-      content: 'Adana leke tedavisi fiyatları; leke tipine, uygulanan yöntemlere ve gereken seans sayısına göre belirlenmektedir. Göksum Güzellik Salonu\'nda Seyhan Cemalpaşa\'da cilt analizi sonucunda kişiye özel fiyatlandırma yapılmaktadır. Güncel bilgi için +90 541 190 13 90 numaralı hattı arayabilirsiniz.',
+      content: 'Adana leke tedavisi fiyatları; leke tipine, uygulanan yöntemlere ve gereken seans sayısına göre belirlenmektedir. Göksum Güzellik Salonu\'nda Seyhan Cemalpaşa\'da cilt analizi sonucunda kişiye özel fiyatlandırma yapılmaktadır. Güncel bilgi için +90 544 859 72 80 numaralı hattı arayabilirsiniz.',
     },
     {
       heading: 'Adana Kimyasal Peeling Nedir, Nasıl Uygulanır?',
@@ -185,7 +185,7 @@ const infoSectionsData: Record<string, { heading: string; content: string }[]> =
   'adana-sac-mezoterapi': [
     {
       heading: 'Adana Saç Mezoterapisi Fiyatları',
-      content: 'Adana saç mezoterapisi fiyatları; uygulanan kokteylin içeriği, seans sayısı ve saç dökülmesi düzeyine göre değişmektedir. Göksum Güzellik Salonu\'nda Seyhan Cemalpaşa\'da kadınlara yönelik saç mezoterapisi programlarımızda rekabetçi fiyatlar sunuyoruz. Bilgi için +90 541 190 13 90 numaralı hattı arayabilirsiniz.',
+      content: 'Adana saç mezoterapisi fiyatları; uygulanan kokteylin içeriği, seans sayısı ve saç dökülmesi düzeyine göre değişmektedir. Göksum Güzellik Salonu\'nda Seyhan Cemalpaşa\'da kadınlara yönelik saç mezoterapisi programlarımızda rekabetçi fiyatlar sunuyoruz. Bilgi için +90 544 859 72 80 numaralı hattı arayabilirsiniz.',
     },
     {
       heading: 'Adana Saç Mezoterapisi Kaç Seans Yapılır?',
@@ -207,7 +207,7 @@ const infoSectionsData: Record<string, { heading: string; content: string }[]> =
     },
     {
       heading: 'Adana Cilt Analizi Sonrası Neler Yapılır?',
-      content: 'Adana cilt analizi tamamlandıktan sonra tespit edilen sorunlara yönelik profesyonel bakım seansları planlanabilir. Ayrıca doğru ürün kullanımı konusunda da yönlendirilirsiniz; salon bakımının etkisi ev bakımıyla pekiştirilir. Cilt analizi randevusu için +90 541 190 13 90 numaralı hattı arayabilirsiniz.',
+      content: 'Adana cilt analizi tamamlandıktan sonra tespit edilen sorunlara yönelik profesyonel bakım seansları planlanabilir. Ayrıca doğru ürün kullanımı konusunda da yönlendirilirsiniz; salon bakımının etkisi ev bakımıyla pekiştirilir. Cilt analizi randevusu için +90 544 859 72 80 numaralı hattı arayabilirsiniz.',
     },
   ],
 };
@@ -524,7 +524,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
 
               {/* WhatsApp hızlı iletişim */}
               <a
-                href="https://wa.me/905411901390"
+                href="https://wa.me/905448597280"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-4 rounded-2xl transition-all duration-300"

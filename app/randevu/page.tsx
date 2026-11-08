@@ -60,10 +60,10 @@ export default function AppointmentPage() {
           <p className="text-center text-xs mt-4" style={{ color: "rgba(0,0,0,0.35)" }}>
             Randevunuz salon onayıyla kesinleşecektir. Soru için{" "}
             <a
-              href="tel:+905411901390"
+              href="tel:+905448597280"
               className="underline hover:text-gold-500 transition-colors"
             >
-              +90 541 190 13 90
+              +90 544 859 72 80
             </a>{" "}
             numarayı arayabilirsiniz.
           </p>
